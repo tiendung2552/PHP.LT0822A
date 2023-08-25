@@ -1,0 +1,78 @@
+.text-demo1{
+    width: 150px;
+    text-align: center;
+    margin-left: 150px;
+    padding-top: 35px;
+    border-radius: 10px;    
+    background-color: rgb(216, 181, 27);
+    color: black;
+}
+.text-demo2{
+    width: 150px;
+    text-align: center;
+    margin-left: 130px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+}
+.text-demo2:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo3{
+    width: 150px;
+    text-align: center;
+    margin-left: 120px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+}
+.text-demo3:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+
+
+.text1{
+    width: 180px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    background-color: rgb(97, 77, 77);
+    padding-top: 30px;
+    padding-left: 50px;
+    margin: 10px 0px 30px 30px;
+}
+
+.body{
+display: flex;
+}
+.background-right-table{
+background-color: rgb(168, 233, 233);
+margin: 50px 20px 0px 150px;
+width: 1000px;
+height:450px;
+border-radius: 10%;
+}
+.background-right-table-small{
+background-color: rgb(88, 199, 199);
+margin: 0px 20px 0px 50px;
+width: 900px;
+height:350px;
+border-radius: 10%;
+}
+h1{
+    padding-top: 15px;
+    text-align: center;
+}
+.text-head{
+    font-size: 25px;
+    list-style: none;
+    text-align: center;
+    padding-top: 40px;
+}
+.text-body{
+    padding-top: 30px;
+    text-align: left;
+    font-size: 20px;
+}
