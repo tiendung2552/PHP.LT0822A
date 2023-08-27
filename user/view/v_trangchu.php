@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/conter.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/center.css'>
+	<link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/repon_trangchu.css'>
     <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/css/fontawesome.css">
     <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/js/all.min.js">
     <link rel="stylesheet" href="./w3_band/assets/fonts/themify-icons/themify-icons.css">
@@ -22,7 +23,7 @@
 		</div>
         <div class="menu">
         	<li><a href="">Nữ</a>
-        		<ul class="sub-menu">
+        		<!-- <ul class="sub-menu">
         			<li><a href="">Hàng mới về</a></li>
         			<li><a href="">Collection</a></li>
         			<li><a href="">Áo</a>
@@ -50,10 +51,10 @@
         					<li><a href="">Đầm thun</a></li>
         				</ul>
         			</li>
-        		</ul>
+        		</ul> -->
         	</li>
         	<li><a href="">Nam</a>
-        		<ul class="sub-menu">
+        		<!-- <ul class="sub-menu">
         			<li><a href="">Hàng mới về</a></li>
         			<li><a href="">Áo</a>
         				<ul>
@@ -69,31 +70,31 @@
         					<li><a href="">Quần âu</a></li>
         				</ul>
         			</li>
-        		</ul>
+        		</ul> -->
         	</li>
         	<li><a href="">Trẻ Em</a>
         		
         	</li>
         	<li><a href="">Sale</a>
-        		<ul class="sub-menu">
+        		<!-- <ul class="sub-menu">
         			<li><a href=""> Giảm ngay 30%</a></li>
         			<li><a href=""> Giảm ngay 60%</a></li>
         			<li><a href=""> Giảm ngay 90%</a></li>
-        		</ul>
+        		</ul> -->
         	</li>
         	<li><a href="">Bộ Sưu Tập</a>
-        		<ul class="sub-menu">
+        		<!-- <ul class="sub-menu">
         			<li><a href=""> Áo sơ mi</a></li>
         			<li><a href=""> Áo Vest</a></li>
         			<li><a href=""> Áo authentic</a></li>
-        		</ul>
+        		</ul> -->
         	</li>
         	<li><a href="">Thông Tin</a>
-        		<ul class="sub-menu">
+        		<!-- <ul class="sub-menu">
         			<li><a href=""> Về 2002-shop</a></li>
         			<li><a href=""> Vui trơi giải trí</a></li>
         			<li><a href=""> Hoạt động cộng đồng</a></li>
-        		</ul>
+        		</ul> -->
         	</li>
         	<li><a href="">Tin Tức</a></li>
         </div>
@@ -128,10 +129,69 @@
                     </ul>
                 </div>
 			</li>
-        	<li> <a class="fa fa-shopping-bag" href=""></a></li>
+        	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span>0</span></a></li>
         </div>
     </div>
-
+	<section id="headerr-mb">
+		<div class="logo">
+			<img src="images/logo/logo3.jpg">
+		</div>
+        <div class="others">
+        	
+        	<li> <a class="fa fa-paw" href=""></a>
+			<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Trợ giúp</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Hotline</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Live Chat</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Messenger</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Email</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Tra cứu đơn hàng</a></li>
+                    </ul>
+            </div>
+			</li>
+        	<li> <a class="fa fa-user" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
+                        <li><a href=""><i class="icon-logout"></i>Đăng xuất</a></li>
+                    </ul>
+                </div>
+			</li>
+        	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span>0</span></a></li>
+        </div>
+        <div class="menu">
+        	<li><a href="">Nữ</a>
+        		
+        	</li>
+        	<li><a href="">Nam</a>
+        		
+        	</li>
+        	<li><a href="">Trẻ Em</a>
+        		
+        	</li>
+        	<li><a href="">Sale</a>
+        	
+        	</li>
+        	<li><a href="">Thông Tin</a>
+        		
+        	</li>
+        	<li class="menu1"><a href="">Tin Tức</a>
+			
+			</li>
+        </div>
+     
+    </i></div>
+    </section>
 	<!------------------------- slider ---------------------->
 	<section id="Slider">
 		<div class="aspect-ratio-169">
@@ -149,6 +209,7 @@
 			<div class="dot"></div>
 		</div>
 	</section>
+	<div class="search-mb"><input  placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></div>
 	<!------------------- slider-all -------------->
 	<section class="slider-all">
 		<!------------------- slider-product-one -------------->	
@@ -180,189 +241,210 @@
 						<div class="slider-product-one-conter-content">
 							<div class="slider-product-one-conter-items-contes">
 								<div class="slider-product-one-conter-items">
-									<div class="slider-product-one-conter-item">
-										<a href=""><img src="images/damnu/aodambe.jpg"></a>
+									<div class="slider-product-one-conter-item sp1">
+										<a href="v_product.html"><img src="images/damnu/aodambe.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
-											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1"><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ĐẦM PEPLUM DẬP LY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
+											<div class="price">
+											 <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp2">
 										<a href=""><img src="images/aonu/aosomi/aosomi.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>SƠ MI HỌA TIẾT REN</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
+											<div class="price">
+												<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>	
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp3">
 										<a href=""><img src="images/damnu/aodamxoe.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ĐẦM VOAN DẬP LY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
+											<div class="price">
+												<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>	
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp4">
 										<a href=""><img src="images/aonu/aothun/aothunxanhtao.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN FLOWERS</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
+											<div class="price">
+												<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>	
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp5">
 										<a href=""><img src="images/quannu/quanbaggy/quanbaggybe.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
+											<div class="price">
+												<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>	
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
 								<!-- ****** -->
 								<div class="slider-product-one-conter-items">
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp1">
 										<a href=""><img src="images/aonu/aosomi/aosomicroptop.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
-											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO SƠ MI CROPTOP KIỂU XOẮN EO</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
+											<div class="price">
+												<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>	
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item  sp2">
 										<a href=""><img src="images/damnu/aodamlua.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ALMIRA DRESS - ĐẦM LỤA 2 LỚP</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp3">
 										<a href=""><img src="images/quannu/quansooc/quansooctim.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN SOOC NỮ TRƠN</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp4">
 										<a href=""><img src="images/aonu/aothun/aothunbloome.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN BLOOME</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp5">
 										<a href=""><img src="images/aonu/aokieu/tuysixanh.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>SET BỘ TUYSI PHỐI BLAZER</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
 								<!-- ****** -->
 								<div class="slider-product-one-conter-items">
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp1">
 										<a href=""><img src="images/aonu/aothun/aothunhong.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/035.png" alt="035" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN CÁNH DƠI</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">245.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp2">
 										<a href=""><img src="images/damnu/aodamluaxanh.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/013.png" alt="013" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/035.png" alt="035" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ALMIRA DRESS - ĐẦM LỤA 2 LỚP</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.393.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.990.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp3">
 										<a href=""><img src="images/quannu/quanjeans/quanjeansbaggy.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN JEANS BAGGY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">763.00<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.090.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp4">
 										<a href=""><img src="images/aonu/aokieu/aopeplumhong.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
 											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/013.png" alt="013" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO PEPLUM XẺ TÀ</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">675.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.350.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item">
+									<div class="slider-product-one-conter-item sp5">
 										<a href=""><img src="images/aonu/aosomi/aosomitencelbe.jpg"></a>
 										<div class="slider-product-one-conter-item-text">
-											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/014.png" alt="014" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/016.png" alt="016" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO SƠ MI TENCEL DÁNG OVERSIZE</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
@@ -375,7 +457,7 @@
 						</div>
 					</div>
 
-					<!------------------ sp2 -------------------->
+					<!------------------ sp-nam -------------------->
 					<div class="slider-product-one-conter-flex">
 						<div class="slider-product-one-conter-title-flex">
 							<h2>Săn sale mỗi ngày</h2>
@@ -383,189 +465,204 @@
 						<div class="slider-product-one-conter-content-flex">
 							<div class="slider-product-one-conter-items-contes-flex">
 								<div class="slider-product-one-conter-items-flex">
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp1">
 										<a href=""><img src="images/aonam/aopolo/polo1.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
-											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ĐẦM PEPLUM DẬP LY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp2">
 										<a href=""><img src="images/aonam/aopolo/polo2.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>SƠ MI HỌA TIẾT REN</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp3">
 										<a href=""><img src="images/aonam/aosomi/aosomi1.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ĐẦM VOAN DẬP LY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp4">
 										<a href=""><img src="images/aonam/aothun/aothun1.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN FLOWERS</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp5">
 										<a href=""><img src="images/quannam/quantay/quantay2.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
 								<!-- ****** -->
 								<div class="slider-product-one-conter-items-flex">
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp1">
 										<a href=""><img src="images/aonu/aosomi/aosomicroptop.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
-											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO SƠ MI CROPTOP KIỂU XOẮN EO</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp2">
 										<a href=""><img src="images/damnu/aodamlua.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ALMIRA DRESS - ĐẦM LỤA 2 LỚP</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp3">
 										<a href=""><img src="images/quannu/quansooc/quansooctim.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN SOOC NỮ TRƠN</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp4">
 										<a href=""><img src="images/aonu/aothun/aothunbloome.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN BLOOME</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp5">
 										<a href=""><img src="images/aonu/aokieu/tuysixanh.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>SET BỘ TUYSI PHỐI BLAZER</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
 								<!-- ****** -->
 								<div class="slider-product-one-conter-items-flex">
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp1">
 										<a href=""><img src="images/aonu/aothun/aothunhong.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/035.png" alt="035" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN CÁNH DƠI</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">245.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp2">
 										<a href=""><img src="images/damnu/aodamluaxanh.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/013.png" alt="013" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/035.png" alt="035" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ALMIRA DRESS - ĐẦM LỤA 2 LỚP</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.393.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.990.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp3">
 										<a href=""><img src="images/quannu/quanjeans/quanjeansbaggy.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN JEANS BAGGY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">763.00<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.090.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp4">
 										<a href=""><img src="images/aonu/aokieu/aopeplumhong.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
 											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/013.png" alt="013" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO PEPLUM XẺ TÀ</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">675.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.350.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item-flex">
+									<div class="slider-product-one-conter-item-flex sp5">
 										<a href=""><img src="images/aonu/aosomi/aosomitencelbe.jpg"></a>
 										<div class="slider-product-one-conter-item-text-flex">
-											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/014.png" alt="014" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/016.png" alt="016" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO SƠ MI TENCEL DÁNG OVERSIZE</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
@@ -578,7 +675,7 @@
 						</div>
 					</div>
 
-					<!---------------------- sp3 ------------------->
+					<!---------------------- sp-chil ------------------->
 					<div class="slider-product-one-conter-toom">
 						<div class="slider-product-one-conter-title-toom">
 							<h2>Săn sale mỗi ngày</h2>
@@ -587,189 +684,204 @@
 							<div class="slider-product-one-conter-items-contes-toom">
 								<!-- ****** -->
 								<div class="slider-product-one-conter-items-toom">
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp1">
 										<a href=""><img src="images/aotreem/aopolo/aopolohinh.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
-											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ĐẦM PEPLUM DẬP LY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp2">
 										<a href=""><img src="images/aotreem/aopolo/aopoloke.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>SƠ MI HỌA TIẾT REN</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp3">
 										<a href=""><img src="images/aotreem/aosomi/aosomihoatiet.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ĐẦM VOAN DẬP LY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp4">
 										<a href=""><img src="images/aotreem/aothun/aothunchu.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN FLOWERS</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp5">
 										<a href=""><img src="images/quantreem/quankaki/quankakihinh.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
 								<!-- ****** -->
 								<div class="slider-product-one-conter-items-toom">
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp1">
 										<a href=""><img src="images/aonu/aosomi/aosomicroptop.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
-											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO SƠ MI CROPTOP KIỂU XOẮN EO</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp2">
 										<a href=""><img src="images/damnu/aodamlua.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ALMIRA DRESS - ĐẦM LỤA 2 LỚP</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp3">
 										<a href=""><img src="images/quannu/quansooc/quansooctim.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN SOOC NỮ TRƠN</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp4">
 										<a href=""><img src="images/aonu/aothun/aothunbloome.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN BLOOME</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp5">
 										<a href=""><img src="images/aonu/aokieu/tuysixanh.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>SET BỘ TUYSI PHỐI BLAZER</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
 								<!-- ****** -->
-								<div class="slider-product-one-conter-items-toom">
-									<div class="slider-product-one-conter-item-toom">
+								<div class="slider-product-one-conter-items-toom ">
+									<div class="slider-product-one-conter-item-toom sp1">
 										<a href=""><img src="images/aonu/aothun/aothunhong.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/035.png" alt="035" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO THUN CÁNH DƠI</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">245.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp2 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp2">
 										<a href=""><img src="images/damnu/aodamluaxanh.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/013.png" alt="013" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/035.png" alt="035" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ALMIRA DRESS - ĐẦM LỤA 2 LỚP</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.393.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.990.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp3 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp3">
 										<a href=""><img src="images/quannu/quanjeans/quanjeansbaggy.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>QUẦN JEANS BAGGY</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">763.00<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.090.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp4 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp4">
 										<a href=""><img src="images/aonu/aokieu/aopeplumhong.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
 											<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/013.png" alt="013" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO PEPLUM XẺ TÀ</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">675.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">1.350.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 									<!-- sp5 -->
-									<div class="slider-product-one-conter-item-toom">
+									<div class="slider-product-one-conter-item-toom sp5">
 										<a href=""><img src="images/aonu/aosomi/aosomitencelbe.jpg"></a>
 										<div class="slider-product-one-conter-item-text-toom">
-											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+											<a href="" class="color-sp1><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/014.png" alt="014" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/016.png" alt="016" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
 											<h1>ÁO SƠ MI TENCEL DÁNG OVERSIZE</h1> <br>
-											<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+											<div class="price">
+											<p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    		</div>
 										</div>
 									</div>
 								</div>
@@ -793,129 +905,148 @@
 				</div> 
 				<div class="slider-product-content-live-icons">
 					<div class="slider-product-content-live-icons-tel">
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/damnu/aodambe.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>ĐẦM PEPLUM DẬP LY</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/damnu/aodambe.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>ĐẦM PEPLUM DẬP LY</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp2 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/aonu/aosomi/aosomi.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>SƠ MI HỌA TIẾT REN</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp2 -->
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/aonu/aosomi/aosomi.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>SƠ MI HỌA TIẾT REN</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp3 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/damnu/aodamxoe.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>ĐẦM VOAN DẬP LY</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp3 -->
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/damnu/aodamxoe.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>ĐẦM VOAN DẬP LY</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp4 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/aonu/aothun/aothunxanhtao.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>ÁO THUN FLOWERS</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp4 -->
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/aonu/aothun/aothunxanhtao.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>ÁO THUN FLOWERS</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp5 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/quannu/quanbaggy/quanbaggybe.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp5 -->
+							<div class="slider-product-one-conter-items-one sp5">
+								<a href=""><img src="images/quannu/quanbaggy/quanbaggybe.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
 					</div>
 
 					<div class="slider-product-content-live-icons-tel all-conter">
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/damnu/aodambe.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>ĐẦM PEPLUM DẬP LY</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/damnu/aodambe.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href="" class="color-sp1"><img src="images/color/001.png" alt="001" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>ĐẦM PEPLUM DẬP LY</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp2 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/aonu/aosomi/aosomi.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>SƠ MI HỌA TIẾT REN</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp2 -->
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/aonu/aosomi/aosomi.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/050.png" alt="050" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>SƠ MI HỌA TIẾT REN</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp3 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/damnu/aodamxoe.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>ĐẦM VOAN DẬP LY</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp3 -->
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/damnu/aodamxoe.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/020.png" alt="020" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>ĐẦM VOAN DẬP LY</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp4 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/aonu/aothun/aothunxanhtao.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>ÁO THUN FLOWERS</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp4 -->
+							<div class="slider-product-one-conter-items-one">
+								<a href=""><img src="images/aonu/aothun/aothunxanhtao.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/007.png" alt="007" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>ÁO THUN FLOWERS</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
-						<!-- sp5 -->
-						<div class="slider-product-one-conter-items-one">
-							<a href=""><img src="images/quannu/quanbaggy/quanbaggybe.jpg"></a>
-							<div class="slider-product-one-conter-item-tel">
-								<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-								<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> <br>
-								<p style=" font-size: 13px; font-weight: bold; ">1.295.000<sup>đ</sup></p> <p style=" font-size: 11px;   text-decoration: line-through;">2.590.000<sup>đ</sup></p>
-								<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+							<!-- sp5 -->
+							<div class="slider-product-one-conter-items-one sp5">
+								<a href=""><img src="images/quannu/quanbaggy/quanbaggybe.jpg"></a>
+								<div class="slider-product-one-conter-item-tel">
+									<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
+									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
+									<h1>QUẦN BAGGY PHỐI TÚI LẬT</h1> 
+									<div class="price">
+                                        <p1>1.295.000<sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+                                        <button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
+                                    </div>
+                                </div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>

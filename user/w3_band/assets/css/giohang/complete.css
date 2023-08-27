@@ -1,0 +1,274 @@
+body{
+    background-image:-webkit-image-set("http://eskipaper.com/images/leaves-background-3.jpg");
+}
+img{
+    width: 300px;
+    margin: 80px 0px 0px 520px;
+    border-radius: 50%;
+}
+.text1{
+    text-align: center;
+    font-weight: 700;
+}
+.text2{
+    text-align: center;
+    font-weight: 700;
+}
+.but{
+    text-align: center;
+    margin-top: 40px;
+}
+.but .button1{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+.but .button1 button{
+    padding: 10px 30px 10px 30px;
+    border-radius:0px 10px 0px 10px ;
+    box-sizing:inherit;
+    background-color: rgb(148, 123, 123);
+    box-shadow: 5px 6px 6px 0px rgb(163, 133, 133);
+}
+.but .button1 button:hover {
+    background-color: brown;
+    color: white;
+ }
+.but .button2{
+    margin-left: 50px;
+}
+.but .button2 button{
+    padding: 10px 30px 10px 30px;
+    border-radius:0px 10px 0px 10px ;
+    background-color: rgb(148, 123, 123);
+    box-shadow: 5px 6px 6px 0px rgb(163, 133, 133);
+}
+.but .button2 button:hover {
+    background-color: brown;
+    color: white;
+ }
+ /* --------------------cart---------------------- */
+/* Mobile iphone X width < 400px */
+@media only screen and (max-width: 400px){
+    img{
+        width: 200px;
+        margin: 160px 0px 0px 80px;    
+    }
+    .but{
+        text-align: center;
+        margin-top: 140px;
+    }
+ }
+ /* iphone 6/7/8 plus*/
+ @media only screen and (min-width: 410px) and (max-width: 500px){
+    img{
+        width: 200px;
+        margin: 140px 0px 0px 100px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 120px;
+    }
+ }
+ /* Table width >= 730px to width < 750px ip 6/7/8 plus ngang */
+ @media only screen and (min-width: 730px) and (max-width: 750px) {
+    img{
+        width: 200px;
+        margin: 20px 0px 0px 260px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 60px;
+    }
+ }
+ /* width < 500px  */
+ @media only screen and (max-width: 500px){
+    
+    .text{
+        margin-top: 20px;
+    }
+    .but .button1{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .but .button1 button{
+        padding: 10px;
+    }
+    .but .button2{
+        margin-left: 10px;
+    }
+    .but .button2 button{
+        padding: 10px;
+    }
+ }
+ /* Table width >= 600px to width < 720px small tablet*/
+ @media only screen and (min-width: 600px) and (max-width: 720px) {
+    img{
+        width: 240px;
+        margin: 120px 0px 0px 180px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 140px;
+    }
+    .text{
+        margin-top: 20px;
+    }
+ }
+ 
+ /* Table width >= 800px to width < 819px  ipXg */
+ @media only screen and (min-width: 812px) and (max-width: 819px) {
+    img{
+        width: 180px;
+        margin: 20px 0px 0px 300px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .but .button1{
+    margin-left: 0px;
+    margin-right: 80px;
+    }
+    .but .button1 button{
+        padding: 10px;
+    }
+    .but .button2{
+        margin-left: 10px;
+    }
+    .but .button2 button{
+        padding: 10px;
+    }
+ }
+ @media only screen and (min-width: 800px) and (max-width: 811px) {
+    img{
+        width: 240px;
+        margin: 60px 0px 0px 280px;
+    }
+    
+    .but{
+        text-align: center;
+        margin-top: 60px;
+    }
+    .but .button1{
+    margin-left: 0px;
+    margin-right: 80px;
+    }
+    .but .button1 button{
+        padding: 10px;
+    }
+    .but .button2{
+        margin-left: 10px;
+    }
+    .but .button2 button{
+        padding: 10px;
+    }
+ }
+ /* Table width >= 760px to width < 790px  ipad */
+ @media only screen and (min-width: 760px) and (max-width: 790px) {
+    img{
+        width: 260px;
+        margin: 180px 0px 0px 260px;
+    }
+    .text{
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 150px;
+    }
+    .but .button1{
+    margin-left: 0px;
+    margin-right: 80px;
+    }
+    .but .button1 button{
+        padding: 20px;
+    }
+    .but .button2{
+        margin-left: 10px;
+    }
+    .but .button2 button{
+        padding: 15px;
+    }
+    .text1{
+        font-size: 20px;
+    }
+    .text2{
+        font-size: 20px;
+    }
+ }
+ /* Table width >= 820px to width < 1024px  ipad pro*/
+ @media only screen and (min-width: 820px) and (max-width: 1024px) {
+    
+    img{
+        width: 360px;
+        margin: 160px 0px 0px 340px;
+    }
+    .text{
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 180px;
+    }
+    .but .button1{
+    margin-left: 20px;
+    margin-right: 100px;
+    }
+    .but .button1 button{
+        padding: 25px 55px 25px 55px;
+    }
+    .but .button2{
+        margin-left: 80px;
+    }
+    .but .button2 button{
+        padding: 25px 55px 25px 55px;
+    }
+    .text1{
+        font-size: 20px;
+    }
+    .text2{
+        font-size: 20px;
+    }
+ }
+ 
+ /* Table width > 1355px to width < 1390px */
+ @media only screen and (min-width: 1355px) and (max-width: 1390px) {
+    img{
+        width: 260px;
+        margin: 80px 0px 0px 550px;
+    }
+    .text{
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .but{
+        text-align: center;
+        margin-top: 80px;
+    }
+    .but .button1{
+    margin-left: 0px;
+    margin-right: 80px;
+    }
+    .but .button1 button{
+        padding: 15px;
+    }
+    .but .button2{
+        margin-left: 10px;
+    }
+    .but .button2 button{
+        padding: 15px;
+    }
+    .text1{
+        font-size: 20px;
+    }
+    .text2{
+        font-size: 20px;
+    }
+ }
+ 
+ @media only screen and (min-width: 1890px) {
+   
+ }
+ 

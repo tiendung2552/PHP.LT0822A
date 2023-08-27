@@ -1,0 +1,415 @@
+/* Điều chỉnh kích thước của các icon trong giỏ hàng */
+.cart-top i, .cart-content-left a i {
+   font-size: 20px;
+ }
+ 
+ /* Điều chỉnh kích thước của các button */
+ button, .btn {
+   padding: 8px 12px;
+   font-size: 14px;
+ }
+ 
+ /* Điều chỉnh cách hiển thị các phần tử giỏ hàng */
+ .cart-content, .checkout-payment {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+ }
+ 
+ /* Thêm các điều chỉnh khác dựa vào nhu cầu responsive cụ thể của bạn */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif; 
+
+ }
+/* --------------------cart---------------------- */
+.cart-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+ }
+
+ .cart-top-top {
+    height: 2px;
+    width: 65%;
+    background-color: rgb(172, 121, 121);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0px 100px 220px;
+ }
+ .cart-top-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(29, 29, 29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+ }
+ 
+ .cart-top-cart {
+    color: rgb(29, 29, 224);
+    border: 1px solid blue;
+ }
+ .title-amount {
+   margin-left: 20px;
+   margin-bottom: 30px;
+ }
+ .title-amount .title-head{
+   font-size: 30px;
+ }
+ .title-amount .title-body{
+   font-size: 30px;
+   color: #ff0000;
+ }
+ .title-amount .title-footer{
+   font-size: 30px;
+   color: #ff0000;
+ }
+ /* table */
+ .cart-top-cart a {
+    color: black;
+ }
+ 
+ .cart-content {
+   
+   width: 100%;
+}
+.cart-content-left {
+    width: 100%;
+    padding-left: 1%;
+ }
+ 
+ .cart-content-left table {
+    width: 100%;
+    /* margin-top: 15px; */
+ }
+ 
+ .cart-content-left th {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: var(--main-text-font);
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(236, 155, 100);
+    border-collapse: collapse;
+    border-bottom: 2px solid blueviolet;
+    text-align: center;
+ }
+ 
+ 
+ 
+ .cart-content-left table tbody button {
+    width: 50px;
+    height: 40px;
+    background-color: rgb(148, 123, 123);
+    border-radius: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
+    box-shadow: 5px 6px 6px 0px rgb(163, 133, 133);
+ }
+ .cart-content-left  table tbody button:hover {
+    background-color: brown;
+    color: white;
+    box-shadow: 5px 6px 6px 0px  rgb(131, 48, 48);
+ }
+ .cart-content-left table td {
+   text-align: center;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 2px solid rgb(117, 49, 49) ;   
+ }
+ .cart-content-left table td input {
+   text-align: center;
+   border: none;
+   margin-left: 10px;
+ }
+ .cart-content-right {
+   
+   width: 40%;
+   background-color: rgb(205, 227, 247);
+   height: auto;
+   margin-right: 1%;
+   margin-left: 1%;
+   border-radius: 5px;
+ }
+ .cart-content-right table {
+    width: 100%;
+    border-bottom: 2px solid #682c2c;
+    padding-bottom: 30px;
+ }
+ 
+ .cart-content-right th {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: var(--main-text-font);
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    border-collapse: collapse;
+    text-align: center;
+    border-bottom: 2px solid gray;
+ }
+ 
+ .cart-content-right td {
+    padding: 40px 0px 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    border-collapse: collapse;
+ 
+ 
+ }
+ 
+ .cart-content-right-text p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #ff0000;
+    margin-top: 40px;
+    margin-bottom: 20px;
+ }
+ 
+ .cart-content-right-button {
+    width: 100%;
+ }
+ 
+ .cart-content-right-button button {
+    padding: 25px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: rgb(122, 116, 116);
+    color: rgb(0, 0, 0);
+    border-radius: 10px 0px 10px 0px;
+    font-size: 15px;
+ }
+ 
+ .cart-content-right-button button:hover {
+    background-color: brown;
+    color: white;
+    box-shadow: 5px 6px 6px 0px  rgb(131, 48, 48);
+    
+ }
+ .cart-page{
+   margin: 20px;
+ }
+ .cart-page .btn-cart-continue {
+   max-width: 250px;
+}
+.cart-page .btn-cart-continue {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 14px 24px;
+   background: #ffffff;
+   border: 1px solid #221f20;
+   box-sizing: border-box;
+   border-radius: 16px 0px;
+   font-size: 16px;
+   line-height: 24px;
+   text-align: center;
+   color: #221f20;
+   max-width: 226px;
+   height: 52px;
+   margin-top: 32px;
+   text-transform: initial;
+}
+.cart-page .btn-cart-continue span svg  {
+   margin: -2px;
+
+}
+.cart-page  a {
+   text-decoration:none;
+}
+.cart-page  a:hover {
+   background-color: #7c7272;
+   color: #ffffff;
+}
+
+/* --------------------cart---------------------- */
+/* Mobile iphone X width < 400px */
+@media only screen and (max-width: 400px){
+   .cart-top {
+      width: 75%;
+      margin: 50px 0px 50px 45px;
+   }
+}
+/* iphone 6/7/8 plus*/
+@media only screen and (min-width: 410px) and (max-width: 500px){
+   .cart-top {
+      width: 75%;
+      margin: 50px 0px 50px 50px;
+   }
+}
+/* Table width >= 730px to width < 750px ip 6/7/8 plus ngang */
+@media only screen and (min-width: 730px) and (max-width: 750px) {
+   .cart-top {
+      width: 65%;
+      margin: 50px 0px 50px 120px;
+   }
+}
+/* width < 500px  */
+@media only screen and (max-width: 500px){
+   .cart-top-item {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+   }
+  .cart-content-left th {
+   padding-top: 30px;
+   padding-bottom: 10px;
+   font-size: 10px;
+   }
+  .cart-content-left table td {
+   padding: 20px 0px 20px 0px;
+   font-size: 10px;
+   text-align: center ;
+   }
+   .cart-content-left table td input {
+      width: 25px;
+      }
+   .cart-content-left table .anhsp img {
+     width: 60px;
+   }
+   
+    .cart-content-left table tbody button {
+      width: 30px;
+      height: 30px;  
+  }
+  .cart-content-right table {
+   padding-bottom: 10px;
+   }
+  .cart-content-right th{
+      font-size: 13px;
+      padding: 20px 0px 20px 0px;
+  }
+  .cart-content-right td{
+   font-size: 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding: 15px 0px 15px 10px;
+   }  
+   .cart-content-right p{
+      font-size: 12px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 10px 20px 10px 20px;
+   }
+   .cart-content-right-button button {
+      padding: 15px;
+   }
+   .cart-page {
+      margin: 0px;
+   }
+   .title-amount {
+      margin-left: 10px;
+      margin-bottom: 0px;
+    }
+    .title-amount .title-head{
+      font-size: 15px;
+    }
+    .title-amount .title-body{
+      font-size: 15px;
+      color: #ff0000;
+    }
+    .title-amount .title-footer{
+      font-size: 15px;
+      color: #ff0000;
+    }
+}
+/* Table width >= 600px to width < 720px small tablet*/
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+   .cart-top {
+      width: 65%;
+      margin: 50px 0px 50px 100px;
+   }
+}
+
+/* Table width >= 800px to width < 819px  ipX small ngang  */
+@media only screen and (min-width: 800px) and (max-width: 819px) {
+   .cart-top {
+      width: 65%;
+      margin: 50px 0px 50px 140px;
+   }
+}
+/* Table width >= 760px to width < 790px  ipad */
+@media only screen and (min-width: 760px) and (max-width: 790px) {
+   .cart-top {
+      width: 65%;
+      margin: 50px 0px 50px 140px;
+   }
+}
+/* Table width >= 820px to width < 1024px  ipad pro*/
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 180px;
+   }
+}
+@media only screen  and (min-width: 500px)and (max-width: 1024px) {
+   .cart-content-right-button button {
+      padding: 20px;
+   }
+   .cart-page {
+      margin-top: 50px;
+   }
+   .title-amount .title-head{
+      font-size: 25px;
+    }
+    .title-amount .title-body{
+      font-size: 25px;
+      color: #ff0000;
+    }
+    .title-amount .title-footer{
+      font-size: 25px;
+      color: #ff0000;
+    }
+}
+@media only screen and (max-width: 1024px) {
+   .cart-content {
+      display:block;
+  }
+   .cart-content-left{
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+   }
+   .cart-content-left table td {
+      padding: 20px 0px 20px 0px;
+      font-size: 10px;
+      text-align: center ;
+      }
+   .cart-content-right{
+      margin: 0px;
+      width: 100%;
+   }
+   .cart-content-right-text p {
+      text-align: center;
+   }
+   
+   .cart-content-left table .anhcolor img {
+      width: 30px;
+    }
+    .title-amount {
+      margin-left: 10px;
+      padding-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+}
+
+/* Table width > 1024px to width < 1350px */
+@media only screen and (min-width: 1025px) and (max-width: 1350px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 220px;
+   }
+}
+
+@media only screen and (min-width: 1890px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 320px;
+   }
+}

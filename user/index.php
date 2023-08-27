@@ -25,7 +25,23 @@ else{
         case 'product':
             include 'controller/c_product.php';
                 break;
+       
+        case 'giohang':
+            include 'controller/giohang/c_giohang.php';
+                break;
          
+        case 'address':
+            include 'controller/giohang/c_address.php';
+                break;
+
+        case 'payment':
+            include 'controller/giohang/c_payment.php';
+                break;
+
+        case 'complete':
+            include 'controller/giohang/c_complete.php';
+                break;
+                                 
     }
     
 ?>

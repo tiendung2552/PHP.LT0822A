@@ -40,7 +40,9 @@ a {
 #headerr:hover {
     background: rgba(255, 255, 255, 1);
 }
-
+#headerr-mb{
+    display: none;
+}
 .logo {
     flex: 1;
 } 
@@ -125,7 +127,9 @@ a {
     padding: 0 12px;
     position: relative;
 }
-
+.others > li .fa-shopping-bag span {
+    padding-left: 10px;
+}
 .others > li::after {
     content: "";
     display: block;
@@ -237,6 +241,9 @@ a {
 .others > li:hover .sub-action {
     visibility: visible;
     top: 44px;
+}
+.search-mb{
+    display: none;
 }
 /* ------------------------ slider-connect ------------------------------ */
 .slider-connect {

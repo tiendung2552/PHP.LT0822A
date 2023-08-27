@@ -1,0 +1,350 @@
+/* Điều chỉnh kích thước của các icon trong giỏ hàng */
+ .cart-top i, .cart-content-left a i {
+   font-size: 20px;
+ }
+ 
+ /* Điều chỉnh kích thước của các button */
+ button, .btn {
+   padding: 8px 12px;
+   font-size: 14px;
+ }
+ 
+ /* Điều chỉnh cách hiển thị các phần tử giỏ hàng */
+ .cart-content, .checkout-payment {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+ }
+ 
+ /* Thêm các điều chỉnh khác dựa vào nhu cầu responsive cụ thể của bạn */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif; 
+}
+.cart-top-wrap {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.cart-top {
+   height: 2px;
+   width: 79%;
+   background-color: rgb(172, 121, 121);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 80px 0px 100px 100px;
+}
+.cart-top-item {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   border: 1px solid rgb(29, 29, 29);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(255, 255, 255);
+}
+
+.cart-top-address {
+   color: rgb(29, 29, 224);
+   border: 1px solid blue;
+}
+
+.cart-top-cart a {
+   color: black;
+}
+.cart-content {
+   
+   width: 100%;
+}
+.cart-content-left {
+    width: 100%;
+    padding-left: 1%;
+ }
+.cart-content-left h3 {
+   text-align: center;
+   font-size: 25px;
+   border-bottom: 2px solid rgb(141, 77, 77);
+   padding: 20px 0px 20px;
+   margin-bottom: 30px;
+}
+.cart-content-left .tt-kh {
+   font-size: 15px;
+   margin: 40px 0 50px 10px;
+}
+.cart-content-left .address {
+   float: right;
+   
+}
+.cart-content-left .address button {
+   width: 80px;
+   height: 40px;
+   background-color: rgb(148, 123, 123);
+   border-radius: 10px 0px 10px 0px;
+   box-shadow: 5px 6px 6px 0px rgb(163, 133, 133);
+   margin-right: 3px ;
+}
+.cart-content-left .address button:hover{
+   background-color: brown;
+   color: white;
+}
+.cart-content-left button{
+   width: 170px;
+   height: 50px;
+   background-color: rgb(129, 99, 99);
+   border-radius: 10px 0px 10px 0px;
+   box-shadow: 5px 6px 6px 0px  rgb(170, 125, 125);
+   margin-left: 10px;
+}
+.cart-content-left button:hover{
+   background-color: brown;
+   color: white;
+   box-shadow: 5px 6px 6px 0px  rgb(170, 125, 125);
+}
+.cart-content-right {
+   
+   width: 40%;
+   background-color: rgb(205, 227, 247);
+   height: auto;
+   margin-right: 1%;
+   margin-left: 1%;
+   border-radius: 5px;
+}
+.cart-content-right h3 {
+   text-align: center;
+   font-size: 25px;
+   border-bottom: 2px solid rgb(26, 103, 175);
+   padding: 20px 0px 20px;
+   margin-bottom: 20px;
+}
+.cart-content-right .span{
+   margin-bottom: 20px;
+}
+.cart-content-right .span-left{
+   font-size: 15px;
+   margin-left: 20px;
+   margin-top: 30px;
+}
+.cart-content-right .span-right{
+   font-size: 15px;
+   float: right;
+   margin-right: 20px;
+  
+}
+.cart-content-right .cart-content-right-text{
+   color: red;
+   border-top: 2px solid rgb(23, 77, 177) ;
+   padding-top: 20px;
+   text-align: center;
+}
+.cart-content-right-button button{
+   padding: 20px;
+   width: 100%;
+   margin-top: 5px;
+   background-color: rgb(122, 116, 116);
+   color: rgb(0, 0, 0);
+   border-radius: 10px 0px 10px 0px;
+}
+.cart-content-right-button button:hover{
+   background-color: brown;
+   color: white;
+}/*---------------------- modal ---------------*/
+.container .modal .modal-content .modal-body table{
+   margin: 10px 0px 10px 0px;
+   width: 100%;
+}
+.container .modal .modal-content .modal-body table td{
+   padding: 0px 0px 10px 10px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container .modal .modal-content .modal-body table td button{
+   background-color: #bd9f9a;
+   padding: 10px;
+   border-radius: 10px 0px 10px 0px;
+   width: 120px;
+}
+.container .modal .modal-content .modal-body table td button:hover{
+   background-color: #e95a5a;
+   padding: 10px;
+   border-radius: 10px 0px 10px 0px;
+   color: white;
+}
+.container .modal .modal-content .modal-header p{
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+ 
+/* --------------------cart---------------------- */
+/* Mobile iphone X width < 400px */
+@media only screen and (max-width: 400px){
+   .cart-top {
+      width: 75%;
+      margin: 50px 0px 30px 45px;
+   }
+  
+}
+/* iphone 6/7/8 plus*/
+@media only screen and (min-width: 410px) and (max-width: 500px){
+   .cart-top {
+      width: 75%;
+      margin: 50px 0px 30px 50px;
+   }
+   
+}
+/* Table width >= 730px to width < 750px ip 6/7/8 plus ngang */
+@media only screen and (min-width: 730px) and (max-width: 750px) {
+   .cart-top {
+      width: 75%;
+      margin: 100px 0px 100px 70px;
+   }
+}
+/* width < 500px  */
+@media only screen and (max-width: 500px){
+   .cart-top-item {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+   }
+   .cart-content-left h3 {
+      font-size: 20px;
+  }
+  .cart-content-left .tt-kh {
+   font-size: 13px;
+   margin: 40px 0px 50px 10px;
+   }
+  .cart-content-right h3{
+      font-size: 20px;
+  }
+  .cart-content-right .tt-kh{
+   font-size: 13px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding: 15px 0px 15px 10px;
+   }  
+   .cart-content-right p{
+      font-size: 12px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0px 20px 10px 20px;
+   }
+   .col-12 .block-border {
+      margin: 0px;
+   }
+   .checkout-title {
+      font-size: 24px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+  }
+  .col-12 .pt-4 h3{
+   font-size: 17px;
+   padding-top: 0px;
+   width: 100%;
+}
+   .block-border{
+      margin-left:10px ;
+      padding: 0px;
+   }
+}
+/* Table width >= 600px to width < 720px small tablet*/
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 100px;
+   }
+}
+
+/* Table width >= 800px to width < 819px  ipX small ngang  */
+@media only screen and (min-width: 800px) and (max-width: 819px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 140px;
+   }
+}
+/* Table width >= 760px to width < 790px  ipad */
+@media only screen and (min-width: 760px) and (max-width: 790px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 120px;
+   }
+}
+/* Table width >= 820px to width < 1024px  ipad pro*/
+@media only screen and (min-width: 820px) and (max-width: 1024px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 180px;
+   }
+}
+@media only screen and (max-width: 1024px) {
+   .cart-content {
+      display:block;
+  }
+   .cart-content-left{
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+   }
+   .cart-content-left table td {
+      padding: 20px 0px 20px 0px;
+      font-size: 10px;
+      text-align: center ;
+      }
+   .cart-content-right{
+      margin: 0px;
+      width: 100%;
+   }
+   .cart-content-right-button button {
+      width: 100%;
+      padding: 15px;
+   }
+   .cart-content-left button {
+      margin-left: 10px;
+      margin-bottom: 20px;
+  }
+   .cart-content-right-text p {
+      text-align: center;
+   }
+   .cart-content-left table .anhcolor img {
+      width: 30px;
+    }
+    .col-12 .block-border {
+      margin: 0px;
+   }
+   .col-12 .checkout-title {
+      font-size: 30px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+  }
+   .checkout-title {
+      font-size: 30px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+  }
+  .col-12 .pt-4 h3{
+   font-size: 24px;
+   padding-top: 0px;
+   width: 100%;
+}
+   .block-border{
+      margin-left:10px ;
+      padding: 0px;
+   }
+}
+
+/* Table width > 1024px to width < 1350px */
+@media only screen and (min-width: 1025px) and (max-width: 1350px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 200px;
+   }
+}
+
+@media only screen and (min-width: 1890px) {
+   .cart-top {
+      width: 65%;
+      margin: 100px 0px 100px 320px;
+   }
+}
+
