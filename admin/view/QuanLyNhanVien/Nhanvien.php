@@ -20,7 +20,9 @@
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
             </p>
-            <b class="name">Vu Dinh Ba</b>
+            <b class="name"><?php if(isset($_SESSION['ss_admin'])) { ?> 
+                <?php echo $_SESSION['ss_admin'] ?>
+                <?php } ?> </b>
         </div>
         <div class="body">
             <div class="background-left">
@@ -32,99 +34,54 @@
             <div class="background-right">
                 <div class="background-right-table">
                     <h1>DANH SÁCH NHÂN VIÊN</h1>
+                    <form action="" method="get">
                     <div class="search">
-                    <input  placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></div>
+                    <input type="hidden" name="page" value="DsNhanVien">
+                    <input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
+                    <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
+                    </div>
+                    </form>
                     <div class="background-right-table-small">  
-                        <form action="" method="post">
                             <table >
                                 <thead>
                                     <tr>
                                     <th>ID</th>
                                     <th>Username</th>
-                                    <th>Số Điện Thoại</th>
+                                    <th>Password</th>
                                     <th>Full_name</th>
+                                    <th>Số Điện Thoại</th>
                                     <th>Lv</th>
                                     <th colspan="3">Setting</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                               
+                                <?php
+                                    foreach ($data_nhanvien as $key => $value) { ?>
+                                    <tbody>
+                                
                                     <tr>
-                                        <td>1</td>
-                                        <td>VuongTu</td>
-                                        <td>123456</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>2</td>
+                                        <td><?php echo $value['id'] ?></td>
+                                        <td><?php echo $value['user'] ?></td>
+                                        <td><?php echo $value['pass'] ?></td>
+                                        <td><?php echo $value['full_name'] ?></td>
+                                        <td><?php echo $value['sodienthoai'] ?></td>
+                                        <td><?php echo $value['lv'] ?></td>
                                         <td class="btn">
-                                            <a href="?page=Suanv">Sửa</a>
-                                            <a href="">Xóa</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>VuongTu</td>
-                                        <td>123456</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="Suanv.html">Sửa</a>
-                                            <a href="">Xóa</a>
-                                        </td>
-                                    </tr> 
-                                    <tr>
-                                        <td>1</td>
-                                        <td>VuongTu</td>
-                                        <td>123456</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="Suanv.html">Sửa</a>
-                                            <a href="">Xóa</a>
-                                        </td>
-                                    </tr>
-                                     <tr>
-                                        <td>1</td>
-                                        <td>VuongTu</td>
-                                        <td>123456</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="Suanv.html">Sửa</a>
-                                            <a href="">Xóa</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>VuongTu</td>
-                                        <td>123456</td>
-                                        <td>Trung Tu Quoc </td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="Suanv.html">Sửa</a>
-                                            <a href="">Xóa</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>VuongTu</td>
-                                        <td>123456</td>
-                                        <td>Trung Tu Quoc </td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="Suanv.html">Sửa</a>
-                                            <a href="">Xóa</a>
+                                            <a href="?page=Suanv&id=<?php echo $value['id'] ?>">Sửa</a>
+                                            <a href="?page=Xoanv&id=<?php echo $value['id'] ?>">Xóa</a>
                                         </td>
                                     </tr>
                                 </tbody>
+                            <?php } ?>
                             </table>
-                            
-                           
-                          </form>
-                          <a href="?page=Themnv" class="more-staff" ><button>Thêm</button></a>
-                          <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
+                         
                     </div>
+                    <a href="?page=Themnv" class="more-staff" ><button>Thêm</button></a>
+                    <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>
         </div>
     </section>
+
 </body>
 </html>

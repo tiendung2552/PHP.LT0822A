@@ -20,7 +20,9 @@
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
             </p>
-            <b class="name">Vu Dinh Ba</b>
+            <b class="name"><?php if(isset($_SESSION['ss_admin'])) { ?> 
+                <?php echo $_SESSION['ss_admin'] ?>
+                <?php } ?> </b>
         </div>
         <div class="body">
             <div class="background-left">
@@ -28,113 +30,56 @@
                     <a class="text1 a2" href="?page=QuanlyKh">Thông tin khách hàng</a>
                     <a class="text1 a3" href="?page=DsSanPham">Thông tin sản phẩm</a>
                     <a class="text1 a4" href="?page=QuanlyDh">Thông tin đơn hàng</a>
-                    <a class="text1 a5" href="index-goc.html">Đăng xuất</a>   
             </div>
             <div class="background-right">
                 <div class="background-right-table">
                     <h1>DANH SÁCH SẢN PHẨM</h1>
+                    <form action="" method="get">
                     <div class="search">
-                    <input  placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></div>
+                    <input type="hidden" name="page" value="DsSanPham">
+                    <input name="keyword" name="keyword1" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
+                    <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
+                    </div>
+                    </form>
                     <div class="background-right-table-small">  
-                        <form action="" method="post">
                             <table >
                                 <thead>
                                     <tr>
                                         <th>Id</th>
                                         <th>Ảnh</th>
                                         <th>Tên Sản Phẩm</th>
-                                        <th>Danh Mục</th>
                                         <th>Đơn Giá</th>
                                         <th>Tồn Kho</th>
+                                        <th>Trạng Thái</th>
                                         <th colspan="3">Setting</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                               
+                                    <?php
+                                    foreach ($data_sanpham as $key => $value) { ?>
+                                     <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>2</td>
+                                        <td><?php echo $value['id_sanpham']?></td>
+                                        <td><img src="../images/sanpham/<?php echo $value['img']?>" width="110px" height="130px"></td>
+                                        <td><?php echo $value['tensanpham'] ?></td>
+                                        <td><?php echo $value['gia'] ?></td>
+                                        <td><?php echo $value['tonkho'] ?></td>
+                                        <td><?php echo $value['trangthai'] ?></td>
                                         <td class="btn">
-                                            <a href="?page=Suasp">Sửa</a>
-                                            <a href="">Xóa</a>
-                                            <a href="">Chi Tiết</a>
+                                            <a href="?page=Suasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-gear"></i></a>
+                                            <a onclick="return confirm('Xóa sản phẩm này?');" href="?page=Xoasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                            <a href=""><i class="fa-solid fa-circle-info"></i></a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="?page=Suasp">Sửa</a>
-                                            <a href="">Xóa</a>
-                                            <a href="">Chi tiết</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="?page=Suasp">Sửa</a>
-                                            <a href="">Xóa</a>
-                                            <a href="">Chi tiết</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>2</td>
-                                        <td class="btn">
-                                            <a href="?page=Suasp">Sửa</a>
-                                            <a href="">Xóa</a>
-                                            <a href="">Chi tiết</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>Hàng nhập khẩu</td>
-                                        <td class="btn">
-                                            <a href="Suasp.html">Sửa</a>
-                                            <a href="">Xóa</a>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>Hàng nhập khẩu</td>
-                                        <td class="btn">
-                                            <a href="Suasp.html">Sửa</a>
-                                            <a href="">Xóa</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                              </tbody>
+                              <?php } ?>
                             </table>
                             
                            
-                          </form>
-                          <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
-                          <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
+                          
                     </div>
+                    <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
+                          <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>
         </div>

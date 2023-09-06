@@ -19,7 +19,9 @@
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
             </p>
-            <b class="name">Vu Dinh Ba</b>
+            <b class="name"><?php if(isset($_SESSION['ss_admin'])) { ?> 
+                <?php echo $_SESSION['ss_admin'] ?>
+                <?php } ?> </b>
         </div>
         <div class="body">
             <div class="background-right">
@@ -27,17 +29,23 @@
                     <h1>THÊM NHÂN VIÊN</h1>
                     <div class="background-right-table-small">  
                         <form action="" method="post">
-                            <ul>
-                                <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user"></span></li>
-                                <li><span class="span-left">Password:</span> <span class="span-right"><input type="text" name="pass"></span></li>
-                                <li><span class="span-left">Phone_number:</span> <span class="span-right"><input type="text" name="cell_phone"></span></li>
-                                <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" ></span></li>
-                                <li><span class="span-left">Lv:</span> <span class="span-right"><input type="text" name="lv"></span></li>
+                            <?php foreach ($user as $key => $value) { ?>
+                            <ul class="ul-head">
+                                <ul  class="ul-left">
+                                    <li><span class="span-left">ID:</span> <span class="span-right"><input type="text" name="id"></span></li>
+                                    <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user"></span></li>
+                                    <li><span class="span-left">Password:</span> <span class="span-right"><input type="text" name="pass"></span></li>
+                                </ul>
+                                <ul class="ul-right">
+                                    <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" ></span></li>
+                                    <li><span class="span-left">Phone_number:</span> <span class="span-right"><input type="text" name="phone" ></span></li>
+                                    <li><span class="span-left">Lv:</span> <span class="span-right"><input type="text" name="lv" ></span></li>
+                                </ul>
                             </ul>
-                           
+                            <button name="btn_them">Thêm</button></a>
+                            <a href="?pge=DsNhanVien" class="come-back"><button>Quay lại</button></a>
                         </form>
-                        <a href="?page=DsNhanVien" class="more-staff" ><button>Thêm</button></a>
-                        <a href="?pge=DsNhanVien" class="come-back"><button>Quay lại</button></a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

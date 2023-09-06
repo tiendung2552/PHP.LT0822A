@@ -1,3 +1,10 @@
+.background-right-table-small{
+    background-color: rgb(88, 199, 199);
+    margin: 0px 20px 0px 45px;
+    width: 930px;
+    height:400px;
+    border-radius: 10%
+    }
 .text-demo1{
     width: 150px;
     text-align: center;
@@ -55,30 +62,37 @@ ul li{
     padding-top: 20px;
 }
 form{
-    height: 405px;
+    height: 400px;
 }
-.span-left{
-    width: 100px;
+.ul-head{
+    display: flex;
+    padding-top: 30px ;
+}
+.ul-head .ul-left .span-left{
     float: left;
-    margin:10px 0px 0px 200px;
+    margin:10px 0px 0px 0px;
     font-size: 18px;
+    width: 100px;
 }
-.span-right input{
-    width: 300px;
+.ul-head .ul-left .span-right input{
+    width: 180px;
     height: 30px;
     border-radius: 10px;
     box-shadow: inset;
+    padding-left: 30px;
 }
-.more-staff button{
-    width: 70px;
+.ul-head .ul-right .span-left{
+    float: left;
+    margin:10px 0px 0px 0px;
     font-size: 18px;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    margin-left: 370px;
+    width: 130px;
 }
-.more-staff button:hover{
-    background-color: black;
-    color: rgb(255, 255, 255);
+.ul-head .ul-right .span-right input{
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: inset;
+    padding-left: 30px;
 }
 .come-back button{
     width: 90px;
@@ -88,6 +102,26 @@ form{
     margin-left: 50px;
 }
 .come-back button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+form button{
+    width: 90px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin-left: 350px;
+    margin-top: 30px;
+}
+form .more-staff button{
+    width: 70px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin-left: 370px;
+    margin-top: 370px;
+}
+.more-staff button:hover{
     background-color: black;
     color: rgb(255, 255, 255);
 }

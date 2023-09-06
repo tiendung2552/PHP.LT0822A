@@ -17,7 +17,7 @@ switch ($page) {
         include "controller/trangchu.php";
         break;
     case 'login':
-        include "controller/login.php";
+        include "controller/Login.php";
         break;
     case 'logout':
         include "controller/logout.php";

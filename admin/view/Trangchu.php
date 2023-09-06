@@ -19,7 +19,9 @@
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
             </p>
-            <b class="name">Vu Dinh Ba</b>
+            <b class="name"><?php if(isset($_SESSION['ss_admin'])) { ?> 
+                <?php echo $_SESSION['ss_admin'] ?>
+                <?php } ?> </b>
         </div>
         <div class="body">
                 <div class="background-left">      
@@ -27,7 +29,7 @@
                         <a class="text1" href="?page=QuanlyKh">Thông tin khách hàng</a>
                         <a class="text1" href="?page=DsSanPham">Thông tin sản phẩm</a>
                         <a class="text1" href="?page=QuanlyDh">Thông tin đơn hàng</a>
-                        <a class="text1" href="index-goc.html">Đăng xuất</a>
+                        <a class="text1" href="?page=logout">Đăng xuất</a>
                 </div>
                 <div class="background-right">
                     <div class="background-right-table">

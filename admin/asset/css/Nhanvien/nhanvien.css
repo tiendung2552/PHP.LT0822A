@@ -59,6 +59,9 @@ h1{
     border-radius: 10px;
     padding: 5px;
 }
+.search .btn-sear:hover{
+    background-color: aqua;
+}
 table{
     padding: 20px 40px 20px 60px;
     width: 100%;
@@ -78,7 +81,7 @@ table tr td a{
 table tr td a:hover{
     color: red;
 }
-form{
+.background-right-table-small{
     width: 930px;
     height: 400px;
     overflow-x:hidden ;
@@ -90,7 +93,7 @@ form{
     font-size: 18px;
     border-radius: 10px;
     color: rgb(0, 0, 0);
-    margin-left: 370px;
+    margin-left: 390px;
 }
 .more-staff button:hover{
     background-color: black;

@@ -1,0 +1,82 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+}
+.footer{
+    
+    border-top: 1px solid rgb(112, 71, 71);
+    padding-top: 1em;
+
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.help{
+    display:flex; 
+    padding:  20px 0 20px 400px;
+}
+.help a{
+    padding:  0 20px 0;
+}
+.help a:hover{
+   color: rgb(255, 0, 0);
+}
+.text-center{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#bnt_register{
+    width: 100%;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 15px 0 15px 0;
+    height:3em;
+}
+/* Máy tính bảng */
+@media screen and (min-width: 1200px) {
+    .khachhang {
+        width: 50%;
+        float: left;
+        margin-right: 1.5%;
+    }
+
+    .matkhau {
+        width: 48.5%;
+        float: left;
+    }
+    .so1{
+        width: 50%;
+        float: left;
+        margin-right: 1.5%;
+    }
+    .so2{
+        width: 48.5%;
+        float: left;
+    }
+}
+@media screen and (min-width: 500px) {
+    .khachhang {
+        width: 50%;
+        float: left;
+        margin-right: 1.5%;
+    }
+
+    .matkhau {
+        width: 48.5%;
+        float: left;
+    }
+    
+}
+
+input {
+border: 1px solid #ccc; 
+height: 3em;
+}
+p {
+font-weight: bold;
+}
+button:hover {
+background-color: #D3D3D3; /* Màu nền khi trỏ chuột vào */
+color: black; /* Màu chữ khi trỏ chuột vào */
+}

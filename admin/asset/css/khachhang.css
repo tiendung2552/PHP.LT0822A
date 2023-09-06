@@ -71,7 +71,7 @@ table tr td{
     padding: 20px 0px 20px 0px;
     border-bottom: 1px solid saddlebrown ;
 }
-form{
+.background-right-table-small{
     width: 930px;
     height: 400px;
     overflow-x:hidden ;
@@ -83,7 +83,7 @@ form{
     font-size: 18px;
     border-radius: 10px;
     color: rgb(0, 0, 0);
-    margin-left: 420px;
+    margin-left: 470px;
 }
 .come-back button:hover{
     background-color: black;

@@ -7,12 +7,28 @@
         $controller = $_GET['controller'];
     }
 else{
-    $controller = 'trangchu';}
+    $controller = 'demo';}
 
     switch ($controller){
+        case 'demo':
+            include 'view/v_trangdemo.php';
+            break;
+
         case 'trangchu':
             include 'controller/c_trangchu.php';
             break;
+
+        case 'sign':
+                include 'controller/c_sign.php';
+                break;
+
+        case 'login':
+            include 'controller/c_login.php';
+            break;
+
+        case 'logout':
+                include 'controller/c_logout.php';
+                break;
 
         case 'spnu':
             include 'controller/c_spnu.php';

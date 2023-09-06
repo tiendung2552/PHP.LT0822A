@@ -48,18 +48,37 @@ h1{
 ul li{
     list-style: none;
     margin: 20px;
+    
+}
+ul li p{
     padding-top: 65px;
 }
 form{
     height: 305px;
 }
 .span-left{
+    padding-top: 75px;
+    width: 150px;
+    float: left;
+    margin:10px 0px 0px 200px;
+    font-size: 18px;
+}
+.span-left1{
+    padding-top: 15px;
     width: 150px;
     float: left;
     margin:10px 0px 0px 200px;
     font-size: 18px;
 }
 .span-right input{
+    margin-top: 75px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: inset;
+}
+.span-right1 input{
+    margin-top: 15px;
     width: 300px;
     height: 30px;
     border-radius: 10px;
@@ -71,6 +90,7 @@ form{
     border-radius: 10px;
     color: rgb(0, 0, 0);
     margin-left: 370px;
+    margin-top: 50px;
 }
 .background-right-table-small button:hover{
     background-color: black;

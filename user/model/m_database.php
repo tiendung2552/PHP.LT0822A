@@ -4,7 +4,7 @@
         protected $host = 'localhost';
         protected $user = 'root';
         protected $pass = '';
-        protected $dbname = 'pro_banhang';
+        protected $dbname = 'ivymoda';
 
         // tạo phương thức kết nối
         public function __construct(){
@@ -15,27 +15,29 @@
             }
         }
 
-        public function get($table, $condition=array()){
-            // khoi tao cau lenh lay du lieu sql
+        public function get($table,$condition=array()){
             $sql = "SELECT * FROM $table";
-
-            if (!empty($condition)){
-                $sql.=" WHERE";
-                foreach($condition as $key => $value){
-                    $sql = " $key = '$value' AND";
+    
+            if(!empty($condition)){
+                $sql .= " WHERE";
+                foreach ($condition as $key => $value) {
+                    # code...
+                    $sql .= " $key = '$value' AND";
                 }
                 $sql = trim($sql, "AND");
-            }
-            // thuc hien cau lenh
-            $query = mysqli_query($this->conn, $sql);
+            };
+            
+            $query = mysqli_query($this->conn,$sql);
+    
             $ketqua = array();
-            if ($query){
+            if($query){
                 while($row = mysqli_fetch_assoc($query)){
                     $ketqua[] = $row;
                 }
-            } return $ketqua;
-
+            }
+            return $ketqua;
         }
+       
         public function get_like($table, $column, $value){
             $sql = "SELECT * FROM $table WHERE $column LIKE '%$value%'";
             $query = mysqli_query($this->conn, $sql);

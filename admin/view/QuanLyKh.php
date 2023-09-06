@@ -20,7 +20,9 @@
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
             </p>
-            <b class="name">Vu Dinh Ba</b>
+            <b class="name"><?php if(isset($_SESSION['ss_admin'])) { ?> 
+                <?php echo $_SESSION['ss_admin'] ?>
+                <?php } ?> </b>
         </div>
         <div class="body">
             <div class="background-left">
@@ -28,15 +30,19 @@
                     <a class="text1 a2" href="?page=QuanlyKh">Thông tin khách hàng</a>
                     <a class="text1 a3" href="?page=DsSanPham">Thông tin sản phẩm</a>
                     <a class="text1 a4" href="?page=QuanlyDh">Thông tin đơn hàng</a>
-                    <a class="text1 a5" href="index-goc.html">Đăng xuất</a>   
             </div>
             <div class="background-right">
                 <div class="background-right-table">
                     <h1>DANH SÁCH KHÁCH HÀNG</h1>
+                    <form action="" method="get">
                     <div class="search">
-                    <input  placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></div>
-                    <div class="background-right-table-small">  
-                        <form action="" method="post">
+                    <input type="hidden" name="page" value="QuanlyKh">
+                    <input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
+                    <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
+                    </div>
+                    </form>
+                    <div class="background-right-table-small">
+                    
                             <table >
                                 <thead>
                                     <tr>
@@ -46,62 +52,20 @@
                                     <th colspan="3">Email</th>
                                     </tr>
                                 </thead>
+                                <?php foreach ($data_khachhang as $key => $value) { ?>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
+                                        <td><?php echo $value['id_kh'] ?></td>
+                                        <td><?php echo $value['name'] ?></td>
+                                        <td><?php echo $value['sdt'] ?></td>
+                                        <td><?php echo $value['email'] ?></td>
                                     </tr>
                                 </tbody>
+                                <?php } ?>
                             </table>
-                            
-                           
-                          </form>
-                          <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>  
+                          
                     </div>
+                    <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>  
                 </div>
             </div>
         </div>

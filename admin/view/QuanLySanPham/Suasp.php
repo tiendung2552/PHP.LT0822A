@@ -20,37 +20,56 @@
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
             </svg>
             </p>
-            <b class="name">Vu Dinh Ba</b>
+            <b class="name"><?php if(isset($_SESSION['ss_admin'])) { ?> 
+                <?php echo $_SESSION['ss_admin'] ?>
+                <?php } ?> </b>
         </div>
         <div class="body">
             <div class="background-right">
                 <div class="background-right-table">
                     <h1>SỬA SẢN PHẨM</h1>
                     <div class="background-right-table-small">  
-                    <form action="" method="post">
-                            <ul class="ul_left">
-                                <li class="li-left">
-                                    <span class="span-right">
-                                        <input class="right1" type="file" name="user" id="image-input" onchange="chooseFile(this)" 
-                                            accept="image/*">
-                                        <img src="#" alt="" id="image" width="100px" height="100px">
-                                    </span>
-                                </li>
-                                <li class="left1"><span class="span-left">Tên Sản Phẩm:</span> <span class="span-right"><input type="text" name="pass"></span></li>
-                                <li><span class="span-left">Đơn Giá:</span> <span class="span-right"><input type="text" name="full_name" ></span></li>
-                                <li><span class="span-left">Trang Thái:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                                <li><span class="span-left">Tồn Kho:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                            </ul>
-                            <ul class="ul_right">
-                                <li class="right1"><span class="span-left">Xuất Xứ:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                                <li class="right"><span class="span-left">Hãng:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                                <li class="right"><span class="span-left">Id danh mục:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                                <li class="right"><span class="span-left">Ngày Tạo:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                                <li class="right"><span class="span-left">Người Tạo:</span> <span class="span-right"><input type="text" name="lv"></span></li>
-                            </ul>
+                    <?php foreach ($data_sanpham as $key => $value) { ?>
+                    <form action="" method="post"  enctype="multipart/form-data">
+                            
+                    <input type="hidden" name="id" value="<?php echo $value['id_sanpham'] ?>">
+                    <table>
+                        <tr>
+                            <th class="left">
+                            <span class="span-right">
+                                <input class="right1" type="file" name="img" id="image-input" onchange="chooseFile(this)" 
+                                    accept="image/*">
+                                <img alt="" id="image" width="100px" height="100px" src="../images/sanpham/<?php echo $value['img'] ?>">
+                            </span>
+                            </th>
+                            <td class="right"><span  class="span-left">Xuất Xứ:</span> <span class="span-right"><input type="text" name="xuatxu" value="<?php echo $value['xuatxu'] ?>"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><span class="span-left">Tên Sản Phẩm: </span> <span class="span-right"><input type="text" name="tensanpham" value="<?php echo $value['tensanpham'] ?>"></span></td>
+                            <td class="right"><span class="span-left">Id danh mục:  </span> <span class="span-right"><input type="text" name="id_danhmuc" value="<?php echo $value['id_danhmuc'] ?>"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"> <span class="span-left">Đơn Giá:   </span> <span class="span-right"><input type="text" name="gia" value="<?php echo $value['gia'] ?>"></span></td>
+                            <td class="right"><span class="span-left">Ngày Tạo:     </span> <span class="span-right"><input type="text" name="ngaytao" value="<?php echo $value['ngaytao'] ?>"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><span class="span-left">Trang Thái:   </span> <span class="span-right"><input type="text" name="trangthai" value="<?php echo $value['trangthai'] ?>"></span></td>
+                            <td class="right"><span class="span-left">Người Tạo:    </span> <span class="span-right"><input type="text" name="nguoitao" value="<?php echo $value['nguoitao'] ?>"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="left"><span class="span-left">Tồn Kho:      </span> <span class="span-right"><input type="text" name="tonkho" value="<?php echo $value['tonkho'] ?>"></span></td>
+                            <td class="right"><span class="span-left">Loại sản phẩm:</span> <span class="span-right"><input type="text" name="loaisanpham" value="<?php echo $value['loaisanpham'] ?>"></span></td>
+                        </tr>
+                        <tr class="bottom" ;>
+                            <td colspan=2><button class="more-staff" name="btn_upd">Sửa</button>
+                            <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a></td>
+                        </tr>
+                    </table>
+                            <?php } ?>
                         </form>
-                        <a href="?page=DsSanPham" class="more-staff" ><button>Sửa</button></a>
-                        <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a>
+                        
+                        
+                        
                     </div>
                 </div>
             </div>

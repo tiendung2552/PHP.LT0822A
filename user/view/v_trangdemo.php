@@ -23,78 +23,22 @@
 		</div>
         <div class="menu">
         	<li><a href="">Nữ</a>
-        		<!-- <ul class="sub-menu">
-        			<li><a href="">Hàng mới về</a></li>
-        			<li><a href="">Collection</a></li>
-        			<li><a href="">Áo</a>
-        				<ul>
-        					<li><a href="">Áo sơ mi</a></li>
-        					<li><a href="">Áo thun</a></li>
-        					<li><a href="">Áo kiểu</a></li>
-        					<li><a href="">Áo croptop</a></li>
-        					<li><a href="">Áo peplum</a></li>
-        				</ul>
-        			</li>
-        			<li> <a href="">Quần</a>
-        				<ul>
-        					<li><a href="">Quần jeans</a></li>
-        					<li><a href="">Quần lửng/short</a></li>
-        					<li><a href="">Quần dài</a></li>
-							<li><a href="">Quần baggy</a></li>
-							<li><a href="">Quần jumpsuit</a></li> 
-        				</ul>
-        			</li>
-					<li> <a href="">Đầm</a>
-        				<ul>
-        					<li><a href="">Đầm</a></li>
-        					<li><a href="">Đầm maxi/voan</a></li>
-        					<li><a href="">Đầm thun</a></li>
-        				</ul>
-        			</li>
-        		</ul> -->
+        		
         	</li>
         	<li><a href="">Nam</a>
-        		<!-- <ul class="sub-menu">
-        			<li><a href="">Hàng mới về</a></li>
-        			<li><a href="">Áo</a>
-        				<ul>
-        					<li><a href="">Áo Thun</a></li>
-        					<li><a href="">Áo sơ mi</a></li>
-        					<li><a href="">Áo Polo</a></li>
-        				</ul>
-        			</li>
-        			<li> <a href="">Quần</a>
-        				<ul>
-        					<li><a href="">Quần jean</a></li>
-        					<li><a href="">Quần lửng</a></li>
-        					<li><a href="">Quần âu</a></li>
-        				</ul>
-        			</li>
-        		</ul> -->
+        		
         	</li>
         	<li><a href="">Trẻ Em</a>
         		
         	</li>
         	<li><a href="">Sale</a>
-        		<!-- <ul class="sub-menu">
-        			<li><a href=""> Giảm ngay 30%</a></li>
-        			<li><a href=""> Giảm ngay 60%</a></li>
-        			<li><a href=""> Giảm ngay 90%</a></li>
-        		</ul> -->
+        		
         	</li>
         	<li><a href="">Bộ Sưu Tập</a>
-        		<!-- <ul class="sub-menu">
-        			<li><a href=""> Áo sơ mi</a></li>
-        			<li><a href=""> Áo Vest</a></li>
-        			<li><a href=""> Áo authentic</a></li>
-        		</ul> -->
+        		
         	</li>
         	<li><a href="">Thông Tin</a>
-        		<!-- <ul class="sub-menu">
-        			<li><a href=""> Về 2002-shop</a></li>
-        			<li><a href=""> Vui trơi giải trí</a></li>
-        			<li><a href=""> Hoạt động cộng đồng</a></li>
-        		</ul> -->
+        		
         	</li>
         	<li><a href="">Tin Tức</a></li>
         </div>
@@ -114,20 +58,7 @@
                     </ul>
                 </div>
 			</li>
-        	<li> <a class="fa fa-user" href=""></a>
-				<div class="sub-action" style="display: block;">
-                    <div class="top-action">
-                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
-                    </div>
-                    <ul>
-                        <li><a href=""><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
-                        <li><a href=""><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
-                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
-                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
-                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
-                        <li><a href="?controller=logout"><i class="icon-logout"></i>Đăng xuất</a></li>
-                    </ul>
-                </div>
+        	<li> <a class="fa fa-user" href="?controller=login"></a>
 			</li>
         	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span>0</span></a></li>
         </div>
@@ -153,19 +84,7 @@
             </div>
 			</li>
         	<li> <a class="fa fa-user" href=""></a>
-				<div class="sub-action" style="display: block;">
-                    <div class="top-action">
-                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
-                    </div>
-                    <ul>
-                        <li><a href=""><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
-                        <li><a href=""><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
-                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
-                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
-                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
-                        <li><a href="?controller=logout"><i class="icon-logout"></i>Đăng xuất</a></li>
-                    </ul>
-                </div>
+				
 			</li>
         	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span>0</span></a></li>
         </div>
