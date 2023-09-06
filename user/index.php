@@ -39,7 +39,7 @@ else{
             break;  
 
         case 'product':
-            include 'controller/c_product.php';
+            include 'view/v_product.php';
                 break;
        
         case 'giohang':
