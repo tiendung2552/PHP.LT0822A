@@ -7,12 +7,12 @@ if (isset($_SESSION['ss_admin'])) {
         if(isset($_POST['btn_them'])){
     
             $username = $_POST['user'];
-            $password = $_POST['pass'];
+            $password = md5($_POST['pass']);
             $fullname = $_POST['full_name'];
             $phone = $_POST['phone'];
             $lv = $_POST['lv'];
 
-
+          
             $loi = array();
             if($username == ''){
                 $loi['user'] = 'user must no để trống ';
@@ -29,7 +29,10 @@ if (isset($_SESSION['ss_admin'])) {
             if($lv == ''){
                 $loi['lv'] = 'lv must no để trống ';
             }
+            $user=$db->get('nhanvien', array('user' => $username));
+            if(empty($user)){ 
             if(!$loi){
+               
                 $db->insert('nhanvien', array(
                 'user'=>$username,
                 'pass'=>$password,
@@ -37,6 +40,11 @@ if (isset($_SESSION['ss_admin'])) {
                 'sodienthoai'=>$phone,
                 'lv'=>$lv));
                 header('location: ?page=DsNhanVien');
+                }
+                   
+            }else{
+                echo "<script>alert ('User này đã tồn tại');
+                window.history.back();</script>";
             }
         }
         }else{

@@ -1,0 +1,479 @@
+body{
+    font-family: "Arial", sans-serif; 
+    margin: 2em 1em ;
+}
+.head{
+    padding-top:  50px;
+  }
+.head span p{
+    width: 100%; 
+    border-bottom: 1px solid Silver;
+    color: #777777; 
+    margin-bottom: 2em;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#headerr {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#headerr.sticky {
+    background: rgba(255, 255, 255, 1);
+}
+
+#headerr:hover {
+    background: rgba(255, 255, 255, 1);
+}
+#headerr-mb{
+    display: none;
+}
+.logo {
+    flex: 1;
+} 
+
+.menu2 {
+    flex: 3;
+    display: flex;
+}
+
+.menu2 > li {
+    padding: 0 12px;
+    position: relative; 
+}
+
+.menu2 li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+.menu2 > li > a:hover {
+    color: #FF5A5F;
+}
+
+.menu2 > li:nth-child(5) > a {
+    color: #FF0000;
+}
+
+.sub-menu {
+    position: absolute;
+    padding: 10px 0 10px 6px;
+    top: 40px;
+    right: 0;
+    background: #FFF;
+    z-index: 1;
+    border: 1px solid #E7E8E9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: max-content;
+    min-width: 180px;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
+.sub-menu ul {
+    padding-left: 20px;
+}
+
+.sub-menu > li > a {
+    display: inline-block;
+}
+
+.sub-menu li ul a {
+    font-weight: normal;
+    font-size: 12px!important;
+}
+
+.menu1 > li:hover .sub-menu {
+    visibility: visible;
+    top: 44px;
+}
+/* ---------------------------- others ----------------------- */
+.others {
+    flex: 1;
+    display: flex;
+}
+
+.others > li {
+    padding: 0 12px;
+    position: relative; 
+}
+
+.others li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+
+.others > li {
+    padding: 0 12px;
+    position: relative;
+}
+.others > li .fa-shopping-bag span {
+    padding-left: 10px;
+}
+.others > li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90%;
+    background-color: #696969;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.others > li:last-child::after {
+    display: none;
+}
+
+.others > li > input {
+    font-size: 15px;
+}
+
+.others > li:first-child {
+    position: relative;
+}
+
+.others > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background: transparent;
+}
+
+.others > li:first-child i {
+    position: absolute;
+    right: 9px;
+    padding: 2px;
+}
+
+.others > li > a:hover {
+    color: #FF5A5F;
+}
+.sub-action {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #FFF;
+    z-index: 1;
+    border: 1px solid #E7E8E9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: max-content;
+    min-width: 255px;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
+.others .icon {
+    font-size: 16px;
+    color: #000;
+    position: relative;
+}
+
+.sub-action ul {
+    margin-left: 0px;
+    padding: 0 24px;
+    transition: all 0.2s ease;
+}
+
+.top-action {
+    padding: 24px 24px 20px ;
+    position: relative;
+    border-bottom: 1px solid #8f8f909b;
+    margin-bottom: 24px;
+}
+.sub-action ul li{
+    margin-top: 0px;
+    padding-left: 0px;
+}
+
+.sub-action > ul > li > a {
+    padding: 10px 0;
+    color: #d1d0d0;
+    font-size: 12px!important;
+}
+
+.sub-action > ul > li:nth-child(1):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(2):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(3):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(4):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(5):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(6):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(7):hover  > a {
+    color: #000;
+}
+
+.others > li:hover .sub-action {
+    visibility: visible;
+    top: 44px;
+}
+.search-mb{
+    display: none;
+}
+.bodyy{
+    display: flex;
+    padding-top:20px ;
+}
+.thanhquanli{
+    border: 1px solid silver;
+    border-radius: 2em 0;
+    width: 470px;
+    font-weight: bold;
+    height: 500px;
+    margin-left: 20px;
+    
+    box-shadow: 10px 10px 12px 3px rgb(214, 179, 154);
+}
+.thanhquanli-mb{
+    display: none;
+}
+.menu-toggle .name{
+    margin-top: 40px;
+    text-align: center;
+    border-bottom: 1px solid saddlebrown;
+    padding-bottom: 40px;
+}
+.menu {
+    justify-content: space-between;
+    align-items: center; 
+    
+  }
+  ul{
+    list-style: none;
+    margin: 0px 0px 0px 60px;
+    padding: 0;
+    float: left;
+    
+  }
+  ul li{
+    margin-top: 50px;
+    
+  }
+  ul li a:hover{
+    color: firebrick;
+  }
+a {
+  text-decoration: none; 
+  color:#777777;
+  }
+  .quanlidh{
+    border-left: 3px solid saddlebrown ;
+    margin-left: 30px;
+    width: 100%;
+  }
+.quanlidh .name{
+    font-weight: bold; 
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.quanlidh .ttdh{
+    margin-left: 20px;
+    display: flex;
+    
+}
+.quanlidh .ttdh label{
+    padding-top:10px ;
+    padding-right: 10px;
+}
+table{
+    width: 100%     ;
+    font-size: 20px;
+}
+table tr th {
+    background-color: #777777;
+    height: 40px;
+}
+table tr td{
+    padding-top: 30px;
+    text-align: center;
+}
+.bars{
+    display: none;
+}
+/* --------------------cart---------------------- */
+/* Mobile iphone X width < 400px */
+@media only screen and (max-width: 400px){
+    
+}
+ 
+ /* iphone 6/7/8 plus*/
+ @media only screen and (min-width: 410px) and (max-width: 500px){
+    
+ }
+ /* width < 600px*/
+ @media only screen and (max-width: 600px){
+    .bars{
+        display: block;
+        font-size: 30px;
+        position: fixed;
+    }
+    
+    .thanhquanli-mb{
+        display: none;
+        width: 250px;
+        height: 300px;
+    }
+    .bodyy{
+        display: block;
+        padding-top:0px ;
+        height: 200px;
+        margin: 0;
+        
+    }
+    .menu-toggle .name{
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+      ul{
+        list-style: none;
+        margin: 0px 0px 0px 30px;
+        padding: 0;
+        float: left;
+        
+      }
+      ul li{
+        margin-top: 30px;
+        
+      }
+      ul li a:hover{
+        color: firebrick;
+      }
+      .quanlidh .ttdh{
+      display: block;
+    }
+    table{
+    width: 100%     ;
+    font-size: 12px;
+}
+table tr td{
+    text-align: center;
+}
+ }
+ /* Table width >= 730px to width < 750px ip 6/7/8 plus ngang */
+ @media only screen and (min-width: 730px) and (max-width: 750px) {
+   
+ }
+ 
+ /* Table width >= 600px to width < 720px small tablet*/
+ @media only screen and (min-width: 600px) and (max-width: 720px) {
+    
+ }
+ 
+ /* Table width >= 812px to width < 819px  ipXg */
+ @media only screen and (min-width: 812px) and (max-width: 819px) {
+    
+ }
+ @media only screen and (min-width: 800px) and (max-width: 811px) {
+   
+ }
+ /* Table width >= 760px to width < 790px  ipad */
+ @media only screen and (min-width: 760px) and (max-width: 790px) {
+    
+ }
+ /* Table width >= 820px to width < 1024px  ipad pro*/
+ @media only screen and (min-width: 820px) and (max-width: 1024px) {
+    .bodyy .bars i{
+        font-size: 50px;
+        position: fixed;
+    }
+ }
+ 
+ /* Table width > 1355px to width < 1390px */
+ @media only screen and (min-width: 1355px) and (max-width: 1390px) {
+    
+ }
+ 
+ @media only screen and (max-width: 1300px) {
+
+    
+    body{
+        font-family: "Arial", sans-serif; 
+        margin: 0 ;
+        padding: 0;
+    }
+    .head span p{
+        width: 100%; 
+        border-bottom: 1px solid Silver;
+        color: #777777; 
+        margin-bottom: 2em;
+    }
+    .thanhquanli{
+        display: none;
+    }
+    .thanhquanli-mb{
+        border-radius: 0px;
+        position: fixed;
+        background-color: aquamarine;
+        margin-left: 30px;
+        margin-top: 0px;
+        color: saddlebrown;
+        border: 1px solid silver;
+        font-weight: bold;
+        box-shadow: 10px 10px 12px 3px rgb(214, 179, 154);
+    }
+    .quanlidh{
+        border: none;
+        margin: 0px;
+    }
+    .quanlidh .name{
+        border: none;
+        margin-top: 80px;
+    }
+ }
+ @media (min-width: 1200px) {
+    
+}
+ 
+
+   

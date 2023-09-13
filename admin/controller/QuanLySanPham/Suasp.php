@@ -1,4 +1,6 @@
 <?php
+$user=$db->get('nhanvien', array());
+if ($user[0]['lv']==1 ) {
  if(isset($_GET['id'])){
     $id = $_GET['id'];
     $data_sanpham=$db->get('sanpham', array('id_sanpham'=>$id));
@@ -8,6 +10,7 @@
     $name = $_POST['tensanpham'];
     $price = $_POST['gia'];
     $trangthai = $_POST['trangthai'];
+    $id_danhmuc = $_POST['id_danhmuc'];
     $amount = $_POST['tonkho'];
     $xuatxu = $_POST['xuatxu'];
     $ngaytao = $_POST['ngaytao'];
@@ -27,6 +30,7 @@
             'img'=>$image,
             'gia'=>$price,
             'trangthai'=>$trangthai,
+            'id_danhmuc' => $id_danhmuc,
             'tonkho'=>$amount,
             'xuatxu'=>$xuatxu,
             'ngaytao'=>$ngaytao,
@@ -42,6 +46,7 @@
             'tensanpham'=>$name,
             'gia'=>$price,
             'trangthai'=>$trangthai,
+            'id_danhmuc' => $id_danhmuc,
             'tonkho'=>$amount,
             'xuatxu'=>$xuatxu,
             'ngaytao'=>$ngaytao,
@@ -54,7 +59,10 @@
  
     header('location: ?page=DsSanPham');
      }
-    
+ }
+}else{
+    echo '<script type="text/javascript">alert("Bạn không có quyền để thêm");
+    window.history.back();</script>';
 }
     include "./view/QuanLySanPham/Suasp.php";
 ?>

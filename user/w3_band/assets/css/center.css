@@ -1,9 +1,11 @@
 .footer{
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    
+   
+    border-top: 2px solid saddlebrown;
 }
 .site-bottom {
+    margin: 10px;
     padding: 60px 0 0;
     border-bottom: 1px solid #D1D2D4;
 }
@@ -134,18 +136,20 @@ img {
 .item-center-ft .title-footer .show-ul li{
    list-style: inherit;
  }
-/* ul{
+ul{
     padding: 0px;
 }
 ul li {
     list-style: none;
-} */
+}
 .item-center-ft ul li a {
     font-size: 14px;
     line-height: 24px;
     color: #57585A;
     margin-bottom: 16px;
     display: block;
+    text-decoration: none;
+
 }
 .item-center-ft .title-footer {
     font-weight: 600;

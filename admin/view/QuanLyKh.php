@@ -47,9 +47,10 @@
                                 <thead>
                                     <tr>
                                     <th>ID</th>
-                                    <th>Full_name</th>
+                                    <th>Tên khách hàng</th>
                                     <th>Số Điện Thoại</th>
-                                    <th colspan="3">Email</th>
+                                    <th>Email</th>
+                                    <th>Setting</th>
                                     </tr>
                                 </thead>
                                 <?php foreach ($data_khachhang as $key => $value) { ?>
@@ -59,6 +60,7 @@
                                         <td><?php echo $value['name'] ?></td>
                                         <td><?php echo $value['sdt'] ?></td>
                                         <td><?php echo $value['email'] ?></td>
+                                        <td><a onclick="return confirm('Xóa sản phẩm này?');" href="?page=xoakh&id=<?php echo $value['id_kh'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a></td>
                                     </tr>
                                 </tbody>
                                 <?php } ?>

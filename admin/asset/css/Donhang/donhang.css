@@ -62,19 +62,26 @@ h1{
 table{
     padding: 20px 40px 20px 60px;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     overflow-x: auto ;
     overflow-y: hidden;
+}
+table tr th{
+    width: 50px;
 }
 table tr td{
     text-align: center;
     padding: 20px 0px 20px 0px;
     border-bottom: 1px solid saddlebrown ;
+    color: black;
+}
+table tr td a{
+    margin-left: 10px;
 }
 table tr td a:hover{
-   color: red;
+   color: rgb(255, 255, 255);
 }
-form{
+.background-right-table-small{
     width: 930px;
     height: 400px;
     overflow-x:hidden ;

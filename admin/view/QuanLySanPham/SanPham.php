@@ -42,7 +42,7 @@
                     </div>
                     </form>
                     <div class="background-right-table-small">  
-                            <table >
+                            <table>
                                 <thead>
                                     <tr>
                                         <th>Id</th>

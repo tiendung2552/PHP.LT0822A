@@ -18,7 +18,7 @@
     </div>
     <div class="but">
     <a href="?controller=trangchu"><span class="button1"><button>TIẾP TỤC MUA SẮM</button></span></a>
-    <a href=""><span class="button2"><button>ĐƠN HÀNG CỦA BẠN</button></span></a> 
+    <a href="?controller=quanlidh"><span class="button2"><button>ĐƠN HÀNG CỦA BẠN</button></span></a> 
     </div>
   </section>
     <script src='js/cart.js'></script>

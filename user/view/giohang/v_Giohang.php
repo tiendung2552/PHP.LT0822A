@@ -7,9 +7,152 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/giohang/giohang.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/center.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/conter.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/repon_trangchu.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div id="headerr">
+		<div class="logo">
+        <a href="?controller=trangchu">
+			<img src="images/logo/logo3.jpg">
+            </a>
+		</div>
+        <div class="menu">
+        	<li><a href="?controller=spnu">Nữ</a>
+        		
+        	</li>
+        	<li><a href="?controller=spnam">Nam</a>
+        		
+        	</li>
+        	<li><a href="?controller=sptreem">Trẻ Em</a>
+        		
+        	</li>
+        	<li><a href="">Sale</a>
+        		
+        	</li>
+        	<li><a href="">Bộ Sưu Tập</a>
+        		
+        	</li>
+        	<li><a href="">Thông Tin</a>
+        		
+        	</li>
+        	<li><a href="">Tin Tức</a></li>
+        </div>
+        <div class="others">
+        	<li><input placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></li>
+        	<li> <a class="fa fa-paw" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Trợ giúp</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Hotline</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Live Chat</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Messenger</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Email</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Tra cứu đơn hàng</a></li>
+                    </ul>
+                </div>
+			</li>
+        	<li> <a class="fa fa-user" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href="?controller=tttk"><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
+                        <li><a href="?controller=quanlidh"><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
+                        <li><a href="?controller=logout"><i class="icon-logout"></i>Đăng xuất</a></li>
+                    </ul>
+                </div>
+			</li>
+            <?php 
+            $totalQuantity = 0;
+                if (isset($_SESSION['cartt'])) {
+                    foreach ($_SESSION['cartt'] as $key => $value) {
+                        if (isset($value['tonkho']) && is_numeric($value['tonkho'])) {
+                            $totalQuantity += $value['tonkho'];
+                        }
+                    }
+                }
+                ?>
+        	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span><?php echo $totalQuantity ?></span></a></li>
+        </div>
+    </div>
+	<section id="headerr-mb">
+		<div class="logo">
+			<img src="images/logo/logo3.jpg">
+		</div>
+        <div class="others">
+        	
+        	<li> <a class="fa fa-paw" href=""></a>
+			<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Trợ giúp</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Hotline</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Live Chat</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Messenger</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Email</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Tra cứu đơn hàng</a></li>
+                    </ul>
+            </div>
+			</li>
+        	<li> <a class="fa fa-user" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
+                        <li><a href="?controller=logout"><i class="icon-logout"></i>Đăng xuất</a></li>
+                    </ul>
+                </div>
+			</li>
+            <?php 
+        	$totalQuantity = 0;
+                if (isset($_SESSION['cartt'])) {
+                    foreach ($_SESSION['cartt'] as $key => $value) {
+                        if (isset($value['tonkho']) && is_numeric($value['tonkho'])) {
+                            $totalQuantity += $value['tonkho'];
+                        }
+                    }
+                }
+                ?>
+        	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span><?php echo $totalQuantity ?></span></a></li>
+        </div>
+        <div class="menu">
+        	<li><a href="">Nữ</a>
+        		
+        	</li>
+        	<li><a href="">Nam</a>
+        		
+        	</li>
+        	<li><a href="">Trẻ Em</a>
+        		
+        	</li>
+        	<li><a href="">Sale</a>
+        	
+        	</li>
+        	<li><a href="">Thông Tin</a>
+        		
+        	</li>
+        	<li class="menu1"><a href="">Tin Tức</a>
+			
+			</li>
+        </div>
+     
+    </i></div>
+    </section>
     <section class="item">
         <div class="container">
             <div class="car-top-wrap">
@@ -27,89 +170,102 @@
             </div>
         </div>
     </section>
+    <form action="" method="post">
     <div class="title-amount">
+        <?php
+        $totalQuantity = 0;
+                if (isset($_SESSION['cartt'])) {
+                    foreach ($_SESSION['cartt'] as $key => $value) {
+                        if (isset($value['tonkho']) && is_numeric($value['tonkho'])) {
+                            $totalQuantity += $value['tonkho'];
+                        }
+                    }
+                }
+                ?>
         <span class="title-head">Giỏ hàng của bạn: </span>
-        <span class="title-body">3</span>
+        <span class="title-body"><?php echo $totalQuantity ?></span>
         <span class="title-footer">Sản Phẩm</span>
     </div>
     <section class="table">
     <div class="container">
         <div class="cart-content">
             <div class="cart-content-left">
+           
                 <table>
                     <thead>
                     <tr > 
                         <th>Sản Phẩm</th>
                         <th>Tên Sản Phẩm</th>
-                        <th>Màu</th>
-                        <th>Size</th>
+                       
                         <th>SL</th>
                         <th>Thành Tiền</th>
                         <th>Xóa</th>
                     </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="anhsp"><img src="images/logo/logo.jpg" alt="" width="100px"></td>
-                            <td><p>Login VIP</p></td>
-                            <td class="anhcolor"><img src="img/logo.jpg" alt="" width="50px"></td>
-                            <td><p>XXL</p></td>
-                            <td><input type="number" value="1" min="1" max="20"></td>
-                            <td><p>12000000<sub>đ</sub></p></td>
-                            <td><button>X</button></td>
-                        </tr>
-                        <tr>
-                            <td class="anhsp"><img src="images/logo/logo.jpg" alt="" width="100px"></td>
-                            <td><p>Login VIP</p></td>
-                            <td class="anhcolor"><img src="img/logo.jpg" alt="" width="50px"></td>
-                            <td><p>XXL</p></td>
-                            <td><input type="number" value="1" min="1" max="20"></td>
-                            <td><p>12000000<sub>đ</sub></p></td>
-                            <td><button>X</button></td>
-                        </tr>
-                        <tr>
-                            <td class="anhsp"><img src="images/logo/logo.jpg" alt="" width="100px"></td>
-                            <td><p>Login VIP</p></td>
-                            <td class="anhcolor"><img src="img/logo.jpg" alt="" width="50px"></td>
-                            <td><p>XXL</p></td>
-                            <td><input type="number" value="1" min="1" max="20"></td>
-                            <td><p>12000000<sub>đ</sub></p></td>
-                            <td><button>X</button></td>
-                        </tr>
-                    </tbody>
+                   
+                    <?php 
+                        
+                                    $amount1 =0;
+                                    if (isset($_SESSION['cartt'])) {
+                                        foreach ($_SESSION['cartt'] as $key => $value) {
+                                        $amount = $value['tonkho'] * $value['gia'];
+                                        $amount1 += $amount;
+                                    ?>
+                                        <tr>
+                                            <td class="anhsp"><img src="../images/sanpham/<?php echo $value['img']?>" width="120px" height="100px" alt="Lỗi"></td>
+                                            <td><p><?php echo $value['tensanpham'] ?></p></td>
+                                            
+                                            <td class="sl">
+                                                <a href='?controller=changecart&method=giam&id=<?php echo $value['id_sanpham'] ?>'><i class='fa fa-minus'></i></a>
+                                                <?php echo $value['tonkho'] ?>
+                                                <a href='?controller=changecart&method=tang&id=<?php echo $value['id_sanpham'] ?>'><i class='fa fa-plus' ></i></a>
+                                            </td>
+                                            <td><p><?php echo $amount ?><sub>đ</sub></p></td>
+                                            <td><a class="a_link" href="?controller=dell&id=<?php echo $value['id_sanpham'] ?>">X</a></td>
+                                        </tr>
+                            <?php 
+                                    }
+                                }
+                            
+                            ?>
+                        </tbody>
                 </table>
             </div>
         
             <div class="cart-content-right">
+           
                <table>
                 <tr>
                     <th colspan="2">Tổng tiền giỏ hàng</th>
                 </tr>
                 <tr>
                     <td>Tổng sản phẩm</td>
-                    <td>1</td>
+                    <td><?php echo $totalQuantity ?></td>
                 </tr>
                 <tr>
                     <td>Tổng tiền hàng</td>
-                    <td>1</td>
+                    <td><?php echo $amount1 ?></td>
                 </tr>
                 <tr>
                     <td>Thành tiền</td>
-                    <td>1</td>
+                    <td><?php echo $amount1?></td>
                 </tr>
                </table>
                <div class="cart-content-right-text">
                     <p>(!!!)Miễn đổi trả đối với sản phẩm đồng giá  / sale trên 50%</p>
                </div>
                <div class="cart-content-right-button">
-                <a href="?controller=address"><button>Đặt Hàng</button></a>
+                <a href="?controller=payment&id=<?php echo $value['id_sanpham'] ?>"><p>Đặt Hàng</p></a>
                </div>
+              
             </div>
         </div>
     </div>
     </section>
+    </form>
     <div class="cart-page">
-        <a href="" class="btn btn--large btn--outline btn-cart-continue mb-3">
+        <a href="?controller=trangchu" class="btn btn--large btn--outline btn-cart-continue mb-3">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>

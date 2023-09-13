@@ -11,7 +11,7 @@
                 if (isset($_POST['btn_upd'])) {
                     $id1 = $_POST['id'];
                     $username = $_POST['user'];
-                    $password = $_POST['pass'];
+                    $password = md5($_POST['pass']);
                     $phone = $_POST['phone'];
                     $full_name = $_POST['full_name'];
                     $lv = $_POST['lv'];

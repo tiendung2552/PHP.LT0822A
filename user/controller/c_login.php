@@ -1,5 +1,6 @@
+
 <?php
-    if(isset($_SESSION['ss_admin'])){
+    if(isset($_SESSION['ss_user'])){
         header('location: ?controller=trangchu');
     }
 ?>
@@ -10,7 +11,7 @@
         $username = $_POST['phone'];
         $password = $_POST['pass'];
         $repass = $_POST['repass'];
-
+        
         $loi = array();
         if($username == ''){
            $loi['phone'] = 'username must no để trống';
@@ -18,23 +19,24 @@
         if($password == ''){
             $loi['pass'] = 'pass must no để trống ';
         }
-        if($repass == ''){
+        if($repass != $password){
             $loi['repass'] = 'pass không giống nhau';
         }
         if(!$loi){
+            $password = md5($password);
             $taikhoan = $db -> get('taikhoan', array( 'sdt' => $username ));
-            if(empty($taikhoan)){
-                $loi['phone'] = 'Username không tồn tại';
-            }else{
-
-            if($password!=$taikhoan[0]['pass']){
-                $loi['pass'] = 'Sai password';
+            if(empty($taikhoan) || ($password!=$taikhoan[0]['pass'])){
+                $loi['phone'] = 'Bạn đã nhập sai';
             }
         }
-    }
+    
         if(!$loi){
-            $_SESSION['ss_admin'] = $taikhoan[0]['full_name'];
-            $_SESSION['ss_admin1'] = $taikhoan[0]['id'];
+            $_SESSION['ss_id'] = $taikhoan[0]['id_user'];
+            $_SESSION['ss_user'] = $taikhoan[0]['name'];
+            $_SESSION['ss_sdt'] = $taikhoan[0]['sdt'];
+            $_SESSION['ss_email'] = $taikhoan[0]['email'];
+            $_SESSION['ss_diachi'] = $taikhoan[0]['diachi'];
+            
             header('location: ?controller=trangchu');
         }
 }

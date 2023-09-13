@@ -64,9 +64,17 @@ switch ($page) {
     case 'Xoasp':
         include "controller/QuanLySanPham/Xoasp.php";
         break;
+    case 'xoadh':
+        include "controller/QuanLyDonHang/xoadh.php";
+        break;
+    case 'xoakh':
+        include "controller/xoakh.php";
+        break;
     case 'Indonhang':
         include "controller/trangchu.php";
         break;
-        
+    case 'upd_tinhtrang':
+        include "controller/QuanLyDonHang/QuanLyDh.php";
+        break;
 }
 ?>

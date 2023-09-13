@@ -25,16 +25,14 @@
                                 <label for="sdt">Điện thoại:<span style='color:red'>*</span></label><br>
                                 <input type="text" name='phone' id='sdt' class="form-control"placeholder='Điện thoại...'>
                 </div>
-                <?php if (isset($loi['phone'])) { ?>
-                    <span style="color: red; " ><?php echo $loi['phone']; ?></span>
-                <?php } ?> 
+               
                 <div class="form-group">
                                 <label>Mật khẩu:<span style="color: red">*</span></label>
                                 <input class="form-control" type="password" value="" name="pass" placeholder="Mật khẩu..." aria-autocomplete="list">
                 </div>
-                <?php if (isset($loi['pass'])) { ?>
-                                    <span style="color: red; " ><?php echo $loi['pass']; ?></span>
-                                <?php } ?> 
+                <?php if (isset($loi['phone'])) { ?>
+                    <span style="color: red; " ><?php echo $loi['phone']; ?></span>
+                <?php } ?> 
                 <div class="form-group">
                                 <label>Nhập lại mật khẩu:<span style="color: red">*</span></label>
                                 <input class="form-control" type="password" value="" name="repass" placeholder="Nhập lại mật khẩu...">

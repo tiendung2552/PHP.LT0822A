@@ -23,13 +23,243 @@
    box-sizing: border-box;
    font-family: Arial, Helvetica, sans-serif; 
 }
+li {
+   list-style: none;
+}
+#headerr {
+   display: flex;
+   justify-content: space-between;
+   padding: 12px 50px;
+   height: 70px;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1;
+   background: rgba(255, 255, 255, 0.15);
+}
+
+#headerr.sticky {
+   background: rgba(255, 255, 255, 1);
+}
+
+#headerr:hover {
+   background: rgba(255, 255, 255, 1);
+}
+#headerr-mb{
+   display: none;
+}
+.logo {
+   flex: 1;
+} 
+
+.menu {
+   flex: 3;
+   display: flex;
+}
+
+.menu > li {
+   padding: 0 12px;
+   position: relative; 
+}
+
+.menu li a {
+   font-size: 15px;
+   font-weight: bold;
+   display: block;
+   line-height: 20px;
+   color: #000;
+}
+
+.menu > li > a:hover {
+   color: #FF5A5F;
+}
+
+.menu > li:nth-child(5) > a {
+   color: #FF0000;
+}
+
+.sub-menu {
+   position: absolute;
+   padding: 10px 0 10px 6px;
+   top: 40px;
+   right: 0;
+   background: #FFF;
+   z-index: 1;
+   border: 1px solid #E7E8E9;
+   box-sizing: border-box;
+   border-radius: 4px;
+   width: max-content;
+   min-width: 180px;
+   visibility: hidden;
+   transition: 0.1s;
+}
+
+.sub-menu ul {
+   padding-left: 20px;
+}
+
+.sub-menu > li > a {
+   display: inline-block;
+}
+
+.sub-menu li ul a {
+   font-weight: normal;
+   font-size: 12px!important;
+}
+
+.menu > li:hover .sub-menu {
+   visibility: visible;
+   top: 44px;
+}
+/* ---------------------------- others ----------------------- */
+.others {
+    flex: 1;
+    display: flex;
+}
+
+.others > li {
+    padding: 0 12px;
+    position: relative; 
+}
+
+.others li a {
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+    color: #000;
+}
+
+.others > li {
+    padding: 0 12px;
+    position: relative;
+}
+.others > li .fa-shopping-bag span {
+    padding-left: 10px;
+}
+.others > li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90%;
+    background-color: #696969;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.others > li:last-child::after {
+    display: none;
+}
+
+.others > li > input {
+    font-size: 15px;
+}
+
+.others > li:first-child {
+    position: relative;
+}
+
+.others > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background: transparent;
+}
+
+.others > li:first-child i {
+    position: absolute;
+    right: 9px;
+    padding: 2px;
+}
+
+.others > li > a:hover {
+    color: #FF5A5F;
+}
+.sub-action {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #FFF;
+    z-index: 1;
+    border: 1px solid #E7E8E9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: max-content;
+    min-width: 255px;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
+.others .icon {
+    font-size: 16px;
+    color: #000;
+    position: relative;
+}
+
+.sub-action ul {
+    padding: 0 24px;
+    transition: all 0.3s ease;
+}
+
+.top-action {
+    padding: 24px 24px 20px;
+    position: relative;
+    border-bottom: 1px solid #8f8f909b;
+    margin-bottom: 24px;
+}
+
+.sub-action > ul > li > a {
+    padding: 10px 0;
+    color: #d1d0d0;
+    font-size: 12px!important;
+}
+
+.sub-action > ul > li:nth-child(1):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(2):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(3):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(4):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(5):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(6):hover  > a {
+    color: #000;
+}
+
+.sub-action > ul > li:nth-child(7):hover  > a {
+    color: #000;
+}
+
+.others > li:hover .sub-action {
+    visibility: visible;
+    top: 44px;
+}
+.search-mb{
+    display: none;
+}
 .cart-top-wrap {
    display: flex;
    justify-content: center;
    align-items: center;
    
 }
-
 .cart-top {
    height: 2px;
    width: 79%;
@@ -75,12 +305,17 @@
 }
 .cart-content-left .tt-kh {
    font-size: 15px;
-   margin: 40px 0 50px 10px;
+   margin: 0px 0 50px 10px;
+   width: 350px;
+   display: flex;
 }
-.cart-content-left .address {
-   float: right;
-   
+.cart-content-left .tt-kh input{
+   border-radius: 10px;
 }
+.cart-content-left .tt-kh span{
+   width: 100%;
+}
+
 .cart-content-left .address button {
    width: 80px;
    height: 40px;
@@ -88,6 +323,7 @@
    border-radius: 10px 0px 10px 0px;
    box-shadow: 5px 6px 6px 0px rgb(163, 133, 133);
    margin-right: 3px ;
+   float: right;
 }
 .cart-content-left .address button:hover{
    background-color: brown;
@@ -110,7 +346,7 @@
    
    width: 40%;
    background-color: rgb(205, 227, 247);
-   height: auto;
+   height: 400px;
    margin-right: 1%;
    margin-left: 1%;
    border-radius: 5px;
@@ -123,7 +359,7 @@
    margin-bottom: 20px;
 }
 .cart-content-right .span{
-   margin-bottom: 20px;
+   margin-bottom: 40px;
 }
 .cart-content-right .span-left{
    font-size: 15px;
@@ -142,6 +378,10 @@
    padding-top: 20px;
    text-align: center;
 }
+.cart-content-right-button{
+   border-bottom: 1px solid saddlebrown;
+   padding-bottom: 50px;
+}
 .cart-content-right-button button{
    padding: 20px;
    width: 100%;
@@ -149,7 +389,9 @@
    background-color: rgb(122, 116, 116);
    color: rgb(0, 0, 0);
    border-radius: 10px 0px 10px 0px;
+   
 }
+
 .cart-content-right-button button:hover{
    background-color: brown;
    color: white;
@@ -178,7 +420,109 @@
    font-size: 18px;
    font-family: Arial, Helvetica, sans-serif;
 }
- 
+ /*--------------checkout-------------*/
+
+.col-12 .checkout-title{
+   font-size: 24px;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-bottom: 20px;
+   margin-top: 30px;
+}
+.col-12 .block-border{
+   padding: 35px 20px 0px 20px ;
+    position: relative;
+    border: 2px solid #7d8288;
+    border-radius: 32px 0px;
+    width: 100%;
+    margin-left: 0px ;
+}
+.checkout-payment .block-border .checkout-title{
+   font-size: 24px;
+}
+.col-12 .pt-4{
+   padding-top: 1.5rem;
+   width: 100%;
+}
+
+#days{
+   margin-left: 10px;
+   margin-right: 10px;
+}
+   .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+
+   }
+    
+   /* Ẩn input checkbox mặc định */
+   .toggle-switch input {
+      display: none;
+   }
+    
+   /* Tạo hình dạng cho thanh trượt */
+   .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 30px; /* Để tạo hình dạng thanh trượt tròn */
+      cursor: pointer;
+      transition: background-color 0.2s;
+   }
+    
+   /* Thiết lập màu nền cho thanh trượt khi được chọn */
+    .toggle-switch input:checked + .slider {
+      background-color: #2196F3;
+    }
+    
+   /* Tạo hình dạng trượt "bóng" khi được chọn */
+   .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      border-radius: 50%; /* Để tạo hình dạng trượt tròn */
+      transition: transform 0.2s;
+   }
+    
+   /* Đặt vị trí cho trượt "bóng" khi input checkbox được chọn */
+   .toggle-switch input:checked + .slider:before {
+      transform: translateX(30px);
+   }
+   .form-switch{
+      margin-bottom: -5px;
+   }
+   .order_vat_form .form-group{
+      border: 50%;
+   }
+   .checkout-payment{
+      margin-left: 1%;
+   }
+    .order_vat_form{
+      width: 100%;
+   }
+    .complete-but {
+      text-align: center;
+      margin: 10px;
+   }
+   .complete-but button{
+      padding: 20px 70px 20px 70px;
+      border-radius: 10px 0px 10px 10px;
+      background-color: rgb(148, 123, 123);
+      box-shadow: 7px 5px 8px 3px rgb(163, 133, 133);
+   }
+   .complete-but button:hover{
+      background-color: brown;
+      color: white;
+      box-shadow: 7px 5px 8px 3px rgb(167, 78, 78);
+   }
 /* --------------------cart---------------------- */
 /* Mobile iphone X width < 400px */
 @media only screen and (max-width: 400px){
@@ -246,6 +590,9 @@
    .block-border{
       margin-left:10px ;
       padding: 0px;
+   }
+   .time{
+      margin-left: 100px;
    }
 }
 /* Table width >= 600px to width < 720px small tablet*/

@@ -104,15 +104,16 @@
  
  
  
- .cart-content-left table tbody button {
+ .cart-content-left table tbody .a_link {
     width: 50px;
     height: 40px;
     background-color: rgb(148, 123, 123);
     border-radius: 10px 0px 10px 0px;
-    padding: 5px 0px 5px 0px;
+    padding: 15px;
     box-shadow: 5px 6px 6px 0px rgb(163, 133, 133);
+    text-decoration: none;
  }
- .cart-content-left  table tbody button:hover {
+ .cart-content-left  table tbody .a_link:hover {
     background-color: brown;
     color: white;
     box-shadow: 5px 6px 6px 0px  rgb(131, 48, 48);
@@ -122,6 +123,7 @@
     padding: 20px 0px 20px 0px;
     border-bottom: 2px solid rgb(117, 49, 49) ;   
  }
+
  .cart-content-left table td input {
    text-align: center;
    border: none;
@@ -157,7 +159,7 @@
  .cart-content-right td {
     padding: 40px 0px 10px 20px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
     border-collapse: collapse;
@@ -171,30 +173,39 @@
     color: #ff0000;
     margin-top: 40px;
     margin-bottom: 20px;
+    text-align: center;
  }
  
  .cart-content-right-button {
     width: 100%;
  }
- 
- .cart-content-right-button button {
-    padding: 25px;
-    width: 100%;
-    margin-top: 15px;
-    background-color: rgb(122, 116, 116);
-    color: rgb(0, 0, 0);
-    border-radius: 10px 0px 10px 0px;
-    font-size: 15px;
+ .cart-content-right-button p{
+   margin: 0px;
+   padding: 25px;
+   width: 100%;
+   margin-top: 15px;
+   background-color: rgb(122, 116, 116);
+   border-radius: 10px 0px 10px 0px;
+   font-size: 15px;
+   text-align: center;
+ }
+ .cart-content-right-button a{
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+ }
+ .cart-content-right-button a:hover{
+   color: white;
  }
  
- .cart-content-right-button button:hover {
+ .cart-content-right-button p:hover {
     background-color: brown;
-    color: white;
+    
     box-shadow: 5px 6px 6px 0px  rgb(131, 48, 48);
     
  }
  .cart-page{
    margin: 20px;
+
  }
  .cart-page .btn-cart-continue {
    max-width: 250px;
@@ -292,12 +303,17 @@
    padding: 15px 0px 15px 10px;
    }  
    .cart-content-right p{
-      font-size: 12px;
+      font-size: 14px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      margin: 10px 20px 10px 20px;
+      margin: 10px 20px 10px 0px;
    }
-   .cart-content-right-button button {
-      padding: 15px;
+   .cart-content-right-button p {
+      padding: 20px;
+      text-align: center;
+   }
+   .cart-content-left a i {
+      font-size: 8px;
+      padding: 0px;
    }
    .cart-page {
       margin: 0px;
@@ -324,6 +340,9 @@
       width: 65%;
       margin: 50px 0px 50px 100px;
    }
+   .cart-content-left a i {
+      font-size: 15px;
+  }
 }
 
 /* Table width >= 800px to width < 819px  ipX small ngang  */
@@ -339,6 +358,9 @@
       width: 65%;
       margin: 50px 0px 50px 140px;
    }
+   .cart-content-left a i {
+      font-size: 15px;
+  }
 }
 /* Table width >= 820px to width < 1024px  ipad pro*/
 @media only screen and (min-width: 820px) and (max-width: 1024px) {
@@ -365,6 +387,11 @@
       font-size: 25px;
       color: #ff0000;
     }
+    .cart-content-left table td {
+      padding: 20px 0px 20px 0px;
+      font-size: 13px;
+      text-align: center ;
+      }
 }
 @media only screen and (max-width: 1024px) {
    .cart-content {
@@ -375,11 +402,7 @@
       padding: 0px;
       margin: 0px;
    }
-   .cart-content-left table td {
-      padding: 20px 0px 20px 0px;
-      font-size: 10px;
-      text-align: center ;
-      }
+   
    .cart-content-right{
       margin: 0px;
       width: 100%;

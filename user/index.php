@@ -27,8 +27,28 @@ else{
             break;
 
         case 'logout':
-                include 'controller/c_logout.php';
-                break;
+            include 'controller/c_logout.php';
+            break;
+
+        case 'tttk':
+            include 'controller/taikhoan/c_thongtintk.php';
+            break;
+
+        case 'sodiachi':
+            include 'controller/taikhoan/c_sodiachi.php';
+            break;
+
+        case 'update':
+            include 'controller/taikhoan/c_thongtintk.php';
+            break;
+
+        case 'quanlidh':
+            include 'controller/taikhoan/c_quanlidh.php';
+            break;
+
+        case 'xoadh':
+            include 'controller/taikhoan/c_xoadh.php';
+            break;
 
         case 'spnu':
             include 'controller/c_spnu.php';
@@ -36,19 +56,30 @@ else{
 
          case 'spnam':
             include 'controller/c_spnam.php';
+            break;
+
+        case 'sptreem':
+            include 'controller/c_sptreem.php';
             break;  
 
         case 'product':
-            include 'view/v_product.php';
+            include 'controller/c_product.php';
                 break;
        
         case 'giohang':
-            include 'controller/giohang/c_giohang.php';
+            include 'view/giohang/v_Giohang.php';
                 break;
-         
-        case 'address':
-            include 'controller/giohang/c_address.php';
+
+         case 'addcart':
+            include 'controller/giohang/c_Giohang.php';
                 break;
+
+        case 'changecart':
+            include 'controller/giohang/c_Giohang.php';
+             break;
+        case 'dell':
+            include 'controller/giohang/c_Giohang.php';
+            break;
 
         case 'payment':
             include 'controller/giohang/c_payment.php';
@@ -57,7 +88,7 @@ else{
         case 'complete':
             include 'controller/giohang/c_complete.php';
                 break;
-                                 
+                           
     }
     
 ?>

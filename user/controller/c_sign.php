@@ -1,6 +1,8 @@
 <?php 
+
+
     if(isset($_POST['btn_sign'])){
-        
+        $id = $_SESSION['ss_id'];
         $username = $_POST['name'];
         $password = $_POST['pass'];
         $repass = $_POST['repass'];
@@ -35,10 +37,13 @@
         if($madd == ''){
             $loi['madd'] = 'catcha must no empty ';
         }
+        $mhmk = md5($repass);
+        $user=$db->get('taikhoan', array('sdt' => $phone));
+        if(empty($user)){ 
         if(!$loi){
             $db->insert('taikhoan', array(
             'name'=>$username,
-            'pass'=>$password,
+            'pass'=>$mhmk,
             'sdt'=>$phone,
             'email'=>$email,
             'ngaytao'=>$date,
@@ -48,14 +53,17 @@
             $db->insert('khach_hang',array(
                 'name' => $username,
                 'sdt' => $phone,
-                'email' => $email
+                'email' => $email,
+                'diachi' => $address
             ));
-        }
-    
-        if(!$loi){
             header('location: ?controller=login');
         }
+    }else{
+    echo "<script>alert ('Số điện thoại này đã tồn tại');
+                window.history.back();</script>";
     }
+             
+}
     
     include 'view/v_dangky.php';
     

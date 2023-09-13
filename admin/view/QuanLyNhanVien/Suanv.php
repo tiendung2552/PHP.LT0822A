@@ -45,7 +45,6 @@
                             </ul>
                             <?php } ?>
                             <button class="more-staff" name="btn_upd">Sửa</button>
-                            
                             <a href="?page=DsNhanVien" class="come-back"><button>Quay lại</button></a>
                           
                         </form>

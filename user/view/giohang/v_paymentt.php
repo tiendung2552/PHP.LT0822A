@@ -5,16 +5,159 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Giỏ Hàng | BDA</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/giohang/address.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/giohang/paymentt.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/center.css'>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/repon_trangchu.css'>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
 </head>
 <body>
+<div id="headerr">
+		<div class="logo">
+        <a href="?controller=trangchu">
+			<img src="images/logo/logo3.jpg">
+            </a>
+		</div>
+        <div class="menu">
+        	<li><a href="?controller=spnu">Nữ</a>
+        		
+        	</li>
+        	<li><a href="?controller=spnam">Nam</a>
+        		
+        	</li>
+        	<li><a href="?controller=sptreem">Trẻ Em</a>
+        		
+        	</li>
+        	<li><a href="">Sale</a>
+        		
+        	</li>
+        	<li><a href="">Bộ Sưu Tập</a>
+        		
+        	</li>
+        	<li><a href="">Thông Tin</a>
+        		
+        	</li>
+        	<li><a href="">Tin Tức</a></li>
+        </div>
+        <div class="others">
+        	<li><input placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></li>
+        	<li> <a class="fa fa-paw" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Trợ giúp</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Hotline</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Live Chat</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Messenger</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Email</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Tra cứu đơn hàng</a></li>
+                    </ul>
+                </div>
+			</li>
+        	<li> <a class="fa fa-user" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href="?controller=tttk"><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
+                        <li><a href="?controller=quanlidh"><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
+                        <li><a href="?controller=logout"><i class="icon-logout"></i>Đăng xuất</a></li>
+                    </ul>
+                </div>
+			</li>
+            <?php 
+            $totalQuantity = 0;
+                if (isset($_SESSION['cartt'])) {
+                    foreach ($_SESSION['cartt'] as $key => $value) {
+                        if (isset($value['tonkho']) && is_numeric($value['tonkho'])) {
+                            $totalQuantity += $value['tonkho'];
+                        }
+                    }
+                }
+                ?>
+        	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span><?php echo $totalQuantity ?></span></a></li>
+        </div>
+    </div>
+	<section id="headerr-mb">
+		<div class="logo">
+			<img src="images/logo/logo3.jpg">
+		</div>
+        <div class="others">
+        	
+        	<li> <a class="fa fa-paw" href=""></a>
+			<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Trợ giúp</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Hotline</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Live Chat</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Messenger</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Email</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Tra cứu đơn hàng</a></li>
+                    </ul>
+            </div>
+			</li>
+        	<li> <a class="fa fa-user" href=""></a>
+				<div class="sub-action" style="display: block;">
+                    <div class="top-action">
+                        <a class="icon" href=""><h3>Tài khoản của tôi</h3></a>
+                    </div>
+                    <ul>
+                        <li><a href=""><i class="icon-ic_avatar-1"></i>Thông tin tài khoản</a></li>
+                        <li><a href=""><i class="icon-ic_reload"></i>Quản lý đơn hàng</a></li>
+                        <li><a href=""><i class="icon-ic_placeholder"></i>Sổ địa chỉ</a></li>
+                        <li><a href=""><i class="icon-ic_headphones"></i>Hỏi đáp sản phẩm</a></li>
+                        <li><a href=""><i class="icon-ic_hand"></i>Hỗ trợ - IVY</a></li>
+                        <li><a href="?controller=logout"><i class="icon-logout"></i>Đăng xuất</a></li>
+                    </ul>
+                </div>
+			</li>
+            <?php 
+        	$totalQuantity = 0;
+                if (isset($_SESSION['cartt'])) {
+                    foreach ($_SESSION['cartt'] as $key => $value) {
+                        if (isset($value['tonkho']) && is_numeric($value['tonkho'])) {
+                            $totalQuantity += $value['tonkho'];
+                        }
+                    }
+                }
+                ?>
+        	<li> <a class="fa fa-shopping-bag" href="?controller=giohang"><span><?php echo $totalQuantity ?></span></a></li>
+        </div>
+        <div class="menu">
+        	<li><a href="">Nữ</a>
+        		
+        	</li>
+        	<li><a href="">Nam</a>
+        		
+        	</li>
+        	<li><a href="">Trẻ Em</a>
+        		
+        	</li>
+        	<li><a href="">Sale</a>
+        	
+        	</li>
+        	<li><a href="">Thông Tin</a>
+        		
+        	</li>
+        	<li class="menu1"><a href="">Tin Tức</a>
+			
+			</li>
+        </div>
+     
+    </i></div>
+    </section>
     <section class="body">
         <div class="container">
             <div class="car-top-wrap">
@@ -74,42 +217,149 @@
     
   </div>
    <section class="cart">
-        
+        <form action="" method="post">
    <div class="containe">
         <div class="cart-content">
+           
             <div class="cart-content-left">
             <h3> Địa chỉ giao hàng</h3>
-            <span class="tt-kh">DinhBa(Cơ Quan)</span> 
-            <span class="address"><a href="btn btn-primary" data-toggle="modal" data-target="#myModal">Chọn địa chỉ mới</a>
-            <button>Default</button></span><br>
-            <p  class="tt-kh">Điện thoại: 0395566099</p>
-            <p class="tt-kh">Địa chỉ: Quảng Yên, Hà An, Quảng Yên, Quảng Ninh</p>
-            <button>+ Thêm Địa Chỉ</button>    
+            <span class="address"><button>Default</button></span> 
+            <?php  
+            if (isset($_SESSION['ss_user'])){ ?>
+            <p class="tt-kh"><span>Tên người nhận: </span><input type="text" name="user" value="<?php echo $_SESSION['ss_user'] ?>"></p>
+           
+            <p  class="tt-kh"><span>Điện thoại: </span><input type="text" name="sdt" value="<?php echo  $_SESSION['ss_sdt'] ?>"></p>
+            
+            <p class="tt-kh"><span>Email : </span><input type="text" name="email" value="<?php echo $_SESSION['ss_email'] ?>"></p>
+
+            <p class="tt-kh"><span>Địa chỉ: </span><input type="text" name="diachi" value="<?php echo $_SESSION['ss_diachi'] ?>"></p>
+            <?php }  ?>
+           
             </div>
+            <?php
+             $totalQuantity = 0;
+             if (isset($_SESSION['cartt'])) {
+                 foreach ($_SESSION['cartt'] as $key => $value) {
+                     if (isset($value['tonkho']) && is_numeric($value['tonkho'])) {
+                         $totalQuantity += $value['tonkho'];
+                     }
+                 }
+             }
+            $amount1 =0;
+            if (isset($_SESSION['cartt'])) {
+                foreach ($_SESSION['cartt'] as $key => $value) {
+                $amount = $value['tonkho'] * $value['gia'];
+                $amount1 += $amount; 
+            }
+                }?>
             <div class="cart-content-right">
                 <h3>Tổng tiền giỏ hàng</h3>
                 <div class="span">
-                <span class="span-left">Tổng sản phẩm</span><span class="span-right">1</span><br>
+                <span class="span-left">Tổng sản phẩm</span><span class="span-right"><?php echo $totalQuantity ?></span><br>
                 </div>
                 <div class="span">
-                <span class="span-left">Tổng tiền hàng</span><span class="span-right">1</span><br>
+                <span class="span-left">Tổng tiền hàng</span><span class="span-right"><?php echo $amount1 ?></span><br>
                 </div>
                 <div class="span">
-                <span class="span-left">Thành tiền</span><span class="span-right">1</span><br>
+                <span class="span-left">Thành tiền</span><span class="span-right"><?php echo $amount1 ?></span><br>
                 </div>
+               
             <div class="cart-content-right-text">
                 <p>(!!!)Miễn đổi trả đối với sản phẩm đồng giá / sale trên 50%</p>
             </div>
-            <div class="cart-content-right-button">
-                <a href="?controller=payment"> <button>Hoàn Thành</button></a>
-            </div>
+           
             </div>
         </div>
     </div>
+   
    </section>
     
    
-</section>
+
+		
+		<div class="col-12 col-2xl-5">
+			<h3 class="checkout-title">Phương thức giao hàng</h3>
+			<div class="block-border">
+			<!-- hien tai chi lam phuong thuc giao nhanh -->
+				<label class="ds__item">
+					<input id="shipping_method_1" class="ds__item__input" type="radio" name="shipping_method" value="1" checked />
+						<span class="ds__item__label">Chuyển phát nhanh
+							<span class="delivery-time">
+								<p>Thời gian giao hàng dự kiến: <span class="time"><i id="days"></i><i id="dates"></i></span></p>
+							</span>
+						</span>
+				</label>
+			</div>
+			<div class="pt-4">
+				<h4 class="checkout-title1">
+				Bạn có muốn nhận hoá đơn VAT không ?
+				
+				<label class="toggle-switch form-switch">
+					<input type="checkbox" style="display: none;">
+					<span class="slider" onclick="showinp()"></span>
+				</label>
+				</h4>
+				   
+					
+				   
+				<div id="show-inp" style="display: none;" class="ds__item__contact-info pt-0 order_vat_form ">
+					<div class="form-group">
+						<input type="text" name="order_vat_email" class="form-control" placeholder="Nhập email" value="" />
+					</div>
+					<div class="form-group">
+						<input type="text" name="order_vat_company_name" class="form-control" placeholder="Nhập tên doanh nghiệp" value="" />
+					</div>
+					<div class="form-group">
+						<input type="text" name="order_vat_tax_code" class="form-control" placeholder="Nhập mã số thuế" value="" />
+					</div>
+					<div class="form-group">
+						<input type="text" name="order_vat_address" class="form-control" placeholder="Nhập địa chỉ" value="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="checkout-payment">
+		
+		<div class="block-border">
+			<h5 class="checkout-title">Phương thức thanh toán</h5>
+			<p>Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại.</p>
+				<div class="checkout-payment__options">
+					<label class="ds__item">
+						<input class="ds__item__input" type="radio" name="payment_method" id="payment_method_1" value="Thanh toán bằng thẻ tín dụng"  />
+						<span class="ds__item__label">
+							Thanh toán bằng thẻ tín dụng
+						</span>
+						<span style="margin-left: 3px">
+							<img src="https://pubcdn.ivymoda.com/ivy2/images/1.png" class="">
+						</span>
+					</label><br>
+					<label class="ds__item">
+						<input class="ds__item__input" type="radio" name="payment_method" id="payment_method_2" value="Thanh toán bằng thẻ ATM"  />
+						<span class="ds__item__label">
+							Thanh toán bằng thẻ ATM
+							<span>( Hỗ trợ thanh toán online hơn 38 ngân hàng phổ biến Việt Nam. )</span>
+						</span>
+					</label><br>
+					<label class="ds__item">
+						<input class="ds__item__input" type="radio" name="payment_method" id="payment_method_5" value="Thanh toán bằng Momo"  />
+						<span class="ds__item__label">
+							Thanh toán bằng Momo
+						</span>
+					</label><br>
+					<label class="ds__item">
+						<input class="ds__item__input" type="radio" name="payment_method" id="payment_method_3" value="hanh toán khi giao hàng" checked />
+						<span class="ds__item__label">
+							Thanh toán khi giao hàng
+						</span>
+					</label>
+			   </div>
+		</div>
+       
+	</section>
+    <div class="cart-content-right-button">
+               <button name="btn_payment" >Hoàn Thành</button>
+        </div>
+        </form>
 <!--Footer-->
 <section class="footer">
     <div class="site-bottom">
@@ -407,6 +657,6 @@
     </footer>
     <!-- site-footer -->
     
-    <script src='js/cart.js'></script>
+    <script src="./w3_band/assets/js/cart.js"></script>
 </body>
 </html>

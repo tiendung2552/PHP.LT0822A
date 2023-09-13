@@ -34,91 +34,50 @@
             <div class="background-right">
                 <div class="background-right-table">
                     <h1>DANH SÁCH ĐƠN HÀNG</h1>
+                    <form action="" method="get">
                     <div class="search">
-                    <input  placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></div>
+                    <input type="hidden" name="page" value="QuanlyDh">
+                    <input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
+                    <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
+                    </div>
+                    
                     <div class="background-right-table-small">  
-                        <form action="" method="post">
+                    
                             <table >
                                 <thead>
                                     <tr>
-                                    <th>ID</th>
                                     <th>Mã Đơn Hàng</th>
-                                    <th>Tên Khách Hàng</th>
-                                    <th>Số Điện Thoại</th>
-                                    <th>Địa Chỉ</th>
-                                    <th>Set</th>
+                                    <th>Mã Khách Hàng</th>
+                                    <th>Tổng Giá</th>
+                                    <th>Tình Trạng</th>
+                                    <th>Setting</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach ($data_donhang as $key => $value) { ?>
+                                      
                                     <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="?page=ct_donhang">Chi tiết</a></td>
+                                        <td><?php echo $value['id_donhang'] ?></td>
+                                        <td><?php echo $value['id_kh'] ?></td>
+                                        <td><?php echo $value['tong'] ?></td>
+                                        <td><?php echo $value['tinhtrang'] ?></td>
+                                        <td>
+                                        <a  href="?page=ct_donhang&id=<?php echo $value['id_donhang'] ?>">
+                                            <i style="color: black;" class="fa-solid fa-circle-info"></i></a>
+                                        <a href="?page=xoadh&id=<?php echo $value['id_donhang'] ?>" onclick="return confirm('Xóa sản phẩm này?');">
+                                            <i style="color: black;" class="fa-solid fa-trash"></i></a>
+                                        <a  style="color: black;" href="?page=QuanlyDh&id=<?php echo $value['id_donhang'] ?>" name="upd">Duyệt</a>
+                                        </td>
+                                        
                                     </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>23145</td>
-                                        <td>Trung Tu Quoc</td>
-                                        <td>0395566099</td>
-                                        <td>Trung Kính - Quang Hoa - Hà Nội </td>
-                                        <td><a href="Ct-donhang.html">Chi tiết</a></td>
-                                    </tr>
+                                   <?php } ?>
                                 </tbody>
                             </table>
-                          </form>
-                          <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
+                            </form>
+                          
                     </div>
+                    
+                    <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>
         </div>

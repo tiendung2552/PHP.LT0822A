@@ -46,7 +46,19 @@
                         </tr>
                         <tr>
                             <td class="left"><span class="span-left">Tên Sản Phẩm: </span> <span class="span-right"><input type="text" name="tensanpham" value="<?php echo $value['tensanpham'] ?>"></span></td>
-                            <td class="right"><span class="span-left">Id danh mục:  </span> <span class="span-right"><input type="text" name="id_danhmuc" value="<?php echo $value['id_danhmuc'] ?>"></span></td>
+                            <td class="right"><span class="span-left">Id danh mục:  
+                            <select name="id_danhmuc" class="span-right"  class="form-control" style="height: 3em;" name="" id="ttdh">
+                            <option value="0"><?php echo $value['id_danhmuc'] ?> </option>
+                            <option value="1">1-Quần Nam</option>
+                            <option value="2">2-Áo Nam</option>
+                            <option value="3">3-Quần Nữ</option>
+                            <option value="4">4-Áo Nữ</option>
+                            <option value="5">5-Đầm Nữ</option>
+                            <option value="6">6-Áo Trẻ Em</option>
+                            <option value="7">7-Quần Trẻ Em</option>
+                            
+                            </select>
+                            </td>
                         </tr>
                         <tr>
                             <td class="left"> <span class="span-left">Đơn Giá:   </span> <span class="span-right"><input type="text" name="gia" value="<?php echo $value['gia'] ?>"></span></td>

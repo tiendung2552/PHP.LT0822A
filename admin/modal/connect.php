@@ -16,13 +16,14 @@ class database {
     public function connect()
     {
         $this->conn = new mysqli($this->localhost, $this->user, $this->pass, $this->dtbname);
-        
+        mysqli_set_charset($this->conn,'UTF8');
         if (!$this->conn ){
             echo "Kết nối thất bại";
             exit();
         }
     }
 
+    
     public function get($table,$condition=array()){
         $sql = "SELECT * FROM $table";
 
@@ -82,25 +83,25 @@ class database {
 			//Bước 5: Cho hàm trả về giá trị 
 			return $result;
 		}
-        // public function get_like_like($table,$table2,$column,$column1,$col2,$value)
-		// {	
-		// 	//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
-		// 	$sql = "SELECT * from $table 
-        //             JOIN $table2 ON $table2.$col2 = $table.$col2";
-		// 	//Bước 2 : Cộng chuỗi phần điều kiện LIKE
-		// 	$sql .= " WHERE ($table2.$column = '$value') OR ($table.$column1 = '%$value%')";
-		// 	//Bước 3: Chạy câu lệnh
-		// 	$query = mysqli_query($this->conn,$sql);
-		// 	//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
-		// 	$result = array();
-		// 	if ($query) {
-		// 		while ($row = mysqli_fetch_assoc($query)) {
-		// 			$result[] = $row;
-		// 		}
-		// 	}
-		// 	//Bước 5: Cho hàm trả về giá trị 
-		// 	return $result;
-		// }
+        public function get_like_like1($table,$table1,$column,$col1,$value)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * from $table 
+                    JOIN $table1 ON $table1.$col1 = $table.$col1";
+			//Bước 2 : Cộng chuỗi phần điều kiện LIKE
+			$sql .= " WHERE ($table1.$column = '$value')";
+			//Bước 3: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 5: Cho hàm trả về giá trị 
+			return $result;
+		}
     public function insert($table, $data=array()){
         $keys = array_keys($data);
         $column = implode(",", $keys);

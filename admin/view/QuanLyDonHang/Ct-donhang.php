@@ -29,65 +29,38 @@
                 <div class="background-right-table">
                     <h1>CHI TIẾT ĐƠN HÀNG</h1>
                     <div class="background-right-table-small">  
-                        <form action="" method="post">
+                        <form action="" method="get">
                             <table >
                                 <thead>
                                     <tr>
-                                        <th>Mã Sản Phẩm</th>
-                                        <th>Img_link</th>
+                                        <th>Mã đơn hàng</th>
+                                        <th>id_sanpham</th>
                                         <th>Name Product</th>
                                         <th>Amount</th>
                                         <th>Unit Price</th>
-                                        <th>Price</th>
+        
                                         <th colspan="3">Setting</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                   
+                                    <?php foreach ( $data_ct_donhang2 as $key => $value) { ?>
+                                        <input type="hidden" name="id" value="<?php echo $value['id_ct']?>">
                                     <tr>
-                                        <td>23145</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>4000000</td>
+                                        <td><?php echo $value['id_donhang'] ?></td>
+                                        <td><?php echo $value['id_sanpham'] ?></td>
+                                        <td><?php echo $value['tensanpham'] ?></td>
+                                        <td><?php echo $value['soluongsp'] ?></td>
+                                        <td><?php echo $value['don_gia'] ?></td>
+                                        
                                         <td class="btn">
-                                            <button>Chưa Xác Nhận</button>
+                                            <a href="?page=ct_donhang&id=<?php echo $value['id_sanpham'] ?>" name="xoa"><button name="xoa">Xóa</button></a>
+                                           
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>23145</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>4000000</td>
-                                        <td class="btn">
-                                            <button>Chưa Xác Nhận</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>23145</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>4000000</td>
-                                        <td class="btn">
-                                            <button>Chưa Xác Nhận</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>23145</td>
-                                        <td><img src="img/backgrou.jpg" width="100px" height="100px"></td>
-                                        <td>backgroud</td>
-                                        <td>2</td>
-                                        <td>2000000</td>
-                                        <td>4000000</td>
-                                        <td class="btn">
-                                            <button>Chưa Xác Nhận</button>
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
+                                <?php } ?>
                             </table>                   
                           </form>
                           <a href="?page=ct_donhang" class="more-staff" ><button>In Đơn Hàng</button></a>
