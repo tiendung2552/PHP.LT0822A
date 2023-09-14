@@ -32,7 +32,6 @@
                             <?php foreach ($user as $key => $value) { ?>
                             <ul class="ul-head">
                                 <ul  class="ul-left">
-                                    <li><span class="span-left">ID:</span> <span class="span-right"><input type="text" name="id"></span></li>
                                     <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user"></span></li>
                                     <li><span class="span-left">Password:</span> <span class="span-right"><input type="text" name="pass"></span></li>
                                 </ul>

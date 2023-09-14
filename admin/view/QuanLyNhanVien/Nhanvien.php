@@ -68,7 +68,7 @@
                                         <td><?php echo $value['lv'] ?></td>
                                         <td class="btn">
                                             <a href="?page=Suanv&id=<?php echo $value['id'] ?>"><i class="fa-solid fa-gear"></i></a>
-                                            <a onclick="return confirm('Xóa sản phẩm này?');" href="?page=Xoanv&id=<?php echo $value['id'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a>
+                                            <a onclick="return confirm(' Bạnn muốn xa thải nhân viên này?');" href="?page=Xoanv&id=<?php echo $value['id'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>

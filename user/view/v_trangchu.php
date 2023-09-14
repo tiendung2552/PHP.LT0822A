@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>2002 Shop</title>
+    <title>Trang chủ</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/conter.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/center.css'>
@@ -47,7 +47,7 @@
         <div class="others">
         
         	<li><form action="" method="get"><input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>" >
-             <i  class="fas fa-search"></i></li>
+            <i  class="fas fa-search"></i></li>
              </form>
         	<li> <a class="fa fa-paw" href=""></a>
        

@@ -36,7 +36,7 @@
                             <ul>
                                 <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user"></span></li>
                                 
-                                <li><span class="span-left1">Password:</span> <span class="span-right1"><input type="text" name="pass"></span></li>
+                                <li><span class="span-left1">Password:</span> <span class="span-right1"><input type="password" name="pass"></span></li>
                                 <?php if (isset($loi['user'])) { ?>
                                     <span style="color: red; margin:30px 0px 0px 370px" ><?php echo $loi['user']; ?></span>
                                 <?php } ?> 

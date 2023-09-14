@@ -60,13 +60,14 @@
                                         <td><?php echo $value['id_donhang'] ?></td>
                                         <td><?php echo $value['id_kh'] ?></td>
                                         <td><?php echo $value['tong'] ?></td>
-                                        <td><?php echo $value['tinhtrang'] ?></td>
+                                        <td><?php echo $value['tinhtrang'] ?>
+                                       
                                         <td>
                                         <a  href="?page=ct_donhang&id=<?php echo $value['id_donhang'] ?>">
                                             <i style="color: black;" class="fa-solid fa-circle-info"></i></a>
-                                        <a href="?page=xoadh&id=<?php echo $value['id_donhang'] ?>" onclick="return confirm('Xóa sản phẩm này?');">
+                                        <a href="?page=xoadh&id=<?php echo $value['id_donhang'] ?>" onclick="return confirm('Bạn muốn xóa đơn hàng của khách?');">
                                             <i style="color: black;" class="fa-solid fa-trash"></i></a>
-                                        <a  style="color: black;" href="?page=QuanlyDh&id=<?php echo $value['id_donhang'] ?>" name="upd">Duyệt</a>
+                                        <a  style="color: black;" href="?page=duyet&id=<?php echo $value['id_donhang'] ?>" name="upd">Duyệt</a>
                                         </td>
                                         
                                     </tr>

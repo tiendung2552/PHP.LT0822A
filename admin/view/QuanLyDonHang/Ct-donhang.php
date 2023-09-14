@@ -63,8 +63,8 @@
                                 <?php } ?>
                             </table>                   
                           </form>
-                          <a href="?page=ct_donhang" class="more-staff" ><button>In Đơn Hàng</button></a>
-                          <a href="?page=QuanLyDh" class="come-back"><button>Quay lại</button></a>
+                          <a href="?page=indh" class="more-staff" ><button>In Đơn Hàng</button></a>
+                          <a href="?page=QuanlyDh" class="come-back"><button>Quay lại</button></a>
                     </div>
                 </div>
             </div>

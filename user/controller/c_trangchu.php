@@ -26,7 +26,7 @@ if (isset($_GET['keyword'])) {
 //sản phẩm chung 
     $data_sanpham=$db->get('sanpham', array('loaisanpham' => 'ao thun nam')); 
     $data_sanpham1=$db->get('sanpham', array('loaisanpham' => 'ao kieu nu')); 
-    //Kiểm tra xem có tồn tại keyword trên thanh url không
+    
     
     include 'view/v_trangchu.php';
 ?>

@@ -28,15 +28,15 @@
                 <div class="background-right-table">
                     <h1>THÊM SẢN PHẨM</h1>
                     <div class="background-right-table-small">  
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?php echo $value['id_sanpham'] ?>">
                             <table>
                                 <tr>
                                     <th colspan=2>
                                     <span class="span-right">
-                                        <input class="right1" type="file" name="img" id="image-input" onchange="chooseFile(this)" 
-                                            accept="image/*">
-                                        <img alt="" id="image" width="100px" height="100px" src="../images/sanpham/<?php echo $value['img'] ?>">
+                                    <input class="right1" type="file" name="images" id="image-input" onchange="chooseFile(this)" 
+                                    accept="image/*">
+                                    <img alt="" id="image" width="100px" height="100px" src="../images/sanpham/<?php echo $value['img'] ?>">
                                     </span>
                                     </th>
                                     
@@ -47,7 +47,19 @@
                                 </tr>
                                 <tr>
                                     <td class="left"> <span class="span-left">Đơn Giá:   </span> <span class="span-right"><input type="text" name="gia" placeholder="Xuất xứ sản phẩm"></span></td>
-                                    <td class="right"><span class="span-left">Id danh mục:  </span> <span class="span-right"><input type="text" name="id_danhmuc" placeholder="id"></span></td>
+                                    <td class="right"> 
+                                        <select name="id_danhmuc" class="span-right"  class="form-control" style="height: 3em;" name="" id="ttdh">
+                                            <option value="0">Chọn loại sản phẩm </option>
+                                            <option value="1">1-Quần Nam</option>
+                                            <option value="2">2-Áo Nam</option>
+                                            <option value="3">3-Quần Nữ</option>
+                                            <option value="4">4-Áo Nữ</option>
+                                            <option value="5">5-Đầm Nữ</option>
+                                            <option value="6">6-Áo Trẻ Em</option>
+                                            <option value="7">7-Quần Trẻ Em</option>
+                            
+                                        </select>
+                                </td>
                                 </tr>
                                 <tr>
                                     <td class="left"><span class="span-left">Trang Thái:   </span> <span class="span-right"><input type="text" name="trangthai" placeholder="Xuất xứ sản phẩm"></span></td>
@@ -57,8 +69,14 @@
                                     <td class="left"><span class="span-left">Tồn Kho:      </span> <span class="span-right"><input type="text" name="tonkho" placeholder="Xuất xứ sản phẩm"></span></td>
                                     <td class="right"><span class="span-left">Loại sản phẩm:</span> <span class="span-right"><input type="text" name="loaisanpham" placeholder="Xuất xứ sản phẩm"></span></td>
                                 </tr>
+                                <tr>
+                                    <td colspan=2><?php if (isset($loi['user'])) { ?>
+                                    <span style="color: red; margin:30px 0px 0px 370px" ><?php echo $loi['user']; ?></span>
+                                <?php } ?> </td>
+                                </tr>
                                 <tr class="bottom" ;>
-                                    <td colspan=2><button class="more-staff" name="btn_them">Thêm</button>
+                                    <td colspan=2>
+                                    <input type="submit" name="btn_them" class="more-staff" value="Thêm" >
                                     <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a></td>
                                 </tr>
                             </table>

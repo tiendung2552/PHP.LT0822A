@@ -17,15 +17,19 @@ if ($user[0]['lv']==1) {
     $loaisp = $_POST['loaisanpham'];
 
     
-    $image = $_FILES['img']['name'];
-    $image_temp=$_FILES['img']['tmp_name'];
+    $image = $_FILES['images']['name'];
+    $image_temp = $_FILES['images']['tmp_name'];
   
-    move_uploaded_file($image_temp, '../img/sanpham/'.$image); 
+    move_uploaded_file($image_temp, "../images/sanpham/$image" ); 
+    $loi = array();
+    if($name == '' && $price =='' && $trangthai =='' && $id_danhmuc =='' && $amount =='' && $xuatxu =='' 
+    && $ngaytao =='' && $loaisp  ==''){
+        $loi['user'] = 'không được để trống thông tin';
+     }
     
     
     if(!$loi){
         $db->insert('sanpham', array(
-            'id_sanpham'=>$id1,
             'tensanpham'=>$name,
             'img'=>$image,
             'gia'=>$price,

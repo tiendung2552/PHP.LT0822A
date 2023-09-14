@@ -61,7 +61,8 @@
             'ghichu' => $note,
         ),);
     }
-        header('location: ?controller=complete');
+         unset($_SESSION['cartt']);
+            header('location: ?controller=complete');
     }
     
 }

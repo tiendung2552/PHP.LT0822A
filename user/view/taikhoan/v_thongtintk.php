@@ -185,48 +185,75 @@
         </DIV>
         
         <DIV class="taikhoancuatoi">
-        <form action="" method="post">
+        
             <label for="" class="name"><h4 style="font-weight: bold;">TÀI KHOẢN CỦA TÔI</h4></label>
             <div class="right">
                 <div class="bang1">
                 <table style="width:100%;border: none;">
                     <tr class="b1">
                         <td> <label for="">Họ tên </label></td>
-                        <td ><input class="input_text" type="text" class="form-control" class="ip" name="user" value="<?php echo $_SESSION['ss_user'] ?>"></td>
+                        <td class="input2"><?php echo $_SESSION['ss_user'] ?></td>
                     </tr>
                     <tr class="b1">
                         <td><label for="">Số điện thoại</label> </td>
-                        <td ><input class="input_text" type="text" class="form-control" class="ip" name="sdt" value="<?php echo $_SESSION['ss_sdt'] ?>"></td>
+                        <td class="input2"><?php echo $_SESSION['ss_sdt'] ?></td>
 
                     </tr>
                     <tr class="b1">
                         <td><label for="">Email: </label></td>
-                        <td ><input class="input_text" type="email" class="form-control" class="ip" name="diachi" value="<?php echo $_SESSION['ss_email'] ?>"></td>
+                        <td class="input2"><?php echo $_SESSION['ss_email'] ?></td>
 
                     </tr>
-                    <tr class="b1">
-                        <td><label for="">Giới tính:</label></td>
-                        <td>
-                        <span>
-                            <span><label for=""><input type="radio" name="optradio" id="" value="Nam" class="gt">
-                            Nam</label></span>
-                           
-                            <span><label for=""><input type="radio" name="optradio" id=""  value="Nữ" class="gt">
-                            Nữ</label></span>
+                    
                             
-                            <span><label for=""> <input type="radio" name="optradio" id="" value="Khác" class="gt">
-                            Khác</label></span> 
-                        </span>
-                        </td>
-
-                    </tr>
-
                     <tr>
-                        <td colspan="2" class="nut"><button class="btn btn-dark cn" name="btn_upd">CẬP NHẬT</button>
-                        <button class="dmk"> ĐỔI MẬT KHẨU</button></td> 
+                        <td colspan="2" class="nut"><button id="openModalBtn" class="btn btn-dark cn" name="btn_upd">CẬP NHẬT</button>
+                        <button class="dmk" id="openChangePasswordModalBtn" class="modal-button"> ĐỔI MẬT KHẨU</button></td> 
                     </tr>
                 </table>
                 </div>
+
+                <!-- Modal đổi mật khẩu -->
+                <form id="changePasswordForm">
+                <div id="changePasswordModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeChangePasswordModalBtn">&times;</span>
+                        <!-- Nội dung modal -->
+                        
+                            <h2>Đổi mật khẩu</h2>
+                            <label for="username">Mật khẩu cũ: </label>
+                            <input type="text" id="username" name="username"><br>
+
+                            <label for="username">Mật khẩu mới:</label>
+                            <input type="text" id="username" name="username"><br>
+
+                            <label for="email">Nhập lại mật khẩu mới:</label>
+                            <input type="email" id="email" name="email"><br>
+
+                            <button type="submit">Đổi mật khẩu</button>
+                        
+                    </div>
+                </div>
+                <!-- Modal update tài khoản -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeModalBtn">&times;</span>
+                        <!-- Nội dung modal -->
+                            <h2>Cập nhật tài khoản</h2>
+                            <label for="username">Họ tên:</label>
+                            <input type="text" id="username" name="username"><br>
+
+                            <label for="username">Số điện thoại:</label>
+                            <input type="text" id="username" name="username"><br>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email"><br>
+
+                            <button type="submit">Cập nhật</button>
+                       
+                    </div>
+                </div>
+                </form>
                 <div class="bang1-mb">
                     <ul>
                         <li>
@@ -247,7 +274,7 @@
                         <button class="dmk">ĐỔI MẬT KHẨU</button></td> 
                       </li>
                     </ul>
-                    </form>
+                   
                 </div>
                 
                 <div class="bang2">
@@ -283,6 +310,48 @@
             grap.style.display = "none";
           }
         }
+        // Lấy tham chiếu đến modal và các nút liên quan
+var modal = document.getElementById('myModal');
+var openModalBtn = document.getElementById('openModalBtn');
+var closeModalBtn = document.getElementById('closeModalBtn');
+
+// Khi người dùng nhấp vào nút "Cập nhật thông tin," mở modal
+openModalBtn.onclick = function() {
+    modal.style.display = 'block';
+}
+
+// Khi người dùng nhấp vào nút đóng (X), đóng modal
+closeModalBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Đóng modal khi người dùng nhấp vào bất kỳ nơi nào bên ngoài modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+// Lấy tham chiếu đến modal và các nút liên quan
+var changePasswordModal = document.getElementById('changePasswordModal');
+var openChangePasswordModalBtn = document.getElementById('openChangePasswordModalBtn');
+var closeChangePasswordModalBtn = document.getElementById('closeChangePasswordModalBtn');
+
+// Khi người dùng nhấp vào nút "Đổi mật khẩu," mở modal đổi mật khẩu
+openChangePasswordModalBtn.onclick = function() {
+    changePasswordModal.style.display = 'block';
+}
+
+// Khi người dùng nhấp vào nút đóng (X), đóng modal đổi mật khẩu
+closeChangePasswordModalBtn.onclick = function() {
+    changePasswordModal.style.display = 'none';
+}
+
+// Đóng modal đổi mật khẩu khi người dùng nhấp vào bất kỳ nơi nào bên ngoài modal
+window.onclick = function(event) {
+    if (event.target == changePasswordModal) {
+        changePasswordModal.style.display = 'none';
+    }
+}
         </script>
 </body>
 </html>

@@ -25,7 +25,6 @@ if ($user[0]['lv']==1 ) {
     {
         move_uploaded_file($image_temp, "../images/sanpham/$image" ); 
         $db->update('sanpham', array(
-            'id_sanpham'=>$id1,
             'tensanpham'=>$name,
             'img'=>$image,
             'gia'=>$price,
@@ -42,7 +41,6 @@ if ($user[0]['lv']==1 ) {
     }else
     {
         $db->update('sanpham', array(
-            'id_sanpham'=>$id1,
             'tensanpham'=>$name,
             'gia'=>$price,
             'trangthai'=>$trangthai,

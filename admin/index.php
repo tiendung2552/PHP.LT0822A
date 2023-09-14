@@ -70,8 +70,11 @@ switch ($page) {
     case 'xoakh':
         include "controller/xoakh.php";
         break;
-    case 'Indonhang':
-        include "controller/trangchu.php";
+    case 'duyet':
+        include "controller/QuanLyDonHang/upd_duyet.php";
+        break;
+    case 'indh':
+        include "view/QuanLyDonHang/Indonhang.php";
         break;
     case 'upd_tinhtrang':
         include "controller/QuanLyDonHang/QuanLyDh.php";
