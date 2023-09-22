@@ -4,3 +4,4 @@ itemsliderbar.forEach(function(menu,index){
         menu.classList.toggle("block")
     })
 })
+

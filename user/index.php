@@ -11,7 +11,7 @@ else{
 
     switch ($controller){
         case 'demo':
-            include 'view/v_trangdemo.php';
+            include 'controller/c_tranggoc.php';
             break;
 
         case 'trangchu':

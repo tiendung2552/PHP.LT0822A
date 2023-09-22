@@ -116,6 +116,14 @@ a {
     position: relative; 
 }
 
+.others .search form{
+    display: flex;
+    width: 150px;
+}
+.others .search form button{
+    background-color: white;
+    border:  none;
+}
 .others li a {
     font-size: 15px;
     font-weight: bold;
@@ -155,7 +163,7 @@ a {
 }
 
 .others > li:first-child input {
-    width: 100%;
+    width: 60%;
     border: none;
     border-bottom: 1px solid #333;
     outline: none;
@@ -1388,6 +1396,11 @@ a {
 .slider-product-content-live-icons-tel {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Cài đặt khoảng cách giữa các sản phẩm */
+    gap: 10px;
+    
 }
 
 
@@ -1457,6 +1470,30 @@ a {
 
 .slider-all {
     padding: 15px 0;
+}
+.phantrang{
+    display: flex;
+    margin-left: 530px;
+}
+.phantrang a{
+    text-align: center;
+    width: 20px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 90% ;
+}
+.phantrang a:hover{
+    background-color: rgb(139, 138, 134);
+    color: white;
+}
+.phantrang button{
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.phantrang button:hover{
+    color: red;
 }
 @media screen and (max-width: 768px) {
     .list-color ul li {

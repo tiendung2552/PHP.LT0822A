@@ -39,17 +39,80 @@
             return $ketqua;
         }
        
-        public function get_like($table, $column, $value){
-            $sql = "SELECT * FROM $table WHERE $column LIKE '%$value%'";
-            $query = mysqli_query($this->conn, $sql);
-            $ketqua = array();
-            if ($query) {
-                while ($row = mysqli_fetch_assoc($query)){
-                    $ketqua[] = $row;
-                }
+        public function get_like($table,$column ,$value)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * from $table ";
+			//Bước 2 : Cộng chuỗi phần điều kiện LIKE
+			$sql .= "WHERE $column LIKE '%$value%'";
+			//Bước 3: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 5: Cho hàm trả về giá trị 
+			return $result;
+		}
+        public function get_like_like($table,$columns,$value)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * from $table ";
+			// Bước 2: Chuyển danh sách cột thành một mảng (nếu nó không phải là một mảng)
+            if (!is_array($columns)) {
+                $columns = [$columns];
             }
-            return $ketqua;
-        }
+        
+            // Bước 3: Tạo mảng cho phần điều kiện LIKE cho mỗi cột
+            $conditions = [];
+            foreach ($columns as $column) {
+                $conditions[] = "$column LIKE '%$value%'";
+            }
+        
+            // Bước 4: Kết hợp các điều kiện bằng toán tử OR
+            $sql .= "WHERE " . implode(" OR ", $conditions);
+			//Bước 5: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 6: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 5: Cho hàm trả về giá trị 
+			return $result;
+		}
+        public function get_limit($table, $condition=array(), $limit)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * FROM $table";
+			//Bước 2: Kiểm tra xem có điều kiện không và cộng chuỗi tương ứng 
+			if (!empty($condition)) {
+				$sql.=" WHERE";
+				foreach ($condition as $key => $value) {
+					$sql.= " $key = '$value' AND";
+				}
+				$sql = trim($sql, "AND");
+			}
+			//Bước 3: cộng chuỗi có thêm điều kiện limit vào
+			$sql .= " LIMIT $limit";
+			//Bước 4: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 5: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 6: Cho hàm trả về giá trị 
+			return $result;
+		}
+        // Thêm dữ liệu mới vào bảng
         public function insert($table, $data=array())
             {
                 $keys = array_keys($data);
@@ -63,7 +126,7 @@
                 $query = mysqli_query($this->conn, $sql);
                 return $query;
             }
-
+        // Xóa dữ liệu từ bảng
             public function delete($table,$condition=array())
             {
                 $sql = " DELETE FROM $table WHERE ";
@@ -74,6 +137,7 @@
                 $query = mysqli_query($this->conn,$sql);
                 return $query;
             }
+        // Cập nhật dữ liệu vào bảng
             public function update($table,$data=array(),$condition=array()) {
 			$str = '';
 			foreach ($data as $key => $value) {
@@ -89,33 +153,11 @@
 			return $query;
         
             }
-            public function get_like_like1($table,$table1,$table2,$col1,$col2, $condition_column, $condition_value)
-            {	
-                //Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
-                $sql = "SELECT * from $table 
-                        JOIN $table1 ON $table1.$col1 = $table.$col1
-                        JOIN $table2 ON $table2.$col2 = $table1.$col2";
-                //Bước 2 : Cộng chuỗi phần điều kiện LIKE
-                $sql .= " WHERE $table2.$condition_column = '$condition_value'";
-                //Bước 3: Chạy câu lệnh
-                $query = mysqli_query($this->conn,$sql);
-                //Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
-                $result = array();
-                if ($query) {
-                    while ($row = mysqli_fetch_assoc($query)) {
-                        $result[] = $row;
-                    }
-                }
-                //Bước 5: Cho hàm trả về giá trị 
-                return $result;
-            }
+        // Trả về ID của bản ghi mới nhất
             function insert_id()
             {
             // Lấy kết nối đến cơ sở dữ liệu
             return $this->conn->insert_id;
-            
-            // Trả về ID của bản ghi mới nhất
-            
             }
     }
 ?>

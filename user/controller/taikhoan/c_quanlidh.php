@@ -9,5 +9,7 @@ exit();
     $data_ct_donhang = $db->get_like_like1('ct_donhang', 'donhang', 'khach_hang', 'id_donhang', 'id_kh', 'id_kh', $id_kh);
 
 
-    include "view/taikhoan/v_quanlidh.php";
+  
+        include 'view/taikhoan/v_quanlidh.php';
+  
  ?>

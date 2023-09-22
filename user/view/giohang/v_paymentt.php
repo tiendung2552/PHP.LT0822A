@@ -229,8 +229,6 @@
             <p class="tt-kh"><span>Tên người nhận: </span><input type="text" name="user" value="<?php echo $_SESSION['ss_user'] ?>"></p>
            
             <p  class="tt-kh"><span>Điện thoại: </span><input type="text" name="sdt" value="<?php echo  $_SESSION['ss_sdt'] ?>"></p>
-            
-            <p class="tt-kh"><span>Email : </span><input type="text" name="email" value="<?php echo $_SESSION['ss_email'] ?>"></p>
 
             <p class="tt-kh"><span>Địa chỉ: </span><input type="text" name="diachi" value="<?php echo $_SESSION['ss_diachi'] ?>"></p>
             <?php }  ?>
@@ -347,7 +345,7 @@
 						</span>
 					</label><br>
 					<label class="ds__item">
-						<input class="ds__item__input" type="radio" name="payment_method" id="payment_method_3" value="hanh toán khi giao hàng" checked />
+						<input class="ds__item__input" type="radio" name="payment_method" id="payment_method_3" value="Thanh toán khi giao hàng" checked />
 						<span class="ds__item__label">
 							Thanh toán khi giao hàng
 						</span>

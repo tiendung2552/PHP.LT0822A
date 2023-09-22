@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>2002 Shop</title>
+    <title>Trang chủ</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/conter.css'>
 	<link rel='stylesheet' type='text/css' media='screen' href='./w3_band/assets/css/center.css'>
@@ -46,9 +46,15 @@
         </div>
         <div class="others">
         
-        	<li><form action="" method="get"><input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>" >
-             <i  class="fas fa-search"></i></li>
-             </form>
+        	<li class="search">
+                <form action="" method="get">
+                <input type="hidden" name="controller" value="trangchu">
+                <input id="btn-search" name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" >
+                <button type="submit" class="fas fa-search"></button>
+                <!-- <input id="btn-search" class="btn btn-default"  type="submit" value="Tìm Kiếm"> -->
+                </form>
+            </li>
+            
         	<li> <a class="fa fa-paw" href=""></a>
        
 				<div class="sub-action" style="display: block;">
@@ -420,10 +426,7 @@
 				</div> 
 				<div class="slider-product-content-live-icons">
 					<div class="slider-product-content-live-icons-tel">
-							<?php $i = 0;
-								 foreach ($data_sanpham as $key => $value)
-								 { if(++$i == 6)
-									break;  ?>
+                                <?php foreach ($data_sanpham as $key => $value) { ?>
 							<div class="slider-product-one-conter-items-one">
 								<a href="?controller=product&id=<?php echo $value['id_sanpham'] ?>"><img src="../images/sanpham/<?php echo $value['img']?>"</a>
 										<div class="slider-product-one-conter-item-tel">
@@ -437,36 +440,35 @@
                                     		</div>
 										</div>
                             </div>
+                            
 						    <?php }	?>
 					</div>
-						
-				</div>
-
-				<div class="slider-product-content-live-icons-tel all-conter">
-					<?php $i = 0;
-								 foreach ($data_sanpham1 as $key => $value)
-								 { if(++$i == 6)
-									break;  ?>
-				<div class="slider-product-one-conter-items-one">
-					<a href="?controller=product&id=<?php echo $value['id_sanpham'] ?>"><img src="../images/sanpham/<?php echo $value['img']?>"</a>
-						<div class="slider-product-one-conter-item-tel">
-							<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-								<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
-									<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-										<h1><?php echo $value['tensanpham'] ?></h1> <br>
-										<div class="price">
-											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
-											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
-                                    	</div>
-                        </div>
-				</div>
-				<?php } ?>
                     
+				</div>
+                
 			</div>
 		</div>
 		</section>
+        
 	</section>
-	
+            <div class="phantrang">
+                <?php 
+                    if (isset($total_pages)) {
+                        for ($i = 1; $i <= min($total_pages, 10); $i++) {
+                            if ($i == $first_page) {
+                                echo "<a href='?controller=trangchu&first_page=$i'>$i</a>";
+                            }else{
+                                echo "<a href='?controller=trangchu&first_page=$i'>$i</a>";
+                            }
+                        }  
+                    }
+                ?>
+                <!-- <?php if ($total_pages >= 5) { ?>
+                    <button id="load-button">......Xem thêm</button>
+                    <button style="display:none" id="hide-button">Ẩn đi</button>
+                <?php } ?> -->
+            </div>         
+    
 	<!-------------------- app-container ----------------------------->
 	<!--Footer-->
     <section class="footer">
@@ -761,9 +763,37 @@
         <div class="container">
             <div class="coppy-right">©IVYmoda All rights reserved</div>
         </div>
-        <!-- .container -->
     </footer>
 </body>
+<!-- <script>
+   // Phân trang khi trang quá 5 sản phẩm ấn xem thêm
+   document.addEventListener("DOMContentLoaded", function () {
+        var loadMoreButton = document.getElementById("load-button"); // Lấy nút "Xem thêm"
+        var hideButton = document.getElementById("hide-button"); // Lấy nút "Ẩn đi"
+        var itemsPerPage = <?php echo $items_page; ?>; // Số lượng mục hiển thị trên mỗi trang
+        var currentPage = <?php echo $first_page; ?>; // Trang hiện tại
+        var totalPages = <?php echo $total_pages; ?>; // Tổng số trang
+
+        
+        
+        loadMoreButton.addEventListener("click", function () {
+            if (currentPage < totalPages) {
+              
+                currentPage++; // Tăng số trang hiện tại lên
+                
+                if (currentPage >= 10) {
+                    loadMoreButton.style.display = "none"; // Ẩn nút "Xem thêm" sau khi hiển thị đủ 10 trang
+                    hideButton.style.display = "block"; // Hiển thị nút "Ẩn đi"
+                }
+            }
+        });
+
+        hideButton.addEventListener("click", function () {
+            loadMoreButton.style.display = "block"; // Hiển thị lại nút "Xem thêm"
+            hideButton.style.display = "none"; // Ẩn nút "Ẩn đi"
+        });
+    });
+</script> -->
 	<script src="./w3_band/assets/js/conter.js"></script>
 	<script src="./w3_band/assets/js/channel.js"></script>
 	<script src="./w3_band/assets/js/tabble.js"></script>

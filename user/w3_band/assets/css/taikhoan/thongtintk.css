@@ -320,11 +320,12 @@ a {
     margin-left: 20px;
     margin-top: 40px;
   }
-  .bang1 table tr td .input_text{
+  .bang1 table tr .input2{
     width: 300px;
-    height: 30px;
+    height: 50px;
     float: left;
     margin-top: 40px;
+    padding-top: 20px;
     margin-left: 50px;
     border-radius: 10px;
     box-shadow: 10px 10px 12px 3px rgb(214, 179, 154);
@@ -368,6 +369,98 @@ a {
 a {
     text-decoration: none; 
     color:#777777;
+}
+
+/* CSS cho modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    position: relative;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+/* CSS cho nút mở modal */
+.modal-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+/* CSS cho biểu mẫu */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 210px;
+    margin-top: 50px;
+    border-radius: 10px 0px 10px 0px;
+}
+/* CSS cho modal đổi mật khẩu */
+#changePasswordModal {
+    display: none;
+}
+
+/* CSS cho nút mở modal đổi mật khẩu */
+
+
+/* CSS cho biểu mẫu đổi mật khẩu */
+#changePasswordForm {
+    margin-top: 20px;
+}
+
+#changePasswordForm h2 {
+    margin-bottom: 10px;
+}
+
+#changePasswordForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#changePasswordForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 
