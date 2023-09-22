@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2023 at 09:39 AM
+-- Generation Time: Sep 22, 2023 at 03:01 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -36,21 +36,10 @@ CREATE TABLE `ct_donhang` (
   `don_gia` int(20) DEFAULT NULL,
   `ngaydat` text DEFAULT NULL,
   `amount` int(20) DEFAULT NULL,
-  `ghichu` varchar(255) DEFAULT NULL,
-  `diachi` varchar(255) DEFAULT NULL
+  `payment` varchar(255) DEFAULT NULL,
+  `diachi` varchar(255) DEFAULT NULL,
+  `ghichu` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `ct_donhang`
---
-
-INSERT INTO `ct_donhang` (`id_donhang`, `id_ct`, `id_sanpham`, `tensanpham`, `soluongsp`, `don_gia`, `ngaydat`, `amount`, `ghichu`, `diachi`) VALUES
-(15, 21, 56, 'Áo sơ mi ren lưới Daisy vàng', 1, 130000, '2023-09-13', 0, 'hanh toán khi giao hàng', NULL),
-(17, 23, 56, 'Áo sơ mi ren lưới Daisy vàng', 1, 130000, '2023-09-13', 0, 'hanh toán khi giao hàng', NULL),
-(19, 25, 56, 'Áo sơ mi ren lưới Daisy vàng', 1, 130000, '2023-09-13', 0, 'hanh toán khi giao hàng', NULL),
-(27, 42, 56, 'Áo sơ mi ren lưới Daisy vàng', 4, 130000, '2023-09-13', 260000, 'hanh toán khi giao hàng', NULL),
-(27, 43, 57, 'Áo sơ mi croptop_trắng', 4, 130000, '2023-09-13', 130000, 'hanh toán khi giao hàng', NULL),
-(27, 44, 21, 'Áo Thun đen-Soul', 4, 120000, '2023-09-13', 120000, 'hanh toán khi giao hàng', NULL);
 
 -- --------------------------------------------------------
 
@@ -86,21 +75,8 @@ CREATE TABLE `donhang` (
   `id_donhang` int(10) NOT NULL,
   `id_kh` int(10) DEFAULT NULL,
   `tong` int(20) DEFAULT NULL,
-  `tinhtrang` varchar(30) DEFAULT NULL
+  `id_tinhtrang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `donhang`
---
-
-INSERT INTO `donhang` (`id_donhang`, `id_kh`, `tong`, `tinhtrang`) VALUES
-(15, 2, 130000, 'Chưa duyệt'),
-(17, 2, 130000, 'Chưa duyệt'),
-(19, 6, 130000, 'Chưa duyệt'),
-(24, 3, 510000, 'Chưa duyệt'),
-(25, 3, 510000, 'Chưa duyệt'),
-(26, 3, 510000, 'Chưa duyệt'),
-(27, 3, 510000, 'Chưa duyệt');
 
 -- --------------------------------------------------------
 
@@ -121,9 +97,10 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`id_kh`, `name`, `sdt`, `email`, `diachi`) VALUES
-(1, 'hulin', '0321234567', 'baokyeu12345@gmail.com', 'Quảng Ninh'),
-(2, 'hulin12', '0395566123', 'baokyeu12345@gmail.com', 'Quảng Ninh'),
-(3, 'VU DINH BA', '0395566099', 'baokyeu12345@gmail.com', 'Quảng Ninh');
+(1, 'VU DINH BA', '0395566099', 'baokyeu12345@gmail.com', 'Quảng Ninh'),
+(2, 'DucAnh', '0395566080', 'baokyeu12345@gmail.com', 'Hà Nội'),
+(3, 'Nguyen Duc Anh', '0395566111', 'Ducanh123@gmail.com', 'Hồ Gươm Nội Bài'),
+(4, 'VU DINH BA', '0395511111', 'baokyeu12345@gmail.com', 'Quảng Ninh');
 
 -- --------------------------------------------------------
 
@@ -146,7 +123,9 @@ CREATE TABLE `nhanvien` (
 
 INSERT INTO `nhanvien` (`id`, `user`, `pass`, `full_name`, `sodienthoai`, `lv`) VALUES
 (2, 'admin1', 'e10adc3949ba59abbe56e057f20f883e', 'VU DINH BA', '0395566099', 1),
-(3, 'nv1', 'b81fbabe373a8a0a80df5da5602e702e', 'NguyenVanA', '0325612632', 2);
+(3, 'nv1', 'b81fbabe373a8a0a80df5da5602e702e', 'NguyenVanA', '0325612632', 2),
+(5, 'LanAnh', '14e1b600b1fd579f47433b88e8d85291', 'DucAnh', '0324421445', 2),
+(7, 'admin2', 'e10adc3949ba59abbe56e057f20f883e', 'VU DINH BA', '0325612632', 1);
 
 -- --------------------------------------------------------
 
@@ -175,7 +154,7 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`id_sanpham`, `tensanpham`, `img`, `gia`, `trangthai`, `tonkho`, `xuatxu`, `id_danhmuc`, `ngaytao`, `nguoitao`, `daban`, `loaisanpham`, `Id_size`) VALUES
-(1, 'Áo Polo Sữa', 'polo1.jpg', '180000', 'Đã về kho', 12, 'Korea', 2, '2023/09/03', 'admin', 0, 'Áo polo nam', 1),
+(1, 'Áo Polo Sữa', 'polo1.jpg', '180000', 'Đã về kho', 12, 'Korea', 2, '2023-09-19', 'admin', 0, 'Áo polo nam', 1),
 (2, 'Áo Polo trắng', 'polo2.jpg', '160000', 'Đã về kho', 5, 'Hàn Quốc', 2, '2023/09/03', 'admin', 0, 'Áo polo nam', 2),
 (3, 'Áo Polo đen', 'polo3.jpg', '160000', 'Đang nhập về kho', 0, 'Hàn Quốc', 2, '2023/09/03', 'admin', 0, 'Áo polo nam', 3),
 (4, 'Áo Polo lục', 'polo4.jpg', '180000', 'Đã về kho', 10, 'Hàn Quốc', 2, '2023/09/03', 'admin', 0, 'Áo polo nam', 4),
@@ -209,7 +188,7 @@ INSERT INTO `sanpham` (`id_sanpham`, `tensanpham`, `img`, `gia`, `trangthai`, `t
 (32, 'Áo Thun đen-patriots', 'aothun12.jpg', '130000', 'Đã về kho', 10, 'Hàn Quốc', 2, '2023/09/03', 'admin', 0, 'Áo thun nam', NULL),
 (41, 'Áo công sở vàng', 'aocongsovang.jpg', '130000', 'Đã về kho', 10, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo công sở', NULL),
 (42, 'Áo công sở xanh', 'aocongsoxanh.jpg', '130000', 'Đã về kho', 10, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo công sở', NULL),
-(43, 'Áo kiểu be', 'aokieube.jpg', '130000', 'Đang nhập về kho', 0, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo kiểu nữ', NULL),
+(43, 'Áo kiểu be', 'aokieube.jpg', '130000', 'Đã về kho', 12, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo kiểu nữ', NULL),
 (44, 'Áo kiểu be vàng', 'aokieubevang.jpg', '130000', 'Đã về kho', 10, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo kiểu nữ', NULL),
 (45, 'Áo lụa cam đỏ', 'aoluacamdo.jpg', '130000', 'Đang nhập về kho', 0, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo kiểu nữ', NULL),
 (46, 'Áo lụa đen', 'aoluaden.jpg', '130000', 'Đang nhập về kho', 0, 'Hàn Quốc', 4, '2023/09/04', 'admin', 0, 'Áo kiểu nữ', NULL),
@@ -251,7 +230,7 @@ INSERT INTO `sanpham` (`id_sanpham`, `tensanpham`, `img`, `gia`, `trangthai`, `t
 (82, 'Áo thun dino', 'aothundino.jpg', '120000', 'Đã về kho', 12, 'Việt Nam', 7, '2023/09/05', 'admin', 0, 'Áo thun trẻ em', NULL),
 (83, 'Áo thun xanh lơ', 'aothunxanhlo.jpg', '120000', 'Đã về kho', 12, 'Việt Nam', 7, '2023/09/05', 'admin', 0, 'Áo thun trẻ em', NULL),
 (84, 'Quần bò slim', 'quanboslim.jpg', '320000', 'Đã về kho', 8, 'Việt Nam', 1, '2023/09/05', 'admin', 0, 'Quần bò nam', NULL),
-(85, 'Quần bò slim-fit', 'quanboslim-fit.jpg', '320000', 'Đã về kho', 8, 'Việt Nam', 1, '2023/09/05', 'admin', 0, 'Quần bò nam', NULL),
+(85, 'Quần bò slim-fit', 'quanboslimfit.jpg', '320000', 'Đã về kho', 8, 'Việt Nam', 1, '2023-09-19', 'admin', 0, 'Quần bò nam', NULL),
 (86, 'Quần jeans', 'quanjeans.jpg', '320000', 'Đã về kho', 8, 'Việt Nam', 1, '2023/09/05', 'admin', 0, 'Quần jeans nam', NULL),
 (87, 'Quần sooc jeans', 'quansoocjeans.jpg', '320000', 'Đã về kho', 8, 'Việt Nam', 1, '2023/09/05', 'admin', 0, 'Quần jeans nam', NULL),
 (88, 'Quần tây xám', 'quantayxam.jpg', '320000', 'Đã về kho', 8, 'Việt Nam', 1, '2023/09/05', 'admin', 0, 'Quần tây nam', NULL),
@@ -321,9 +300,21 @@ CREATE TABLE `taikhoan` (
 --
 
 INSERT INTO `taikhoan` (`id_user`, `name`, `pass`, `email`, `sdt`, `gioitinh`, `ngaytao`, `diachi`) VALUES
-(1, 'hulin', 'e10adc3949ba59abbe56e057f20f883e', 'baokyeu12345@gmail.com', '0321234567', 'Nam', '2023-09-12', 'Quảng Ninh'),
-(2, 'hulin12', 'e10adc3949ba59abbe56e057f20f883e', 'baokyeu12345@gmail.com', '0395566123', 'Nam', '2023-09-13', 'Quảng Ninh'),
-(3, 'VU DINH BA', 'e10adc3949ba59abbe56e057f20f883e', 'baokyeu12345@gmail.com', '0395566099', 'Nam', '2023-09-13', 'Quảng Ninh');
+(1, 'VU DINH BA', 'e10adc3949ba59abbe56e057f20f883e', 'baokyeu12345@gmail.com', '0395566099', 'Nam', '2023-09-13', 'Quảng Ninh'),
+(2, 'DucAnh', 'e10adc3949ba59abbe56e057f20f883e', 'baokyeu12345@gmail.com', '0395566080', 'Nam', '2023-09-14', 'Hà Nội'),
+(3, 'Nguyen Duc Anh', 'e10adc3949ba59abbe56e057f20f883e', 'Ducanh123@gmail.com', '0395566111', 'Nam', '2023-09-14', 'Hồ Gươm'),
+(4, 'VU DINH BA', 'e10adc3949ba59abbe56e057f20f883e', 'baokyeu12345@gmail.com', '0395511111', 'Nam', '2023-09-14', 'Quảng Ninh');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tinhtrang`
+--
+
+CREATE TABLE `tinhtrang` (
+  `id_tinhtrang` int(11) NOT NULL,
+  `tinhtrang` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -347,7 +338,9 @@ ALTER TABLE `danhmuc`
 -- Indexes for table `donhang`
 --
 ALTER TABLE `donhang`
-  ADD PRIMARY KEY (`id_donhang`);
+  ADD PRIMARY KEY (`id_donhang`),
+  ADD KEY `fk_donhang` (`id_kh`),
+  ADD KEY `fk_tinhtrang` (`id_tinhtrang`);
 
 --
 -- Indexes for table `khach_hang`
@@ -382,6 +375,12 @@ ALTER TABLE `taikhoan`
   ADD PRIMARY KEY (`id_user`);
 
 --
+-- Indexes for table `tinhtrang`
+--
+ALTER TABLE `tinhtrang`
+  ADD PRIMARY KEY (`id_tinhtrang`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -389,7 +388,7 @@ ALTER TABLE `taikhoan`
 -- AUTO_INCREMENT for table `ct_donhang`
 --
 ALTER TABLE `ct_donhang`
-  MODIFY `id_ct` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_ct` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `danhmuc`
@@ -401,25 +400,25 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id_donhang` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_donhang` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id_sanpham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id_sanpham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT for table `size_product`
@@ -431,7 +430,7 @@ ALTER TABLE `size_product`
 -- AUTO_INCREMENT for table `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -443,6 +442,13 @@ ALTER TABLE `taikhoan`
 ALTER TABLE `ct_donhang`
   ADD CONSTRAINT `fk_ctdonhang` FOREIGN KEY (`id_donhang`) REFERENCES `donhang` (`id_donhang`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_ctdonhang1` FOREIGN KEY (`id_sanpham`) REFERENCES `sanpham` (`id_sanpham`);
+
+--
+-- Constraints for table `donhang`
+--
+ALTER TABLE `donhang`
+  ADD CONSTRAINT `fk_donhang` FOREIGN KEY (`id_kh`) REFERENCES `khach_hang` (`id_kh`),
+  ADD CONSTRAINT `fk_tinhtrang` FOREIGN KEY (`id_tinhtrang`) REFERENCES `tinhtrang` (`id_tinhtrang`);
 
 --
 -- Constraints for table `sanpham`
