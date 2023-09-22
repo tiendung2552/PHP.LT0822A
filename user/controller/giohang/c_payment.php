@@ -64,6 +64,7 @@
 
         array('id_donhang' => $idup)
     );
+
          unset($_SESSION['cartt']);
             header('location: ?controller=complete');
     }

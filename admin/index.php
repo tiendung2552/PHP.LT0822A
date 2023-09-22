@@ -76,9 +76,11 @@ switch ($page) {
     case 'duyet':
         include "controller/QuanLyDonHang/c_upd_duyet.php";
         break;
+
     case 'indh':
         include "view/QuanLyDonHang/c_Indonhang.php";
         break;
+
     case 'upd_tinhtrang':
         include "controller/QuanLyDonHang/c_QuanLyDh.php";
         break;
