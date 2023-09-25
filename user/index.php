@@ -46,6 +46,10 @@ else{
             include 'controller/taikhoan/c_quanlidh.php';
             break;
 
+        case 'chitietdh':
+            include 'controller/taikhoan/c_chitietdh.php';
+            break;
+
         case 'xoadh':
             include 'controller/taikhoan/c_xoadh.php';
             break;

@@ -203,30 +203,20 @@
             </DIV>
         <DIV class="quanlidh">
             <Div>
-                <div class="name"><label for="" style="font-weight: bold; margin-bottom: 2em; "><h4 style="font-weight: bold;">QUẢN LÝ ĐƠN HÀNG</h4></label></div>
-                <div class="ttdh"><label for="ttdh">Trạng thái đơn hàng:</label><br>
-                <select  class="form-control" style="height: 3em;" name="" id="ttdh">
-                    <option value="">Tất cả </option>
-                    <option value="">Đặt hàng thành công</option>
-                    <option value="">Đang xử lí</option>
-                    <option value="">Chờ giao vận</option>
-                    <option value="">Đã gửi</option>
-                    <option value="">Đã nhận hàng</option>
-                    <option value="">Đã hủy</option>
-                    <option value="">Trả hàng</option>
-    
-                </select></div>
+                <div class="name"><label for="" style="font-weight: bold; margin-bottom: 2em; font-size: 18px; "><h4 style="font-weight: bold;">CHI TIẾT ĐƠN HÀNG</h4></label></div>
+               
             </Div><br>
+            <form action="" method="get">
             <table>
                 <thead>
                     <tr>
-                        <th class="text-center">MÃ ĐƠN HÀNG</th>
-                        <th class="text-center">TÊN KHÁCH HÀNG</th>
-                        <th class="text-center">SỐ ĐIỆN THOẠI</th>
-                        <th class="text-center">ĐỊA CHỈ</th>
-                        <th class="text-center">TỔNG</th>
-                        
-                        <th colspan=3 class="text-center">TRẠNG THÁI</th>
+                        <th class="text-center">TÊN SẢN PHẨM</th>
+                        <th class="text-center">ẢNH</th>
+                        <th class="text-center">SỐ LƯỢNG</th>
+                        <th class="text-center">ĐƠN GIÁ</th>
+                        <th class="text-center">THÀNH TIỀN</th>
+                     
+                       
                     </tr>
                 </thead>
             
@@ -235,22 +225,19 @@
                 <?php foreach ($ct_donhang as $key => $value) { ?>
                     <tr>
                         
-                        <td><?php echo $value['id_ct'] ?></td>
-                        <td><?php echo $value['name'] ?></td>
-                        <td><?php echo $value['sdt'] ?></td>
-                        <td><?php echo $value['diachi'] ?></td>        
-                        <td><?php echo $value['amount'] ?></td>         
-                             
-                        <td><?php echo $value['tinhtrang'] ?></td>   
-                        <td><a onclick="return confirm('Bạn muốn hủy đơn này sao?');" href="?controller=xoadh&id=<?php echo $value['id_ct'] ?>">Hủy đơn</a></td>
-                        <td><a href="?controller=chitietdh&id=<?php echo $value['id_ct'] ?>">Chi tiết</a></td>
+                        <td><?php echo $sanpham[0]['tensanpham'] ?></td>
+                        <td><img src="../images/sanpham/<?php echo $sanpham[0]['img'] ?>" width="100px" alt=""></td>
+                        <td><?php echo $value['soluongsp'] ?></td>
+                        <td><?php echo $sanpham[0]['gia'] ?></td>
+                        <td><?php echo $value['amount'] ?></td>
+                          
             
                     </tr>
                 <?php } ?>
                     </tbody>
                 
             </table>
-    
+            </form>
         </DIV>
     </main>
     

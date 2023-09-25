@@ -60,6 +60,7 @@
             'id_sanpham'=>$value['id_sanpham'],
             'soluongsp'=>$value['tonkho'],
             'amount' =>$amount,
+            'size' =>$value['size'],
             'ngaydat'=>$date,
             'ngaynhan' =>$date_nhan,
             'payment' => $payment,

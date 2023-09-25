@@ -336,6 +336,7 @@ table tr th {
 table tr td{
     padding-top: 30px;
     text-align: center;
+    font-size: 14px;
 }
 .bars{
     display: none;
