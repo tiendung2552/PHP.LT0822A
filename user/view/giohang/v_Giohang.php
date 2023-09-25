@@ -196,8 +196,9 @@
                     <tr > 
                         <th>Sản Phẩm</th>
                         <th>Tên Sản Phẩm</th>
-                       
+                        <th>Đơn giá</th>
                         <th>SL</th>
+                        <th>Size</th>
                         <th>Thành Tiền</th>
                         <th>Xóa</th>
                     </tr>
@@ -215,12 +216,13 @@
                                         <tr>
                                             <td class="anhsp"><img src="../images/sanpham/<?php echo $value['img']?>" width="120px" height="100px" alt="Lỗi"></td>
                                             <td><p><?php echo $value['tensanpham'] ?></p></td>
-                                            
+                                            <td><p><?php echo $value['gia'] ?></p></td>
                                             <td class="sl">
                                                 <a href='?controller=changecart&method=giam&id=<?php echo $value['id_sanpham'] ?>'><i class='fa fa-minus'></i></a>
                                                 <?php echo $value['tonkho'] ?>
                                                 <a href='?controller=changecart&method=tang&id=<?php echo $value['id_sanpham'] ?>'><i class='fa fa-plus' ></i></a>
                                             </td>
+                                            <td><p><?php echo $value['size'] ?></p></td>
                                             <td><p><?php echo $amount ?><sub>đ</sub></p></td>
                                             <td><a class="a_link" href="?controller=dell&id=<?php echo $value['id_sanpham'] ?>">X</a></td>
                                         </tr>

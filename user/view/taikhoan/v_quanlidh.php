@@ -221,29 +221,31 @@
                 <thead>
                     <tr>
                         <th class="text-center">MÃ ĐƠN HÀNG</th>
-                        <th class="text-center">SẢN PHẨM </th>
-                        <th class="text-center">ĐƠN GIÁ </th>
+                        <th class="text-center">TÊN KHÁCH HÀNG</th>
+                        <th class="text-center">SỐ ĐIỆN THOẠI</th>
+                        <th class="text-center">TỔNG</th>
                        
-                        <th colspan=2 class="text-center">TRẠNG THÁI</th>
+                        <th colspan=3 class="text-center">TRẠNG THÁI</th>
                     </tr>
                 </thead>
             
                 <tbody>
                
-                <?php foreach ($data_ct_donhang as $key) { ?>
+                <?php foreach ($ct_donhang as $key => $value) { ?>
                     <tr>
-                        <td><?php echo $key['id_donhang'] ?></td>
-                        <td><?php echo $key['tensanpham'] ?></td>
-                        <td><?php echo $key['don_gia'] ?></td>           
                         
-                        <td>Chưa duyệt</td>
-                        <td><a onclick="return confirm('Bạn muốn hủy đơn này sao?');" href="?controller=xoadh&id=<?php echo $key['id_ct'] ?>">Hủy đơn hàng</a></td>
+                        <td><?php echo $value['id_ct'] ?></td>
+                        <td><?php echo $value['name'] ?></td>
+                        <td><?php echo $value['sdt'] ?></td>
+                        <td><?php echo $value['amount'] ?></td>           
+                        <td><?php echo $value['tinhtrang'] ?></td>   
+                        <td><a onclick="return confirm('Bạn muốn hủy đơn này sao?');" href="?controller=xoadh&id=<?php echo $value['id_ct'] ?>">Hủy đơn</a></td>
+                        <td><a href="">Chi tiết</a></td>
+            
                     </tr>
-                    <tr>
-                        <th colspan=5 class="text-center">TỔNG TIỀN = <?php echo $key['amount']; ?></th>
-                    </tr>
+                <?php } ?>
                     </tbody>
-                    <?php } ?>
+                
             </table>
     
         </DIV>

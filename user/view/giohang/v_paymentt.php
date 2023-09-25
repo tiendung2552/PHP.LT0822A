@@ -201,6 +201,7 @@
                     <tr>
                         <td><p>Địa chỉ:<span>Quảng Yên, Hà An, Quảng Yên, Quảng Ninh</span></p></td>
                     </tr>
+                    
                 </table>
                 
             </div>
@@ -231,6 +232,10 @@
             <p  class="tt-kh"><span>Điện thoại: </span><input type="text" name="sdt" value="<?php echo  $_SESSION['ss_sdt'] ?>"></p>
 
             <p class="tt-kh"><span>Địa chỉ: </span><input type="text" name="diachi" value="<?php echo $_SESSION['ss_diachi'] ?>"></p>
+
+            <p class="tt-kh"><span>Email: </span><input type="text" name="email" value="<?php echo $_SESSION['ss_email'] ?>"></p>
+            
+            <p class="tt_checkbox">Ghi chú: </p><textarea name="note"  cols="100" rows="5" placeholder="Có thể bỏ qua ghi chú nếu bạn không có gì viết"></textarea> 
             <?php }  ?>
            
             </div>
@@ -280,10 +285,11 @@
 			<div class="block-border">
 			<!-- hien tai chi lam phuong thuc giao nhanh -->
 				<label class="ds__item">
+                    <input type="hidden" id="ngaynhan" name="ngaynhan" value="">
 					<input id="shipping_method_1" class="ds__item__input" type="radio" name="shipping_method" value="1" checked />
 						<span class="ds__item__label">Chuyển phát nhanh
 							<span class="delivery-time">
-								<p>Thời gian giao hàng dự kiến: <span class="time"><i id="days"></i><i id="dates"></i></span></p>
+								<p>Thời gian giao hàng dự kiến: <span class="time"  name="ngaynhan"><i id="days"></i><i id="dates"></i></span></p>
 							</span>
 						</span>
 				</label>
@@ -654,7 +660,34 @@
         <!-- .container -->
     </footer>
     <!-- site-footer -->
+    <script>
+        // time
+    window.onload = setInterval(clock,1000);
+    function clock(){
+    var d = new Date();
+    var date = d.getDate() + 3;
+    var month = d.getMonth();
+    var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6",
+                   "Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+    month=montharr[month];
+
+    var year = d.getFullYear();
+    var day = d.getDay() + 3;
+    var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+    if (day > 6) {
+        day = day - 7;
+    }
+    day=dayarr[day];
+
+    document.getElementById("days").innerHTML=day;
+    document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+
+    var ngayNhan = document.getElementById("dates").textContent;
     
-    <script src="./w3_band/assets/js/cart.js"></script>
+    document.getElementById("ngaynhan").value = ngayNhan;
+}
+    </script>
+    <script src="./w3_band/assets/js/chanel.js"></script>
+    <script src="./w3_band/assets/js/center.js"></script>
 </body>
 </html>

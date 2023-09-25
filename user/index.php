@@ -60,10 +60,14 @@ else{
 
         case 'sptreem':
             include 'controller/c_sptreem.php';
-            break;  
+            break;
+            
+        case 'chitietsp':
+            include 'view/v_product.php';
+                break;
 
         case 'product':
-            include 'controller/c_product.php';
+            include 'controller/giohang/c_Giohang.php';
                 break;
        
         case 'giohang':

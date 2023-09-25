@@ -4,12 +4,10 @@ if (!isset($_SESSION['ss_user'])) {
 exit();
 
 }
-
     $id_kh = $_SESSION['ss_id'];
-    $data_ct_donhang = $db->get_like_like1('ct_donhang', 'donhang', 'khach_hang', 'id_donhang', 'id_kh', 'id_kh', $id_kh);
-
-
-  
+    $ct_donhang = $db -> get_join_like('ct_donhang', 'donhang', 'khach_hang', 'tinhtrang','id_donhang', 'id_kh', 'id_tinhtrang' ,'id_user', $id_kh);
+// var_dump($ct_donhang);
+// die;
         include 'view/taikhoan/v_quanlidh.php';
   
  ?>

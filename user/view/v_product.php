@@ -163,69 +163,73 @@
     <!-------------------------- product ---------------------------->
    	<section class="product">
 
-   	  	<form action="" method="post" >
+   	  	
    	 		<div class="container">
 	   	 		<div class="product-top row">
 	                <p>Trang Chủ</p> <span>&#10230; </span> <p>Nữ</p> <span>&#10230; </span> <p>Hàng nữ mới về</p> <span>&#10230; </span> <p>ELLIE DRESS - ĐẦM REN SERONA</p>
 	   	 		</div>
 				<?php foreach ($product as $key => $value) { ?>
-   	 			<div class="product-content row">
-	   	 			<div class="product-content-left row">
-	   	 				<div class="product-content-left-big-img">
-	   	 					<img src="../images/sanpham/<?php echo $value['img']?>" alt="">
-	   	 				</div>
+                    <div class="product-content row">
+                        <div class="product-content-left row">
+                            <div class="product-content-left-big-img">
+                                <img src="../images/sanpham/<?php echo $value['img']?>" alt="">
+                            </div>
 
-	   	 			</div>
+                        </div>
 
-   	 				<div class="product-content-right">
-	   	 				<!-- /// product-name //// -->
-	   	 				<div class="product-content-right-product-name">
-	   	 					<h1><?php echo $value['tensanpham'] ?></h1>
-	   	 					<p> SKU: 45S2779 </p>
-	   	 				</div>
+                        <div class="product-content-right">
+                            <!-- /// product-name //// -->
+                            <div class="product-content-right-product-name">
+                                <h1><?php echo $value['tensanpham'] ?></h1>
+                                <p> SKU: 45S2779 </p>
+                            </div>
 
-	   	 				<!-- //// product-giá //// -->
-	   	 				<div class="product-content-right-product-price">
-	   	 					<p><?php echo $value['gia'] ?><sup>đ</sup></p>
-	   	 				</div>
+                            <!-- //// product-giá //// -->
+                            <div class="product-content-right-product-price">
+                                <p><?php echo $value['gia'] ?><sup>đ</sup></p>
+                            </div>
 
-	   	 				<!-- /// product-color /// -->
-	   	 				<!-- <div class="product-content-right-product-color">
-	   	 					<p><span style="font-weight: bold;">Màu sắc</span>: Đen <span style="color: red;"> *</span></p>
-	   	 					<div class="product-content-right-product-color-img">
-	   	 						<img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy">
-	   	 					</div>
-	   	 				</div> -->
+                            <!-- /// product-color /// -->
+                            <!-- <div class="product-content-right-product-color">
+                                <p><span style="font-weight: bold;">Màu sắc</span>: Đen <span style="color: red;"> *</span></p>
+                                <div class="product-content-right-product-color-img">
+                                    <img src="images/color/049.png" alt="049" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy">
+                                </div>
+                            </div> -->
+                        <form action="?controller=addcart&id=<?php echo $value['id_sanpham'] ?>" method="post" >
+                            <!-- //// product-size //// -->
+                            <div class="product-content-right-product-size">
+                                <p style="font-weight: bold;">Size</p>
+                                <div class="size" >
+                                    <span><input type="radio" name="size" value="M"></span><span id="cell">M :<?php echo $size[0]['SL_size_M'] ?></span>
+                                    <span><input type="radio" name="size" value="L"></span><span id="cell">L :<?php echo  $size[0]['SL_size_L'] ?></span>
+                                    <span><input type="radio" name="size" value="XL"></span><span id="cell">XL :<?php echo  $size[0]['SL_size_XL'] ?></span>
+                                    <span><input type="radio" name="size" value="XXL"></span><span id="cell">XXL :<?php echo  $size[0]['SL_size_XXL']?></span>
+                                </div>
+                            </div>
+                                <p style="color: red;">Vui lòng chọn size</p>
+                            <!-- /// product-quantity /// -->
+                            <div class="quantity">
+                                <p style="font-weight: bold;">Số Lượng:</p>
+                                    <input type="number" id="" name="sl"  value="1" min="1" max="10" >
+                            </div><br>
 
-	   	 				<!-- //// product-size //// -->
-	   	 				<div class="product-content-right-product-size">
-	   	 					<p style="font-weight: bold;">Size</p>
-	   	 					<div class="size" name="size" >
-	   	 						<span><input type="radio" name="size" value="M"></span><span id="cell">M :<?php echo $value['Id_size'] ?></span>
-	   	 						<span><input type="radio" name="size" value="L"></span><span id="cell">L :<?php echo $value['Id_size'] ?></span>
-	   	 						<span><input type="radio" name="size" value="XL"></span><span id="cell">XL :<?php echo $value['Id_size'] ?></span>
-	   	 						<span><input type="radio" name="size" value="XXL"></span><span id="cell">XXL :<?php echo $value['Id_size']?></span>
-	   	 					</div>
-	   	 				</div>
+                            <div class="quantity1">
+                                <p style="font-weight: bold;">Tồn kho:<?php echo $value['tonkho']; ?></p>
+                            </div>
+                            
 
-	   	 				<!-- /// product-quantity /// -->
-	   	 				<div class="quantity">
-	   	 					<p style="font-weight: bold;">Số Lượng:</p>
-								<input type="number" id="" name="sl" value="1" >
-	   	 				</div>
-	   	 				
-	   	 				<p style="color: red;">Vui lòng chọn size</p>
-
-	   	 				<!-- /// product-button /// -->
-	   	 				<div class="product-content-right-product-button">
-							<!-- <input type="submit" name="" value="Thêm">
-							<button type="submit">THÊM VÀO GIỎ HÀNG</button>
-							<button type="submit"><p>MUA HÀNG</p></button> -->
-							<a href="?controller=addcart&id=<?php echo $value['id_sanpham'] ?>"><p>  THÊM VÀO GIỎ HÀNG</p></a>
-	   	 					<a href="?controller=giohang"> <p><i class="fas fa-shopping-cart"></i> MUA HÀNG</p></a>
-	   	 					<button> <i class="fa-regular fa-heart"></i> </button>
-	   	 				</div>
-						
+                            <!-- /// product-button /// -->
+                            <div class="product-content-right-product-button">
+                                <!-- <input type="submit" name="" value="Thêm">-->
+                                <button type="submit">THÊM VÀO GIỎ HÀNG</button>
+                                <button type="submit"><p>MUA HÀNG</p></button>
+                                <!-- <a href="?controller=addcart&id=<?php echo $value['id_sanpham'] ?>"><p>  THÊM VÀO GIỎ HÀNG</p></a>
+                                <a href="?controller=giohang"> <p><i class="fas fa-shopping-cart"></i> MUA HÀNG</p></a> -->
+                                <button> <i class="fa-regular fa-heart"></i> </button>
+                            </div>
+                        <?php } ?>
+                        </form>
 	   	 				<!-- ///  product-icons /// -->
 	   	 				<div class="product-content-right-product-icon">
 	   	 					<div class="product-content-right-product-icon-item">
@@ -322,9 +326,9 @@
 	   	 				</div>
 	   	 			</div>
    	 			</div>
-					<?php } ?>
+					
    	 		</div>
-				</form>
+				
    	</section>
    	 	<!----------------------- product-related ------------------------->
 		<div class="product-related-title">

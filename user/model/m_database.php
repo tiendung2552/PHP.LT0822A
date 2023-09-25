@@ -86,6 +86,36 @@
 			//Bước 5: Cho hàm trả về giá trị 
 			return $result;
 		}
+        public function get_join_like($table, $table1, $table2, $table3, $col1, $col2, $col3 ,$columns, $value)
+        {
+            // Bước 1: Khởi tạo cấu trúc câu lệnh truy vấn
+            $sql = "SELECT * FROM $table 
+                    JOIN $table1 ON $table1.$col1 = $table.$col1
+                    JOIN $table2 ON $table2.$col2 = $table1.$col2
+                    JOIN $table3 ON $table3.$col3 = $table1.$col3";
+                    // JOIN $table4 ON $table4.$col4 = $table2.$col4";
+
+            // Bước 3: Kết hợp các điều kiện bằng toán tử OR
+            $sql .= " WHERE $table2.$columns = $value " ;
+
+            // Bước 4: Chạy câu lệnh
+            $query = mysqli_query($this->conn, $sql);
+
+            // Bước 5: Khởi tạo một biến mảng để chứa kết quả
+            $result = array();
+
+            if ($query) {
+                // Bước 6: Lặp qua kết quả truy vấn và thêm vào mảng kết quả
+                while ($row = mysqli_fetch_assoc($query)) {
+                    $result[] = $row;
+                }
+            } else {
+                echo "Lỗi truy vấn: " . mysqli_error($this->conn);
+            }
+
+            // Bước 7: Trả về kết quả
+            return $result;
+        }
         public function get_limit($table, $condition=array(), $limit)
 		{	
 			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn

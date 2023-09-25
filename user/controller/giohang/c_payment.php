@@ -6,10 +6,13 @@
         $user = $_POST['user'];
         $phone  =  $_POST['sdt'];
         $address = $_POST['diachi'];
+        $email = $_POST['email'];
         $date = date('Y-m-d');
-        $note = $_POST['payment_method'];
-        $tinhtrang = 'Chưa duyệt';
-  
+        $date_nhan = $_POST['ngaynhan'];
+        $payment = $_POST['payment_method'];
+        $note = $_POST['note'];
+//   var_dump($date_nhan);
+//   die;
 
         $totalQuantity = 0;
             if (isset($_SESSION['cartt'])) {
@@ -26,22 +29,28 @@
             $amount1 += $amount;
             }
 
-            
-        $db->update('khach_hang', array(
+        
+        $db->insert('khach_hang', array(
+                'id_user' => $_SESSION['ss_id'],
                 'name'=>$user,
                 'sdt'=>$phone,
+                'email'=>$email,
+                'diachi' => $address
             ),
-            array('id_kh' => $_SESSION['ss_id'])
         );
-
-
+        $khach_hang =$db -> get('khach_hang', array());
+        foreach ($khach_hang as $key => $value){
+            $id_kh = $value['id_kh'];
+        }
+        $tinhtrang = 1;
         $db->insert('donhang', array(
-            'id_kh'=>$_SESSION['ss_id'],
+            'id_kh'=>  $id_kh,
             'tong'=>$amount1,
-            'tinhtrang' => $tinhtrang,
+            'id_tinhtrang' => $tinhtrang,
         ),
         
         );
+   
         $idup = $db -> insert_id();
         foreach ($_SESSION['cartt'] as $key => $value) {
             $amount = $value['tonkho'] * $value['gia'];
@@ -49,21 +58,16 @@
         $db->insert('ct_donhang', array(
             'id_donhang'=> $idup,
             'id_sanpham'=>$value['id_sanpham'],
-            'tensanpham'=> $value['tensanpham'],
-            'soluongsp'=>$totalQuantity,
-            'don_gia'=>  $value['gia'],
+            'soluongsp'=>$value['tonkho'],
             'amount' =>$amount,
             'ngaydat'=>$date,
-            'payment' => $note,
+            'ngaynhan' =>$date_nhan,
+            'payment' => $payment,
+            'ghichu' => $note
         ),);
     }
     
-        $db->update('ct_donhang', array(
-            'diachi'=>$address,
-        ),
 
-        array('id_donhang' => $idup)
-    );
 
          unset($_SESSION['cartt']);
             header('location: ?controller=complete');
