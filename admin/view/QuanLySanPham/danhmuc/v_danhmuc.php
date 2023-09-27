@@ -45,29 +45,21 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Ảnh</th>
-                                        <th>Tên Sản Phẩm</th>
-                                        <th>Đơn Giá</th>
-                                        <th>Tồn Kho</th>
-                                        <th>Trạng Thái</th>
-                                        <th colspan="3">Setting</th>
+                                        <th>Danh mục</th>
+                                        <th colspan="2">Setting</th>
                                     </tr>
                                 </thead>
                                
                                     <?php
-                                    foreach ($data_sanpham as $key => $value) { ?>
+                                    foreach ($data_danhmuc as $key => $value) { ?>
                                      <tbody>
                                     <tr>
-                                        <td><?php echo $value['id_sanpham']?></td>
-                                        <td><img src="../images/sanpham/<?php echo $value['img']?>" width="110px" height="130px"></td>
-                                        <td><?php echo $value['tensanpham'] ?></td>
-                                        <td><?php echo $value['gia'] ?></td>
-                                        <td><?php echo $value['tonkho'] ?></td>
-                                        <td><?php echo $value['trangthai'] ?></td>
+                                        <td><?php echo $value['id_danhmuc']?></td>
+                                        <td><?php echo $value['danhmuc'] ?></td>
+                                    
                                         <td class="btn">
                                             <a href="?page=Suasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-gear"></i></a>
                                             <a onclick="return confirm('Xóa sản phẩm này?');" href="?page=Xoasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-trash"></i></a>
-                                            <a href="?page=ct_sanpham&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-circle-info"></i></a>
                                         </td>
                                     </tr>
                               </tbody>
@@ -77,8 +69,8 @@
                            
                           
                     </div>
-                    <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
-                          <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
+                        <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
+                        <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>
         </div>
