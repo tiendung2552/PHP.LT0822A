@@ -1,0 +1,95 @@
+.text-demo1{
+    width: 150px;
+    text-align: center;
+    margin-left: 150px;
+    padding-top: 35px;
+    border-radius: 10px;    
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+}
+.text-demo1:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo2{
+    width: 150px;
+    text-align: center;
+    margin-left: 130px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+    border-radius: 10px; 
+}
+.text-demo2:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo3{
+    width: 150px;
+    text-align: center;
+    margin-left: 120px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+    border-radius: 10px; 
+}
+.text-demo3:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+h1{
+    padding-top: 15px;
+    text-align: center;
+}
+table{
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+    font-size: 16px;
+}
+.right1{
+    padding:5px 10px;
+    padding-top: 5px;
+
+}
+.right{
+    padding:5px 10px;
+    padding-top: 5px;
+    padding-left: 100px;
+}
+.span-right{
+    display: flex;
+}
+.span-right input{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;  
+}
+.span-right .right1{
+    padding-top: 60px;
+    padding-left: 20px;
+}
+table tr td{
+    text-align: center;
+    padding: 100px 0px 20px 0px;
+}
+table tr td input{
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.come-back button{
+    width: 90px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 390px;
+    margin-top: 6px;
+}
+.come-back button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}

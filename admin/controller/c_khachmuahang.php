@@ -4,13 +4,13 @@ if(isset($_SESSION['ss_admin'])){
     if (isset($_GET['keyword'])) {
         $keyword = $_GET['keyword'];
         //Nếu có tồn tại thì mình sẽ lấy dữ liệu theo tên người dùng tìm kiếm
-        $data_taikhoan = $db->get_like('taikhoan','name',$keyword);
+        $data_khachhang = $db->get_like('khach_hang','name',$keyword);
     }else{
         //Nếu không tồn tại thì sẽ lấy tất cả dữ liệu trong bảng product
-        $data_taikhoan=$db->get('taikhoan', array());
+        $data_khachhang=$db->get('khach_hang', array());
     }
 }else{
     header('location: ?page=login');
 }
-    include "./view/v_QuanLyKh.php";
+    include "./view/v_khachmuahang.php";
 ?>

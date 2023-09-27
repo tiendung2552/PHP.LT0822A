@@ -26,7 +26,7 @@ const header = document.querySelector("#headerr")
 	})
 	function imgSlider (){
 		index++;
-		console.log(index)
+		// console.log(index)
 		if (index>=imgNuber) {index=0}
 		slider (index)
 	}

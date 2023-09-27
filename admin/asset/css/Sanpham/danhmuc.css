@@ -1,0 +1,109 @@
+.text-demo1{
+    width: 150px;
+    text-align: center;
+    margin-left: 150px;
+    padding-top: 35px;
+    border-radius: 10px;    
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+}
+.text-demo1:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo2{
+    width: 150px;
+    text-align: center;
+    margin-left: 130px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+    border-radius: 10px; 
+}
+.text-demo2:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo3{
+    width: 150px;
+    text-align: center;
+    margin-left: 120px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+    border-radius: 10px; 
+}
+.text-demo3:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+
+.body .background-left .a2{
+    background-color: rgb(216, 181, 27) ;
+    color: black;
+}
+h1{
+    padding-top: 15px;
+    text-align: center;
+}
+.search{
+    margin-left: 700px;
+    border-radius: 10px;
+    margin-top: -45px;
+    margin-bottom: 20px;
+}
+.search input{
+    border-radius: 10px;
+    padding: 5px;
+}
+table{
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+    font-size: 16px;
+    overflow-x: auto ;
+    overflow-y: hidden;
+}
+table tr td{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid saddlebrown ;
+}
+table tr td a{
+    padding: 0px 5px 0px 5px;
+    color: rgb(0, 0, 0);
+}
+table tr td a:hover{
+    color: red;
+}
+.background-right-table-small{
+    width: 930px;
+    height: 400px;
+    overflow-x:hidden ;
+    overflow-y: auto;
+    margin-bottom: 5px;
+}
+.more-staff button{
+    width: 70px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin-left: 390px;
+}
+.more-staff button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.come-back button{
+    width: 90px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin-left: 50px;
+}
+.come-back button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}

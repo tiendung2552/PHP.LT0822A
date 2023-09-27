@@ -10,24 +10,30 @@
     }
 
 switch ($page) {
+    //trang chưa đăng nhập
     case 'tranggoc':
         include "view/v_tranggoc.php";
         break;
+    //trang đã đăng nhập
     case 'trangchu':
         include "controller/c_trangchu.php";
         break;
+    //trang đăng nhập
     case 'login':
         include "controller/c_Login.php";
-        break;
+        break; 
+    //đăng xuất
     case 'logout':
         include "controller/c_logout.php";
         break;
+    //trang thông tin hỗ trợ và giới thiệu
     case 'help':
         include "view/v_Help.php";
         break;
     case 'information':
         include "view/v_infor-Web.php";
         break;
+    //Trang quản lý đơn hàng
     case 'QuanlyDh':
         include "controller/QuanLyDonHang/c_QuanLyDh.php";
         break;
@@ -37,9 +43,26 @@ switch ($page) {
     case 'Indonhang':
         include "controller/QuanLyDonHang/c_Indonhang.php";
         break;
+    case 'duyet':
+        include "controller/QuanLyDonHang/c_upd_duyet.php";
+        break;
+    case 'indh':
+        include "view/QuanLyDonHang/c_Indonhang.php";
+        break;
+    case 'xoadh':
+        include "controller/QuanLyDonHang/c_xoadh.php";
+        break;
+    //trang quản lý khách hàng
     case 'QuanlyKh':
         include "controller/c_QuanLyKh.php";
         break;
+    case 'khachmuahang':
+        include "controller/c_khachmuahang.php";
+        break;    
+    case 'xoakh':
+        include "controller/c_xoakh.php";
+        break;
+    //trang quản lý nhân viên 
     case 'DsNhanVien':
         include "controller/QuanLyNhanVien/c_Nhanvien.php";
         break;
@@ -51,6 +74,16 @@ switch ($page) {
         break;
     case 'Xoanv':
         include "controller/QuanLyNhanVien/c_xoanv.php";
+        break;
+    //trang quản lý sản phẩm, banner, danh muc
+    case 'banner':
+        include "controller/QuanLySanPham/c_banner.php";
+        break;
+    case 'upd_banner':
+        include "controller/QuanLySanPham/c_upd_banner.php";
+        break;
+     case 'danhmuc':
+        include "controller/QuanLySanPham/c_danhmuc.php";
         break;
     case 'DsSanPham':
         include "controller/QuanLySanPham/c_SanPham.php";
@@ -67,22 +100,6 @@ switch ($page) {
     case 'ct_sanpham':
         include "controller/QuanLySanPham/c_ct_sanpham.php";
         break;
-    case 'xoadh':
-        include "controller/QuanLyDonHang/c_xoadh.php";
-        break;
-    case 'xoakh':
-        include "controller/c_xoakh.php";
-        break;
-    case 'duyet':
-        include "controller/QuanLyDonHang/c_upd_duyet.php";
-        break;
-
-    case 'indh':
-        include "view/QuanLyDonHang/c_Indonhang.php";
-        break;
-
-    case 'upd_tinhtrang':
-        include "controller/QuanLyDonHang/c_QuanLyDh.php";
-        break;
+   
 }
 ?>

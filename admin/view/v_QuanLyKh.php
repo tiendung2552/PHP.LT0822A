@@ -26,10 +26,9 @@
         </div>
         <div class="body">
             <div class="background-left">
-                    <a class="text1 a1" href="?page=DsNhanVien">Thông tin nhân viên</a>
-                    <a class="text1 a2" href="?page=QuanlyKh">Thông tin khách hàng</a>
-                    <a class="text1 a3" href="?page=DsSanPham">Thông tin sản phẩm</a>
-                    <a class="text1 a4" href="?page=QuanlyDh">Thông tin đơn hàng</a>
+                    <a class="text1 a2" href="?page=QuanlyKh">Khách hàng đăng ký</a>
+                    <a class="text1 a3" href="?page=khachmuahang">Khách hàng mua</a>
+                   
             </div>
             <div class="background-right">
                 <div class="background-right-table">
@@ -50,19 +49,21 @@
                                     <th>Tên khách hàng</th>
                                     <th>Số Điện Thoại</th>
                                     <th>Email</th>
+                                    <th>Giới tính</th>
                                     <th>Địa Chỉ</th>
                                     <th>Setting</th>
                                     </tr>
                                 </thead>
-                                <?php foreach ($data_khachhang as $key => $value) { ?>
+                                <?php foreach ($data_taikhoan as $key => $value) { ?>
                                 <tbody>
                                     <tr>
-                                        <td><?php echo $value['id_kh'] ?></td>
+                                        <td><?php echo $value['id_user'] ?></td>
                                         <td><?php echo $value['name'] ?></td>
                                         <td><?php echo $value['sdt'] ?></td>
                                         <td><?php echo $value['email'] ?></td>
+                                        <td><?php echo $value['gioitinh'] ?></td>
                                         <td><?php echo $value['diachi'] ?></td>
-                                        <td><a onclick="return confirm('Xóa sản phẩm này?');" href="?page=xoakh&id=<?php echo $value['id_kh'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a></td>
+                                        <td><a onclick="return confirm('Xóa sản phẩm này?');" href="?page=xoakh&id=<?php echo $value['id_user'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a></td>
                                     </tr>
                                 </tbody>
                                 <?php } ?>

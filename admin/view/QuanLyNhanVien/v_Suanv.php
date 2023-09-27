@@ -33,12 +33,13 @@
                         <form action="" method="post">
                             <ul class="ul-head">
                                 <ul  class="ul-left">
-                                    <li><span class="span-left">ID:</span> <span class="span-right"><input type="text" name="id" value="<?php echo $value['id'] ?>"></span></li>
+                                    <input type="hidden" name="id" value="<?php echo $value['id'] ?>">
                                     <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user" value="<?php echo $value['user'] ?>"></span></li>
                                     <li><span class="span-left">Password:</span> <span class="span-right"><input type="text" name="pass" value="<?php echo $value['pass'] ?>"></span></li>
+                                    <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" value="<?php echo $value['sodienthoai'] ?>"></span></li>
                                 </ul>
                                 <ul class="ul-right">
-                                    <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" value="<?php echo $value['sodienthoai'] ?>"></span></li>
+                                   
                                     <li><span class="span-left">Phone_number:</span> <span class="span-right"><input type="text" name="phone" value="<?php echo $value['full_name'] ?>"></span></li>
                                     <li><span class="span-left">Lv:</span> <span class="span-right"><input type="text" name="lv" value="<?php echo $value['lv'] ?>" ></span></li>
                                 </ul>

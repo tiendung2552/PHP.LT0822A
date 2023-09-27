@@ -169,20 +169,21 @@
     </i></div>
     </section>
 	<!------------------------- slider ---------------------->
-	<section id="Slider">
+    <section id="Slider">
+        
 		<div class="aspect-ratio-169">
-			<img src="images/slider/slider1.jpg">
-			<img src="images/slider/slider2.jpg">
-			<img src="images/slider/slider3.jpg">
-			<img src="images/slider/slider6.jpg">
-			<img src="images/slider/slider7.jpg">
-		</div>
+        <?php foreach ($banner as $key => $value) { ?>
+			<img src="../images/slider/<?php echo $value['img_banner'] ?>">
+         <?php } ?>
+        </div>
+       
 		<div class="dot-container">
 			<div class="dot active"></div>
 			<div class="dot"></div>
 			<div class="dot"></div>
 			<div class="dot"></div>
 			<div class="dot"></div>
+            <div class="dot"></div>
 		</div>
 	</section>
 	<div class="search-mb"><input  placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></div>

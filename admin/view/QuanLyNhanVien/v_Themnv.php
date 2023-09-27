@@ -34,9 +34,10 @@
                                 <ul  class="ul-left">
                                     <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user"></span></li>
                                     <li><span class="span-left">Password:</span> <span class="span-right"><input type="text" name="pass"></span></li>
+                                    <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" ></span></li>
                                 </ul>
                                 <ul class="ul-right">
-                                    <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" ></span></li>
+                                    
                                     <li><span class="span-left">Phone_number:</span> <span class="span-right"><input type="text" name="phone" ></span></li>
                                     <li><span class="span-left">Lv:</span> <span class="span-right"><input type="text" name="lv" ></span></li>
                                 </ul>

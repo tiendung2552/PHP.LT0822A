@@ -26,9 +26,6 @@
         </div>
         <div class="body">
             <div class="background-left">
-                  <a class="text1 a1" href="?page=DsNhanVien">Thông tin nhân viên</a>
-                    <a class="text1 a2" href="?page=QuanlyKh">Thông tin khách hàng</a>
-                    <a class="text1 a3" href="?page=DsSanPham">Thông tin sản phẩm</a>
                     <a class="text1 a4" href="?page=QuanlyDh">Thông tin đơn hàng</a>
             </div>
             <div class="background-right">

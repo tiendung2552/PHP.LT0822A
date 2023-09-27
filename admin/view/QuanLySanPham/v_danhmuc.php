@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
-    <link rel="stylesheet" href="asset/css/Sanpham/sanpham.css">
+    <link rel="stylesheet" href="asset/css/Sanpham/danhmuc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -77,7 +77,7 @@
                            
                           
                     </div>
-                            <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
+                    <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
                           <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>

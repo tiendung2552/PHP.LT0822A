@@ -36,7 +36,7 @@
                                     <span class="span-right">
                                     <input class="right1" type="file" name="images" id="image-input" onchange="chooseFile(this)" 
                                     accept="image/*">
-                                    <img alt="" id="image" width="100px" height="100px" src="../images/sanpham/<?php echo $value['img'] ?>">
+                                    <img alt="" id="image" width="100px" height="100px" src="#">
                                     </span>
                                     </th>
                                     
@@ -77,10 +77,11 @@
                                 <tr class="bottom" ;>
                                     <td colspan=2>
                                     <input type="submit" name="btn_them" class="more-staff" value="Thêm" >
-                                    <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a></td>
+                                    </td>   
                                 </tr>
                             </table>
                     </form>
+                    <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a>
                     </div>
                 </div>
             </div>

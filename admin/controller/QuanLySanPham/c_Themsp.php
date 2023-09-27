@@ -51,6 +51,8 @@ if ($user[0]['lv']==1) {
     echo '<script type="text/javascript">alert("Bạn không có quyền để thêm");
     window.history.back();</script>';
 }
+}else{
+    header('location: ?page=login');
 }
     include "./view/QuanLySanPham/v_Themsp.php";
 ?>

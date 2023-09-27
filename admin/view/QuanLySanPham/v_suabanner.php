@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
-    <link rel="stylesheet" href="asset/css/Sanpham/sanpham.css">
+    <link rel="stylesheet" href="asset/css/Sanpham/upd_banner.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -33,41 +33,35 @@
             <div class="background-right">
                 <div class="background-right-table">
                     <h1>DANH SÁCH SẢN PHẨM</h1>
-                    <form action="" method="get">
-                    <div class="search">
-                    <input type="hidden" name="page" value="DsSanPham">
-                    <input name="keyword" name="keyword1" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
-                    <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
-                    </div>
-                    </form>
+                    <form action="" method="post"  enctype="multipart/form-data">
+                    
                     <div class="background-right-table-small">  
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
+                                        
                                         <th>Ảnh</th>
-                                        <th>Tên Sản Phẩm</th>
-                                        <th>Đơn Giá</th>
-                                        <th>Tồn Kho</th>
-                                        <th>Trạng Thái</th>
-                                        <th colspan="3">Setting</th>
+                                        <th>Tên Banner</th>
                                     </tr>
                                 </thead>
                                
                                     <?php
-                                    foreach ($data_sanpham as $key => $value) { ?>
+                                    foreach ($banner as $key => $value) { ?>
                                      <tbody>
                                     <tr>
-                                        <td><?php echo $value['id_sanpham']?></td>
-                                        <td><img src="../images/sanpham/<?php echo $value['img']?>" width="110px" height="130px"></td>
-                                        <td><?php echo $value['tensanpham'] ?></td>
-                                        <td><?php echo $value['gia'] ?></td>
-                                        <td><?php echo $value['tonkho'] ?></td>
-                                        <td><?php echo $value['trangthai'] ?></td>
-                                        <td class="btn">
-                                            <a href="?page=Suasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-gear"></i></a>
-                                            <a onclick="return confirm('Xóa sản phẩm này?');" href="?page=Xoasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-trash"></i></a>
-                                            <a href="?page=ct_sanpham&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-circle-info"></i></a>
+                                        <input type="hidden" value="<?php echo $value['id_banner']?>">
+                                        <td class="img">
+                                        <span class="span-right">
+                                            <input class="right1" type="file" name="img" id="image-input" onchange="chooseFile(this)" 
+                                            accept="image/*">
+                                            <img alt="" id="image" width="250px" height="150px" src="../images/slider/<?php echo $value['img_banner'] ?>"></td>
+                                        </span>
+                                        <td><input type="text" name="name_banner" value="<?php echo $value['name_banner'] ?>"></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                    <td class="btn">
+                                            <button name="upd_banner">Sửa</button>
                                         </td>
                                     </tr>
                               </tbody>
@@ -77,11 +71,30 @@
                            
                           
                     </div>
-                            <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
+                    </form>
                           <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        document.getElementById("image-input").addEventListener("change", function(event) {
+        var selectedImage = document.getElementById("image");
+        var selectedFile = event.target.files[0];
+
+        if (selectedFile) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                selectedImage.src = e.target.result;
+            }
+
+            reader.readAsDataURL(selectedFile);
+        } else {
+            selectedImage.src = "#"; // Đặt nguồn ảnh về một giá trị mặc định nếu không có hình ảnh được chọn
+        }
+    });
+
+    </script>
 </body>
 </html>

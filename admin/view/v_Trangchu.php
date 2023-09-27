@@ -7,6 +7,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
     <link rel="stylesheet" href="asset/css/index.css"> 
+    <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/css/fontawesome.css">
+    <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/js/all.min.js">
+    <link rel="stylesheet" href="./w3_band/assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <section class="container">
@@ -25,11 +29,11 @@
         </div>
         <div class="body">
                 <div class="background-left">      
-                        <a class="text1" href="?page=DsNhanVien">Thông tin nhân viên</a>
-                        <a class="text1" href="?page=QuanlyKh">Thông tin khách hàng</a>
-                        <a class="text1" href="?page=DsSanPham">Thông tin sản phẩm</a>
-                        <a class="text1" href="?page=QuanlyDh">Thông tin đơn hàng</a>
-                        <a class="text1" href="?page=logout">Đăng xuất</a>
+                        <a class="text1" href="?page=DsNhanVien"><i class="fa-solid fa-clipboard-user"></i>Nhân viên</a>
+                        <a class="text1" href="?page=QuanlyKh"><i class="fa-solid fa-circle-user"></i></i>Khách hàng</a>
+                        <a class="text1" href="?page=DsSanPham"><i class="fa-solid fa-shirt"></i>Sản phẩm</a>
+                        <a class="text1" href="?page=QuanlyDh"><i class="fa-solid fa-receipt"></i>Đơn hàng</a>
+                        <a class="text1" href="?page=logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng xuất</a>
                 </div>
                 <div class="background-right">
                     <div class="background-right-table">

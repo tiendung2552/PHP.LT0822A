@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
-    <link rel="stylesheet" href="asset/css/Nhanvien/nhanvien.css">
+    <link rel="stylesheet" href="asset/css/khachmuahang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -26,60 +26,52 @@
         </div>
         <div class="body">
             <div class="background-left">
-                    <a class="text1 a1" href="?page=DsNhanVien">Thông tin nhân viên</a>
+                    <a class="text1 a2" href="?page=QuanlyKh">Khách hàng đăng ký</a>
+                    <a class="text1 a3" href="?page=khachmuahang">Khách hàng mua</a>
                    
             </div>
             <div class="background-right">
                 <div class="background-right-table">
-                    <h1>DANH SÁCH NHÂN VIÊN</h1>
+                    <h1>DANH SÁCH KHÁCH HÀNG</h1>
                     <form action="" method="get">
                     <div class="search">
-                    <input type="hidden" name="page" value="DsNhanVien">
+                    <input type="hidden" name="page" value="QuanlyKh">
                     <input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
                     <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
                     </div>
                     </form>
-                    <div class="background-right-table-small">  
+                    <div class="background-right-table-small">
+                    
                             <table >
                                 <thead>
                                     <tr>
                                     <th>ID</th>
-                                    <th>Username</th>
-                                    <th>Password</th>
-                                    <th>Full_name</th>
+                                    <th>Tên khách hàng</th>
                                     <th>Số Điện Thoại</th>
-                                    <th>Lv</th>
-                                    <th colspan="3">Setting</th>
+                                    <th>Email</th>
+                                    <th>Địa Chỉ</th>
+                                    <th>Setting</th>
                                     </tr>
                                 </thead>
-                               
-                                <?php
-                                    foreach ($data_nhanvien as $key => $value) { ?>
-                                    <tbody>
-                                
+                                <?php foreach ($data_khachhang as $key => $value) { ?>
+                                <tbody>
                                     <tr>
-                                        <td><?php echo $value['id'] ?></td>
-                                        <td><?php echo $value['user'] ?></td>
-                                        <td><?php echo $value['pass'] ?></td>
-                                        <td><?php echo $value['full_name'] ?></td>
-                                        <td><?php echo $value['sodienthoai'] ?></td>
-                                        <td><?php echo $value['lv'] ?></td>
-                                        <td class="btn">
-                                            <a href="?page=Suanv&id=<?php echo $value['id'] ?>"><i class="fa-solid fa-gear"></i></a>
-                                            <a onclick="return confirm(' Bạnn muốn xa thải nhân viên này?');" href="?page=Xoanv&id=<?php echo $value['id'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a>
-                                        </td>
+                                        <td><?php echo $value['id_kh'] ?></td>
+                                        <td><?php echo $value['name'] ?></td>
+                                        <td><?php echo $value['sdt'] ?></td>
+                                        <td><?php echo $value['email'] ?></td>
+                                        <td><?php echo $value['diachi'] ?></td>
+                                        <td><a onclick="return confirm('Xóa sản phẩm này?');" href="?page=xoakh&id=<?php echo $value['id_kh'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a></td>
                                     </tr>
                                 </tbody>
-                            <?php } ?>
+                                <?php } ?>
                             </table>
-                         
+                          
                     </div>
-                    <a href="?page=Themnv" class="more-staff" ><button>Thêm</button></a>
-                    <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
+                    <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>  
                 </div>
             </div>
         </div>
     </section>
-
 </body>
 </html>

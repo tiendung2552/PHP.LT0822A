@@ -42,6 +42,8 @@ if(isset($_SESSION['ss_user'])){
     $data_sanpham = $db->get_limit('sanpham',array(),$start.','.$items_page);
     }
 
+    //banner
+    $banner = $db -> get('banner',array());
 }else{
     header('location: ?controller=login');
 }
