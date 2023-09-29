@@ -1,6 +1,7 @@
-<?php;
+<?php
 if(isset($_SESSION['ss_admin'])){
     $data_danhmuc = $db -> get('danhmuc',array());
+    
     $user = $db -> get('nhanvien', array());
         if ($user[0]['lv']==1) {
             if(isset($_POST['add_danhmuc'])){
@@ -13,21 +14,22 @@ if(isset($_SESSION['ss_admin'])){
                 }
                 
                 if(!$loi){
-                    $db->insert('sanpham', array(
+                    $db->insert('danhmuc', array(
                         'danhmuc'=>$danhmuc ));
                 
                     if(!$loi){
-                        header('location: ?page=DsSanPham');
+                        header('location: ?page=danhmuc');
                     }
 
                 }
             }
+
         }else{
             echo '<script type="text/javascript">alert("Bạn không có quyền để thêm");
             window.history.back();</script>';
         }
 }else{
-    header('location: ?page=login')
+    header('location: ?page=login');
 }
-    include "view/QuanLySanPham/v_danhmuc.php";
+    include "view/QuanLySanPham/danhmuc/v_add_danhmuc.php";
 ?>

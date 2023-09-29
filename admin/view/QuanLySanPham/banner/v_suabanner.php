@@ -60,7 +60,7 @@
                                         
                                     </tr>
                                     <tr>
-                                    <td class="btn">
+                                        <td class="btn" colspan=2> 
                                             <button name="upd_banner">Sửa</button>
                                         </td>
                                     </tr>

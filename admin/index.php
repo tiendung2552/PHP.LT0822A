@@ -78,23 +78,23 @@ switch ($page) {
     //trang quản lý sản phẩm, banner, danh muc
     //banner
     case 'banner':
-        include "controller/QuanLySanPham/c_banner.php";
+        include "controller/QuanLySanPham/banner/c_banner.php";
         break;
     case 'upd_banner':
-        include "controller/QuanLySanPham/c_upd_banner.php";
+        include "controller/QuanLySanPham/banner/c_upd_banner.php";
         break;
     //danhmuc
     case 'danhmuc':
-        include "controller/QuanLySanPham/c_danhmuc.php";
+        include "controller/QuanLySanPham/danhmuc/c_danhmuc.php";
         break;
     case 'add_danhmuc':
-        include "controller/QuanLySanPham/c_danhmuc.php";
+        include "controller/QuanLySanPham/danhmuc/c_add_danhmuc.php";
         break;
     case 'up_danhmuc':
-        include "controller/QuanLySanPham/c_danhmuc.php";
+        include "controller/QuanLySanPham/danhmuc/c_up_danhmuc.php";
         break;
     case 'dell_danhmuc':
-        include "controller/QuanLySanPham/c_danhmuc.php";
+        include "controller/QuanLySanPham/danhmuc/c_dell_danhmuc.php";
         break;
     //sanpham
     case 'DsSanPham':

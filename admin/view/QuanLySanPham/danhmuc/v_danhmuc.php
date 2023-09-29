@@ -39,7 +39,7 @@
                     <input name="keyword" name="keyword1" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
                     <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
                     </div>
-                    </form>
+                    
                     <div class="background-right-table-small">  
                             <table>
                                 <thead>
@@ -58,8 +58,8 @@
                                         <td><?php echo $value['danhmuc'] ?></td>
                                     
                                         <td class="btn">
-                                            <a href="?page=Suasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-gear"></i></a>
-                                            <a onclick="return confirm('Xóa sản phẩm này?');" href="?page=Xoasp&id=<?php echo $value['id_sanpham'] ?>"><i class="fa-solid fa-trash"></i></a>
+                                            <a href="?page=up_danhmuc&id=<?php echo $value['id_danhmuc'] ?>"><i class="fa-solid fa-gear"></i></a>
+                                            <a onclick="return confirm('Xóa sản phẩm này?');" href="?page=dell_danhmuc&id=<?php echo $value['id_danhmuc'] ?>"><i class="fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
                               </tbody>
@@ -69,7 +69,8 @@
                            
                           
                     </div>
-                        <a href="?page=Themsp" class="more-staff" ><button>Thêm</button></a>
+                    </form>
+                        <a href="?page=add_danhmuc" class="more-staff" ><button>Thêm</button></a>
                         <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>

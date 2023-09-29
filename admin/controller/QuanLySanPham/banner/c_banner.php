@@ -5,5 +5,5 @@ if(isset($_SESSION['ss_admin'])){
 }else{
     header('location: ?page=login');
 }
-include "view/QuanLySanPham/v_banner.php";
+include "view/QuanLySanPham/banner/v_banner.php";
 ?>

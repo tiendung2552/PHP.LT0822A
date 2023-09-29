@@ -41,5 +41,5 @@ if(isset($_SESSION['ss_admin'])){
 }else{
     header('location: ?page=login');
 }
-include "view/QuanLySanPham/v_suabanner.php";
+include "view/QuanLySanPham/banner/v_suabanner.php";
 ?>
