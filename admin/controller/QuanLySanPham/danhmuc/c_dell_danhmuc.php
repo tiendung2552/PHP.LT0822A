@@ -1,4 +1,4 @@
-<?php;
+<?php
 if(isset($_SESSION['ss_admin'])){
     $data_danhmuc = $db -> get('danhmuc',array());
     
@@ -7,8 +7,8 @@ if(isset($_SESSION['ss_admin'])){
 
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
-                $user=$db->delete('danhmuc', array('id_sanpham'=>$id));
-                header ('location: ?page=DsSanPham');
+                $user=$db->delete('danhmuc', array('id_danhmuc'=>$id));
+                header ('location: ?page=danhmuc');
             }
 
         }else{
@@ -16,7 +16,7 @@ if(isset($_SESSION['ss_admin'])){
             window.history.back();</script>';
         }
 }else{
-    header('location: ?page=login')
+    header('location: ?page=login');
 }
     include "view/QuanLySanPham/danhmuc/v_danhmuc.php";
 ?>

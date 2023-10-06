@@ -1,10 +1,9 @@
 <?php
 if (isset($_SESSION['ss_admin'])) {
-	
 $user=$db->get('nhanvien', array());
 if ($user[0]['lv']==1) {
  if(isset($_POST['btn_them'])){
-        
+       
     $id1 = $_POST['id'];
     $name = $_POST['tensanpham'];
     $price = $_POST['gia'];
@@ -15,7 +14,11 @@ if ($user[0]['lv']==1) {
     $ngaytao = date('Y-m-d');
     $nguoitao = $_POST['nguoitao'];
     $loaisp = $_POST['loaisanpham'];
-
+    $daban = $_POST['daban'];
+    $size_M = $_POST['size_M'];
+    $size_L = $_POST['size_L'];
+    $size_XL = $_POST['size_XL'];
+    $size_XXL = $_POST['size_XXL'];
     
     $image = $_FILES['images']['name'];
     $image_temp = $_FILES['images']['tmp_name'];
@@ -26,9 +29,16 @@ if ($user[0]['lv']==1) {
     && $ngaytao =='' && $loaisp  ==''){
         $loi['user'] = 'không được để trống thông tin';
      }
-    
-    
+     
     if(!$loi){
+        $db->insert('size_product', array(
+            'SL_size_M' => $size_M,
+            'SL_size_L' => $size_L,
+            'SL_size_XL' => $size_XL,
+            'SL_size_XXL' => $size_XXL
+            )
+        );
+        $idup = $db -> insert_id();
         $db->insert('sanpham', array(
             'tensanpham'=>$name,
             'img'=>$image,
@@ -36,12 +46,15 @@ if ($user[0]['lv']==1) {
             'trangthai'=>$trangthai,
             'id_danhmuc' => $id_danhmuc,
             'tonkho'=>$amount,
+            'daban' =>$daban,
             'xuatxu'=>$xuatxu,
             'ngaytao'=>$ngaytao,
+            'Id_size' => $idup,
             'nguoitao'=>$nguoitao,
             'loaisanpham'=>$loaisp)
         );
-    
+        
+        
     if(!$loi){
         header('location: ?page=DsSanPham');
     }

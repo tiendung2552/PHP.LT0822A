@@ -31,6 +31,7 @@
                     <form action="" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?php echo $value['id_sanpham'] ?>">
                             <table>
+                            <input type="hidden" name="daban" value="0">
                                 <tr>
                                     <th colspan=2>
                                     <span class="span-right">
@@ -44,30 +45,34 @@
                                 <tr>
                                     <td class="left"><span class="span-left">Tên Sản Phẩm: </span> <span class="span-right"><input type="text" name="tensanpham" placeholder="tên sản phẩm"></span></td>
                                     <td class="right"><span  class="span-left">Xuất Xứ:</span> <span class="span-right"><input type="text" name="xuatxu" placeholder="Xuất xứ sản phẩm"></span></td>
+                                    <td class="right"><span class="span-left">Size M:    </span> <span class="span-right"><input type="text" name="size_M" placeholder="Số lượng size M" value="0"></span></td>
                                 </tr>
                                 <tr>
-                                    <td class="left"> <span class="span-left">Đơn Giá:   </span> <span class="span-right"><input type="text" name="gia" placeholder="Xuất xứ sản phẩm"></span></td>
+                                    <td class="left"> <span class="span-left">Đơn Giá:   </span> <span class="span-right"><input type="text" name="gia" placeholder="Giá sản phẩm"></span></td>
                                     <td class="right"> 
                                         <select name="id_danhmuc" class="span-right"  class="form-control" style="height: 3em;" name="" id="ttdh">
                                             <option value="0">Chọn loại sản phẩm </option>
-                                            <option value="1">1-Quần Nam</option>
-                                            <option value="2">2-Áo Nam</option>
-                                            <option value="3">3-Quần Nữ</option>
-                                            <option value="4">4-Áo Nữ</option>
-                                            <option value="5">5-Đầm Nữ</option>
-                                            <option value="6">6-Áo Trẻ Em</option>
-                                            <option value="7">7-Quần Trẻ Em</option>
+                                            <option value="1">Quần Nam</option>
+                                            <option value="2">Áo Nam</option>
+                                            <option value="3">Quần Nữ</option>
+                                            <option value="4">Áo Nữ</option>
+                                            <option value="5">Đầm Nữ</option>
+                                            <option value="6">Áo Trẻ Em</option>
+                                            <option value="7">Quần Trẻ Em</option>
                             
                                         </select>
+                                        <td class="right"><span class="span-left">Size L:    </span> <span class="span-right"><input type="text" name="size_L" placeholder="Số lượng size L" value="0"></span></td>
                                 </td>
                                 </tr>
                                 <tr>
-                                    <td class="left"><span class="span-left">Trang Thái:   </span> <span class="span-right"><input type="text" name="trangthai" placeholder="Xuất xứ sản phẩm"></span></td>
-                                    <td class="right"><span class="span-left">Người Tạo:    </span> <span class="span-right"><input type="text" name="nguoitao" placeholder="Xuất xứ sản phẩm"></span></td>
+                                    <td class="left"><span class="span-left">Trang Thái:   </span> <span class="span-right"><input type="text" name="trangthai" placeholder="Trạng thái sản phẩm"></span></td>
+                                    <td class="right"><span class="span-left">Người Tạo:    </span> <span class="span-right"><input type="text" name="nguoitao" placeholder="Người tạo sản phẩm"></span></td>
+                                    <td class="right"><span class="span-left">Size XL:    </span> <span class="span-right"><input type="text" name="size_XL" placeholder="Số lượng size XL" value="0"></span></td>
                                 </tr>
                                 <tr>
-                                    <td class="left"><span class="span-left">Tồn Kho:      </span> <span class="span-right"><input type="text" name="tonkho" placeholder="Xuất xứ sản phẩm"></span></td>
-                                    <td class="right"><span class="span-left">Loại sản phẩm:</span> <span class="span-right"><input type="text" name="loaisanpham" placeholder="Xuất xứ sản phẩm"></span></td>
+                                    <td class="left"><span class="span-left">Tồn Kho:      </span> <span class="span-right"><input type="text" name="tonkho" placeholder="Sản phẩm tồn kho" value="0"></span></td>
+                                    <td class="right"><span class="span-left">Loại sản phẩm:</span> <span class="span-right"><input type="text" name="loaisanpham" placeholder="Loại sản phẩm"></span></td>
+                                    <td class="right"><span class="span-left">Size XXL:    </span> <span class="span-right"><input type="text" name="size_XXL" placeholder="Số lượng size XXL" value="0"></span></td>
                                 </tr>
                                 <tr>
                                     <td colspan=2><?php if (isset($loi['user'])) { ?>

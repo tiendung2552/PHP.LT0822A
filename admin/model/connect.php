@@ -47,12 +47,44 @@ class database {
         return $ketqua;
     }
     //Hàm lấy dữ liệu theo điều kiện like
-		public function get_like($table,$column ,$value)
+		public function get_join($table,$table1,$table2,$table3, $col1, $col2, $condition=array())
 		{	
 			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
-			$sql = "SELECT * from $table ";
+			$sql = "SELECT * FROM $table 
+            JOIN $table1 ON $table1.$col1 = $table.$col1
+            JOIN $table2 ON $table2.$col2 = $table3.$col2";
 			//Bước 2 : Cộng chuỗi phần điều kiện LIKE
-			$sql .= "WHERE $column LIKE '%$value%'";
+            if(!empty($condition)){
+                $sql .= " WHERE";
+                foreach ($condition as $key => $value) {
+                    # code...
+                    $sql.= " $key = '$value' AND";
+                }
+                $sql = trim($sql, "AND");
+            };
+			//Bước 3: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 5: Cho hàm trả về giá trị 
+			return $result;
+		}
+        //Hàm lấy dữ liệu theo điều kiện like
+		public function get_join_4($table,$table1,$table4,$table2,$table5,$table3,$table6, $col1, $col2,$col3, $table7, $col4, $value)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * FROM $table 
+            JOIN $table1 ON $table1.$col1 = $table4.$col1
+            JOIN $table2 ON $table2.$col2 = $table5.$col2
+            JOIN $table3 ON $table3.$col3 = $table6.$col3
+            
+            WHERE $table7.$col4 = $value ";
+            
 			//Bước 3: Chạy câu lệnh
 			$query = mysqli_query($this->conn,$sql);
 			//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
@@ -94,13 +126,16 @@ class database {
 			//Bước 5: Cho hàm trả về giá trị 
 			return $result;
 		}
-        public function get_join_like($table, $table1, $col1 ,$columns, $value)
+        public function get_join_like($table, $table1, $table2,$table3, $col1, $col2 ,$columns, $value)
         {
             // Bước 1: Khởi tạo cấu trúc câu lệnh truy vấn
-            $sql = "SELECT $table.* , $table1.* FROM $table 
-                    JOIN $table1 ON $table1.$col1 = $table.$col1";
-
+            $sql = "SELECT * FROM $table 
+            JOIN $table1 ON $table1.$col1 = $table.$col1
+            JOIN $table2 ON $table2.$col2 = $table3.$col2";
+            // WHERE $table3.$col3 = $table4.$col4";
+            // JOIN $table3 ON $table3.$col3 = $table1.$col3
             // Bước 2: Tạo mảng cho phần điều kiện LIKE cho mỗi cột
+            
             $conditions = [];
 
             if (!is_array($columns)) {
@@ -174,6 +209,11 @@ class database {
         $query = mysqli_query($this->conn,$sql);
         return $query;
     }   
-    
+     // Trả về ID của bản ghi mới nhất
+     function insert_id()
+     {
+     // Lấy kết nối đến cơ sở dữ liệu
+     return $this->conn->insert_id;
+     }
     
 }

@@ -54,7 +54,7 @@
         $idup = $db -> insert_id();
         foreach ($_SESSION['cartt'] as $key => $value) {
             $amount = $value['tonkho'] * $value['gia'];
-        
+            
         $db->insert('ct_donhang', array(
             'id_donhang'=> $idup,
             'id_sanpham'=>$value['id_sanpham'],

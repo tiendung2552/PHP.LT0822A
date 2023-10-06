@@ -34,29 +34,31 @@
                             
                     <input type="hidden" name="id" value="<?php echo $value['id_sanpham'] ?>">
                     <table>
+                       
                         <tr>
-                            <th class="left">
+                            <th colspan=2>
                             <span class="span-right">
                                 <input class="right1" type="file" name="img" id="image-input" onchange="chooseFile(this)" 
                                     accept="image/*">
                                 <img alt="" id="image" width="100px" height="100px" src="../images/sanpham/<?php echo $value['img'] ?>">
                             </span>
                             </th>
-                            <td class="right"><span  class="span-left">Xuất Xứ:</span> <span class="span-right"><input type="text" name="xuatxu" value="<?php echo $value['xuatxu'] ?>"></span></td>
+                            
                         </tr>
                         <tr>
                             <td class="left"><span class="span-left">Tên Sản Phẩm: </span> <span class="span-right"><input type="text" name="tensanpham" value="<?php echo $value['tensanpham'] ?>"></span></td>
                             <td class="right"><span class="span-left">Id danh mục:  
                             <select name="id_danhmuc" class="span-right"  class="form-control" style="height: 3em;" name="" id="ttdh">
-                            <option value="0"><?php echo $value['id_danhmuc'] ?> </option>
-                            <option value="1">1-Quần Nam</option>
-                            <option value="2">2-Áo Nam</option>
-                            <option value="3">3-Quần Nữ</option>
-                            <option value="4">4-Áo Nữ</option>
-                            <option value="5">5-Đầm Nữ</option>
-                            <option value="6">6-Áo Trẻ Em</option>
-                            <option value="7">7-Quần Trẻ Em</option>
                             
+                                <option value="<?php echo $value['id_danhmuc'] ?>"><?php echo $value['danhmuc'] ?> </option>
+                                <option value="1">Quần Nam</option>
+                                <option value="2">Áo Nam</option>
+                                <option value="3">Quần Nữ</option>
+                                <option value="4">Áo Nữ</option>
+                                <option value="5">Đầm Nữ</option>
+                                <option value="6">Áo Trẻ Em</option>
+                                <option value="7">Quần Trẻ Em</option>
+                                
                             </select>
                             </td>
                         </tr>
@@ -70,18 +72,18 @@
                         </tr>
                         <tr>
                             <td class="left"><span class="span-left">Tồn Kho:      </span> <span class="span-right"><input type="text" name="tonkho" value="<?php echo $value['tonkho'] ?>"></span></td>
-                           
+                            <td class="right"><span  class="span-left">Xuất Xứ:</span> <span class="span-right"><input type="text" name="xuatxu" value="<?php echo $value['xuatxu'] ?>"></span></td>
                         </tr>
                         <tr class="bottom" ;>
                             <td colspan=2><button class="more-staff" name="btn_upd">Sửa</button>
-                            <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a></td>
+                            </td>
                         </tr>
                     </table>
                             <?php } ?>
                         </form>
                         
                         
-                        
+                        <a href="?page=DsSanPham" class="come-back"><button>Quay lại</button></a>
                     </div>
                 </div>
             </div>

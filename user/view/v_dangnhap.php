@@ -18,7 +18,7 @@
 
         <div class="row">
             <div>
-                <p>Thông tin khách hàng</p>
+                
                 <!-- Các phần tử khác như đã định nghĩa trong mã gốc -->
                 <form action="" method="post">
                 <div class="form-group">
@@ -33,13 +33,7 @@
                 <?php if (isset($loi['phone'])) { ?>
                     <span style="color: red; " ><?php echo $loi['phone']; ?></span>
                 <?php } ?> 
-                <div class="form-group">
-                                <label>Nhập lại mật khẩu:<span style="color: red">*</span></label>
-                                <input class="form-control" type="password" value="" name="repass" placeholder="Nhập lại mật khẩu...">
-                </div>
-                <?php if (isset($loi['repass'])) { ?>
-                                    <span style="color: red;" ><?php echo $loi['repass']; ?></span>
-                                <?php } ?> 
+                
 
                     <div class="help">
                     <a href="">Quên mật khẩu</a>

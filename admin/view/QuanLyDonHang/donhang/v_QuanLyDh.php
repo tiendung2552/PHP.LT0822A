@@ -40,7 +40,7 @@
                     
                     <div class="background-right-table-small">  
                     
-                            <table >
+                            <table>
                                 <thead>
                                     <tr>
                                     <th>Mã Đơn Hàng</th>
@@ -48,35 +48,36 @@
                                     <th>Số Điện Thoại</th>
                                     <th>Tổng Giá</th>
                                     <th>Tình Trạng</th>
-                                    <th>Setting</th>
+                                    <th colspan="2">Setting</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($data_donhang as $key => $value) { ?>
-                                      
+                                
                                     <tr>
                                         <td><?php echo $value['id_donhang'] ?></td>
                                         <td><?php echo $value['name'] ?></td>
                                         <td><?php echo $value['sdt'] ?></td>
                                         <td><?php echo $value['tong'] ?></td>
                                         <td><?php echo $value['tinhtrang'] ?>
-                                       
-                                        <td>
+                                        <td colspan="2">
+                                        <a  href="?page=ct_donhang&id=<?php echo $value['id_donhang'] ?>">
+                                            <i style="color: black;"class="fa-solid fa-gear"></i></a>
                                         <a  href="?page=ct_donhang&id=<?php echo $value['id_donhang'] ?>">
                                             <i style="color: black;" class="fa-solid fa-circle-info"></i></a>
                                         <a href="?page=xoadh&id=<?php echo $value['id_donhang'] ?>" onclick="return confirm('Bạn muốn xóa đơn hàng của khách?');">
                                             <i style="color: black;" class="fa-solid fa-trash"></i></a>
-                                        <a  style="color: black;" href="?page=duyet&id=<?php echo $value['id_donhang'] ?>" name="upd">Duyệt</a>
+                                        <a  style="color: black;" href="?page=duyet&id=<?php echo $value['id_donhang'] ?>" >Duyệt</a>
                                         </td>
                                         
                                     </tr>
                                    <?php } ?>
                                 </tbody>
                             </table>
-                            </form>
+                            
                           
                     </div>
-                    
+                    </form>
                     <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>

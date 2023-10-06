@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
-    <link rel="stylesheet" href="asset/css/index.css"> 
+    <link rel="stylesheet" href="asset/css/trangchu.css"> 
     <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/css/fontawesome.css">
     <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/js/all.min.js">
     <link rel="stylesheet" href="./w3_band/assets/fonts/themify-icons/themify-icons.css">

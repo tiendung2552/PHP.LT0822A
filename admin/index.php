@@ -34,24 +34,25 @@ switch ($page) {
         include "view/v_infor-Web.php";
         break;
     //Trang quản lý đơn hàng
+    //Đơn hàng
     case 'QuanlyDh':
-        include "controller/QuanLyDonHang/c_QuanLyDh.php";
+        include "controller/QuanLyDonHang/donhang/c_QuanLyDh.php";
         break;
-    case 'ct_donhang':
-        include "controller/QuanLyDonHang/c_Ct-donhang.php";
-        break;
-    case 'Indonhang':
-        include "controller/QuanLyDonHang/c_Indonhang.php";
+    case 'xoadh':
+        include "controller/QuanLyDonHang/donhang/c_xoadh.php";
         break;
     case 'duyet':
         include "controller/QuanLyDonHang/c_upd_duyet.php";
         break;
-    case 'indh':
-        include "view/QuanLyDonHang/c_Indonhang.php";
+    //Chi tiết đơn hàng   
+    case 'ct_donhang':
+        include "controller/QuanLyDonHang/ct_donhang/c_Ct-donhang.php";
         break;
-    case 'xoadh':
-        include "controller/QuanLyDonHang/c_xoadh.php";
+    case 'Indonhang':
+        include "controller/QuanLyDonHang/ct_donhang/c_Indonhang.php";
         break;
+    case 'In':
+        include "controller/QuanLyDonHang/ct_donhang/c_In.php";
     //trang quản lý khách hàng
     case 'QuanlyKh':
         include "controller/c_QuanLyKh.php";

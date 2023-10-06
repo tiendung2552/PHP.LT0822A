@@ -4,7 +4,8 @@ if(isset($_SESSION['ss_admin'])){
     if (isset($_GET['keyword'])) {
         $keyword = $_GET['keyword'];
         //Nếu có tồn tại thì mình sẽ lấy dữ liệu theo tên người dùng tìm kiếm
-        $data_khachhang = $db->get_like('khach_hang','name',$keyword);
+        $seach = ['name'];
+        $data_khachhang = $db->get_like_like('khach_hang',$seach,$keyword);
     }else{
         //Nếu không tồn tại thì sẽ lấy tất cả dữ liệu trong bảng product
         $data_khachhang=$db->get('khach_hang', array());

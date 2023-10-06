@@ -86,17 +86,17 @@
 			//Bước 5: Cho hàm trả về giá trị 
 			return $result;
 		}
-        public function get_join_like($table, $table1, $table2, $table3, $col1, $col2, $col3 ,$table5 ,$columns, $value)
+        public function get_join_like($table, $table1, $table2, $table3,$table4,$table5, $col1, $col2, $col3 ,$table6 ,$columns, $value)
         {
             // Bước 1: Khởi tạo cấu trúc câu lệnh truy vấn
             $sql = "SELECT * FROM $table 
                     JOIN $table1 ON $table1.$col1 = $table.$col1
-                    JOIN $table2 ON $table2.$col2 = $table1.$col2
-                    JOIN $table3 ON $table3.$col3 = $table1.$col3";
+                    JOIN $table2 ON $table2.$col2 = $table4.$col2
+                    JOIN $table3 ON $table3.$col3 = $table5.$col3";
                     // JOIN $table4 ON $table4.$col4 = $table2.$col4";
 
             // Bước 3: Kết hợp các điều kiện bằng toán tử OR
-            $sql .= " WHERE $table5.$columns = $value " ;
+            $sql .= " WHERE $table6.$columns = $value " ;
 
             // Bước 4: Chạy câu lệnh
             $query = mysqli_query($this->conn, $sql);

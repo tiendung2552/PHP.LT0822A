@@ -66,9 +66,7 @@ table{
     overflow-x: auto ;
     overflow-y: hidden;
 }
-table tr th{
-    width: 50px;
-}
+
 table tr td{
     text-align: center;
     padding: 20px 0px 20px 0px;

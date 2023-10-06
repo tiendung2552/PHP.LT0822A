@@ -10,7 +10,7 @@
         
         $username = $_POST['phone'];
         $password = $_POST['pass'];
-        $repass = $_POST['repass'];
+       
         
         $loi = array();
         if($username == ''){
@@ -19,9 +19,7 @@
         if($password == ''){
             $loi['pass'] = 'pass must no để trống ';
         }
-        if($repass != $password){
-            $loi['repass'] = 'pass không giống nhau';
-        }
+       
         if(!$loi){
             $password = md5($password);
             $taikhoan = $db -> get('taikhoan', array( 'sdt' => $username ));

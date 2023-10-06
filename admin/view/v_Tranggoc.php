@@ -7,12 +7,15 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
     <link rel="stylesheet" href="asset/css/index.css"> 
-    <link rel="stylesheet" href="asset/css/index-goc.css">
+    <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/css/fontawesome.css">
+    <link rel="stylesheet" href="./w3_band/assets/fontawesome/fontss/js/all.min.js">
+    <link rel="stylesheet" href="./w3_band/assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <section class="container">
         <div class="img-background-top">
-            <a class="text-demo1" href="index-goc.html"> Trang chủ </a>
+            <a class="text-demo1" href="?page=tranggoc"> Trang chủ </a>
             <a class="text-demo2" href=""> Hỗ Trợ </a>
             <a class="text-demo3" href=""> Thông tin trang </a>
             <p class="icon-user">
@@ -24,10 +27,10 @@
         </div>
         <div class="body">
                 <div class="background-left">      
-                        <a class="text1" href="#">Thông tin nhân viên</a>
-                        <a class="text1" href="#">Thông tin khách hàng</a>
-                        <a class="text1" href="#">Thông tin sản phẩm</a>
-                        <a class="text1" href="#">Thông tin đơn hàng</a>
+                        <a class="text1" href=""><i class="fa-solid fa-clipboard-user"></i>Nhân viên</a>
+                        <a class="text1" href=""><i class="fa-solid fa-circle-user"></i></i>Khách hàng</a>
+                        <a class="text1" href=""><i class="fa-solid fa-shirt"></i>Sản phẩm</a>
+                        <a class="text1" href=""><i class="fa-solid fa-receipt"></i>Đơn hàng</a>
                 </div>
                 <div class="background-right">
                     <div class="background-right-table">

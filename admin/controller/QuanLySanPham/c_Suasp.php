@@ -4,8 +4,8 @@ $user=$db->get('nhanvien', array());
 if ($user[0]['lv']==1 ) {
  if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $data_sanpham=$db->get('sanpham', array('id_sanpham'=>$id));
-
+    $data_sanpham = $db -> get_join('sanpham','danhmuc','size_product','sanpham','id_danhmuc','id_size',array('id_sanpham' => $id));
+    // $data_sanpham=$db->get('sanpham', array('id_sanpham'=>$id));
     if (isset($_POST['btn_upd'])) {
     $id1 = $_POST['id'];
     $name = $_POST['tensanpham'];
@@ -17,11 +17,16 @@ if ($user[0]['lv']==1 ) {
     $ngaytao = date('Y-m-d');
     $nguoitao = $_POST['nguoitao'];
     $loaisp = $_POST['loaisanpham'];
-
+    $size_M = $_POST['size_M'];
+    $size_L = $_POST['size_L'];
+    $size_XL = $_POST['size_XL'];
+    $size_XXL = $_POST['size_XXL'];
    
     $image = $_FILES['img']['name'];
     $image_temp=$_FILES['img']['tmp_name'];
-        
+    // var_dump($id_danhmuc);
+    // die;
+       
     if($image_temp != "")   
     {
         move_uploaded_file($image_temp, "../images/sanpham/$image" ); 
@@ -37,13 +42,13 @@ if ($user[0]['lv']==1 ) {
             'nguoitao'=>$nguoitao,
             'loaisanpham'=>$loaisp
         ),
-        array('id_sanpham' => $id));  
-       
+        array('id_sanpham' => $id)); 
     }else{
         $db->update('sanpham', array(
             'tensanpham'=>$name,
             'gia'=>$price,
             'trangthai'=>$trangthai,
+            'id_danhmuc' => $id_danhmuc,
             'tonkho'=>$amount,
             'xuatxu'=>$xuatxu,
             'ngaytao'=>$ngaytao,

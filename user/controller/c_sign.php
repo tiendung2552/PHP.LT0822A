@@ -50,12 +50,6 @@
             'diachi' => $address,
             'gioitinh'=>$gioitinh));
             
-            $db->insert('khach_hang',array(
-                'name' => $username,
-                'sdt' => $phone,
-                'email' => $email,
-                'diachi' => $address
-            ));
             header('location: ?controller=login');
         }
     }else{

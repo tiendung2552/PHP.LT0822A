@@ -23,12 +23,12 @@ if(isset($_SESSION['ss_user'])){
     // $data_sanpham1= $db->get_like('sanpham','loaisanpham',$keyword) ; 
     }else{
     //Nếu không tồn tại thì sẽ lấy tất cả dữ liệu trong bảng
-     $sanpham=$db->get('sanpham', array()); 
+     $data_sanpham=$db->get('sanpham', array()); 
     /* Số lượng dữ liệu trên mỗi trang */
     $items_page = 20; 
     
     /* Số lượng dữ liệu trong cơ sở dữ liệu */
-    $total_items = count($sanpham);
+    $total_items = count($data_sanpham);
     /* Tính tổng số trang */
     global $total_pages;
     $total_pages = ceil($total_items / $items_page); 

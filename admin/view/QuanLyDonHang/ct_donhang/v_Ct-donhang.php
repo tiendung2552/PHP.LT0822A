@@ -34,24 +34,26 @@
                                 <thead>
                                     <tr>
                                         <th>Mã đơn hàng</th>
-                                        <th>id_sanpham</th>
-                                        <th>Name Product</th>
-                                        <th>Amount</th>
-                                        <th>Unit Price</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Size</th>
+                                        <th>Giá</th>
+                                        <th>Số lượng</th>
+                                        <th>Thành tiền</th>
                                         <th>Thanh Toán</th>
                                         <th>Địa chỉ</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                    
-                                    <?php foreach ( $data_ct_donhang2 as $key => $value) { ?>
+                                    <?php foreach ($data_chitiet as $key => $value) { ?>
                                         <input type="hidden" name="id" value="<?php echo $value['id_ct']?>">
                                     <tr>
                                         <td><?php echo $value['id_donhang'] ?></td>
-                                        <td><?php echo $value['id_sanpham'] ?></td>
                                         <td><?php echo $value['tensanpham'] ?></td>
+                                        <td><?php echo $value['size'] ?></td>
+                                        <td><?php echo $value['gia'] ?></td>
                                         <td><?php echo $value['soluongsp'] ?></td>
-                                        <td><?php echo $value['don_gia'] ?></td>
+                                        <td><?php echo $value['amount'] ?></td>
                                         <td><?php echo $value['payment'] ?></td>
                                         <td><?php echo $value['diachi'] ?></td>
                                     </tr>
@@ -60,7 +62,7 @@
                                 <?php } ?>
                             </table>                   
                           </form>
-                          <a href="?page=indh" class="more-staff" ><button>In Đơn Hàng</button></a>
+                          <a href="?page=Indonhang&id=<?php echo $id ?>" class="more-staff" ><button>In Đơn Hàng</button></a>
                           <a href="?page=QuanlyDh" class="come-back"><button>Quay lại</button></a>
                     </div>
                 </div>

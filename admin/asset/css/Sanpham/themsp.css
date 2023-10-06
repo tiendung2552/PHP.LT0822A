@@ -74,7 +74,7 @@ form{
     font-size: 18px;
 }
 table tr td{
-    padding-left: 120px;
+    padding-left: 1px;
 }
 .right1{
     padding:5px 10px;
@@ -84,7 +84,7 @@ table tr td{
 .right{
     padding:5px 10px;
     padding-top: 5px;
-    padding-left: 160px;
+    padding-left: 15px;
 }
 .span-right{
     display: flex;
@@ -100,19 +100,19 @@ table tr td{
 }
 .bottom td{
     text-align: center;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding-left: 240px;
 }
 .bottom td .more-staff {
-    width: 70px;
+    width: 90px;
     font-size: 18px;
     border-radius: 10px;
     color: rgb(0, 0, 0);
-    
-    margin: 0;
+    margin-left: 200px;
     padding: 0;
 }
 
-.bottom td button:hover{
+.bottom td  .more-staff:hover{
     background-color: black;
     color: rgb(255, 255, 255);
 }
@@ -121,7 +121,8 @@ table tr td{
     font-size: 18px;
     border-radius: 10px;
     color: rgb(0, 0, 0);
-    margin-left: 50px;
+    margin-top: 0px;
+    margin-left: 450px;
 }
 .come-back button:hover{
     background-color: black;

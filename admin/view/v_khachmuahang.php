@@ -35,7 +35,7 @@
                     <h1>DANH SÁCH KHÁCH HÀNG</h1>
                     <form action="" method="get">
                     <div class="search">
-                    <input type="hidden" name="page" value="QuanlyKh">
+                    <input type="hidden" name="page" value="khachmuahang">
                     <input name="keyword" placeholder="Tìm kiếm" type="search" aria-label="Search" value="<?php echo (isset($_GET['keyword'])) ? $_GET['keyword'] : '' ?>"> 
                     <input id="btn-search" class="btn btn-default" class="btn-sear" type="submit" value="Tìm Kiếm">
                     </div>
