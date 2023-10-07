@@ -17,10 +17,6 @@ if ($user[0]['lv']==1 ) {
     $ngaytao = date('Y-m-d');
     $nguoitao = $_POST['nguoitao'];
     $loaisp = $_POST['loaisanpham'];
-    $size_M = $_POST['size_M'];
-    $size_L = $_POST['size_L'];
-    $size_XL = $_POST['size_XL'];
-    $size_XXL = $_POST['size_XXL'];
    
     $image = $_FILES['img']['name'];
     $image_temp=$_FILES['img']['tmp_name'];

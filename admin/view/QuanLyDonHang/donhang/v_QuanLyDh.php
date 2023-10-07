@@ -61,7 +61,7 @@
                                         <td><?php echo $value['tong'] ?></td>
                                         <td><?php echo $value['tinhtrang'] ?>
                                         <td colspan="2">
-                                        <a  href="?page=ct_donhang&id=<?php echo $value['id_donhang'] ?>">
+                                        <a  href="?page=suadh&id=<?php echo $value['id_donhang'] ?>">
                                             <i style="color: black;"class="fa-solid fa-gear"></i></a>
                                         <a  href="?page=ct_donhang&id=<?php echo $value['id_donhang'] ?>">
                                             <i style="color: black;" class="fa-solid fa-circle-info"></i></a>
@@ -75,9 +75,10 @@
                                 </tbody>
                             </table>
                             
-                          
+                            
                     </div>
                     </form>
+                    <a href="?page=themdh" class="more-staff"><button>Thêm Đơn Hàng</button></a>
                     <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
                 </div>
             </div>

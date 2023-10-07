@@ -225,10 +225,10 @@
                 <?php foreach ($ct_donhang as $key => $value) { ?>
                     <tr>
                         
-                        <td><?php echo $sanpham[0]['tensanpham'] ?></td>
-                        <td><img src="../images/sanpham/<?php echo $sanpham[0]['img'] ?>" width="100px" alt=""></td>
+                        <td><?php echo $value['tensanpham'] ?></td>
+                        <td><img src="../images/sanpham/<?php echo $value['img'] ?>" width="100px" alt=""></td>
                         <td><?php echo $value['soluongsp'] ?></td>
-                        <td><?php echo $sanpham[0]['gia'] ?></td>
+                        <td><?php echo $value['gia'] ?></td>
                         <td><?php echo $value['amount'] ?></td>
                           
             

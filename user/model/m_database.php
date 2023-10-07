@@ -86,6 +86,47 @@
 			//Bước 5: Cho hàm trả về giá trị 
 			return $result;
 		}
+        public function get_join_2($table,$table1,$table2, $col1, $table3, $col2, $value)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * FROM $table 
+            JOIN $table1 ON $table1.$col1 = $table2.$col1
+            
+            WHERE $table3.$col2 = $value ";
+            
+			//Bước 3: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 5: Cho hàm trả về giá trị 
+			return $result;
+		}
+        public function get_join_3($table,$table1,$table3,$table2,$table4, $col1, $col2, $table6, $col3, $value)
+		{	
+			//Bước 1 : Khởi tạo cấu trúc câu lệnh truy vấn
+			$sql = "SELECT * FROM $table 
+            JOIN $table1 ON $table1.$col1 = $table3.$col1
+            JOIN $table2 ON $table2.$col2 = $table4.$col2
+            
+            WHERE $table6.$col3 = $value ";
+            
+			//Bước 3: Chạy câu lệnh
+			$query = mysqli_query($this->conn,$sql);
+			//Bước 4: Khởi tạo 1 biến mảng và lặp hết dữ liệu lấy được từ câu truy vấn ở trên cho vào mảng đó
+			$result = array();
+			if ($query) {
+				while ($row = mysqli_fetch_assoc($query)) {
+					$result[] = $row;
+				}
+			}
+			//Bước 5: Cho hàm trả về giá trị 
+			return $result;
+		}
         public function get_join_like($table, $table1, $table2, $table3,$table4,$table5, $col1, $col2, $col3 ,$table6 ,$columns, $value)
         {
             // Bước 1: Khởi tạo cấu trúc câu lệnh truy vấn

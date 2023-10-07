@@ -232,18 +232,18 @@
             
                 <tbody>
                
-                <?php foreach ($ct_donhang as $key => $value) { ?>
+                <?php foreach ($donhang as $key => $value) { ?>
                     <tr>
                         
-                        <td><?php echo $value['id_ct'] ?></td>
+                        <td><?php echo $value['id_donhang'] ?></td>
                         <td><?php echo $value['name'] ?></td>
                         <td><?php echo $value['sdt'] ?></td>
                         <td><?php echo $value['diachi'] ?></td>        
-                        <td><?php echo $value['amount'] ?></td>         
+                        <td><?php echo $value['tong'] ?></td>         
                              
                         <td><?php echo $value['tinhtrang'] ?></td>   
-                        <td><a onclick="return confirm('Bạn muốn hủy đơn này sao?');" href="?controller=xoadh&id=<?php echo $value['id_ct'] ?>">Hủy đơn</a></td>
-                        <td><a href="?controller=chitietdh&id=<?php echo $value['id_ct'] ?>">Chi tiết</a></td>
+                        <td><a onclick="return confirm('Bạn muốn hủy đơn này sao?');" href="?controller=xoadh&id=<?php echo $value['id_donhang'] ?>">Hủy đơn</a></td>
+                        <td><a href="?controller=chitietdh&id=<?php echo $value['id_donhang'] ?>">Chi tiết</a></td>
             
                     </tr>
                 <?php } ?>

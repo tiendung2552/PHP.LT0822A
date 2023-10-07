@@ -28,32 +28,33 @@
             
             <div class="background-right">
                 <div class="background-right-table">
-                    <h1>THÊM ĐƠN HÀNG</h1>
+                    <h1>SỬA ĐƠN HÀNG</h1>
                     <form action="" method="post">
                     <div class="background-right-table-small">  
-                    
+                        <?php foreach ($donhang as $key => $value) { ?>
+            
                         <table>
                             <tr>
-                            <td class="left"> <span class="span-left">Khách Hàng:   </span> <span class="span-right"><input type="text" name="name" placeholder="Tên khách hàng"></span></td>
-                            <td class="right"><span class="span-left">ID User: </span> <span class="span-right"><input type="text" name="id_user" placeholder="Id của tài khoản đăng ký"></span></td>
-                            <td class="left"> <span class="span-left">Thanh Toán:   </span> <span class="span-right"><input type="text" name="payment" placeholder="Phương thức thanh toán"></span></td>
+                            <td class="left"> <span class="span-left">Khách Hàng:   </span> <span class="span-right"><input type="text" name="name" value="<?php echo $value['name'] ?>"></span></td>
+                            <td class="right"> <span class="span-left">Thanh Toán:   </span> <span class="span-right"><input type="text" name="payment" value="<?php echo $value['payment'] ?>"></span></td>
+                            <td class="left"><span class="span-left">Sỉze: </span> <span class="span-right"><input type="text" name="size" value="<?php echo $value['size'] ?>"></span></td>
                             </tr>
                         
                             <tr>
-                            <td class="left"> <span class="span-left">Email:   </span> <span class="span-right"><input type="text" name="email" placeholder="Email"></span></td>
-                            <td class="right"><span class="span-left">ID Sản Phẩm:     </span> <span class="span-right"><input type="text" name="id_sp" placeholder="Id của sản phẩm"></span></td>
-                            <td class="left"> <span class="span-left">Ghi Chú:   </span> <span class="span-right"><input type="text" name="note" placeholder="Ghi chú"></span></td>
+                            <td class="left"> <span class="span-left">Email:   </span> <span class="span-right"><input type="text" name="email" value="<?php echo $value['email'] ?>"></span></td>
+                            <td class="right"><span class="span-left">ID Sản Phẩm:     </span> <span class="span-right"><input type="text" name="id_sp" value="<?php echo $value['id_sanpham'] ?>"></span></td>
+                            <td class="left"> <span class="span-left">Ghi Chú:   </span> <span class="span-right"><input type="text" name="note" value="<?php echo $value['ghichu'] ?>"></span></td>
                             </tr>
 
                             <tr>
-                            <td class="left"> <span class="span-left">Số Điện Thoại:   </span> <span class="span-right"><input type="text" name="sdt" placeholder="Số điện thoại" ></span></td>
-                            <td class="right"><span class="span-left">Số Lượng Sản Phẩm: </span> <span class="span-right"><input type="text" name="sl" placeholder="Số lượng sản phẩm" ></span></td>
-                            <td class="left"><span class="span-left">Sỉze: </span> <span class="span-right"><input type="text" name="size" placeholder="Kích thước sản phẩm" ></span></td>
+                            <td class="left"> <span class="span-left">Số Điện Thoại:   </span> <span class="span-right"><input type="text" name="sdt" value="<?php echo $value['sdt'] ?>" ></span></td>
+                            <td class="right"><span class="span-left">Số Lượng Sản Phẩm: </span> <span class="span-right"><input type="text" name="sl" value="<?php echo $value['soluongsp'] ?>"></span></td>
+
                             </tr>
 
                             <tr>
-                            <td class="left"> <span class="span-left">Địa Chỉ:   </span> <span class="span-right"><input type="text" name="diachi"  placeholder="Địa chỉ" ></span></td>
-                            <td class="right"><span class="span-left">Ngày nhận: </span> <span class="span-right"><input type="text" name="ngaynhan"  placeholder="Ngày nhận" ></span></td>
+                            <td class="left"> <span class="span-left">Địa Chỉ:   </span> <span class="span-right"><input type="text" name="diachi"  value="<?php echo $value['diachi'] ?>"></span></td>
+                            <td class="right"><span class="span-left">Ngày nhận: </span> <span class="span-right"><input type="text" name="ngaynhan"  value="<?php echo $value['ngaynhan'] ?>"></span></td>
                            
                             </tr>
                             <tr>
@@ -64,8 +65,9 @@
                                 </td> 
                             </tr>
                         </table>
+                        <input type="submit" class="more-staff" name="btn_upd" value="Sửa Đơn Hàng">
+                          <?php }  ?>
                             
-                            <input type="submit" class="more-staff" name="btn_them" value="Thêm Đơn Hàng">
                     </div>
                     
                     </form>

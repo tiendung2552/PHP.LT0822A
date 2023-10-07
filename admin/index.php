@@ -38,6 +38,12 @@ switch ($page) {
     case 'QuanlyDh':
         include "controller/QuanLyDonHang/donhang/c_QuanLyDh.php";
         break;
+    case 'themdh':
+        include "controller/QuanLyDonHang/donhang/c_themdh.php";
+        break;
+     case 'suadh':
+        include "controller/QuanLyDonHang/donhang/c_suadh.php";
+        break;
     case 'xoadh':
         include "controller/QuanLyDonHang/donhang/c_xoadh.php";
         break;
