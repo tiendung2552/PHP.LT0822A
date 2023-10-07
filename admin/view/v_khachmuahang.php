@@ -61,7 +61,7 @@
                                         <td><?php echo $value['sdt'] ?></td>
                                         <td><?php echo $value['email'] ?></td>
                                         <td><?php echo $value['diachi'] ?></td>
-                                        <td><a onclick="return confirm('Xóa sản phẩm này?');" href="?page=xoakh&id=<?php echo $value['id_kh'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a></td>
+                                        <td><a onclick="return confirm('Xóa sản phẩm này?');" href="?page=xoakh_mua&id=<?php echo $value['id_kh'] ?>"><i style="color:black;" class="fa-solid fa-trash"></i></a></td>
                                     </tr>
                                 </tbody>
                                 <?php } ?>

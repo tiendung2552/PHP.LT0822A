@@ -1,6 +1,5 @@
 <?php 
 
-
     if(isset($_POST['btn_sign'])){
         $id = $_SESSION['ss_id'];
         $username = $_POST['name'];

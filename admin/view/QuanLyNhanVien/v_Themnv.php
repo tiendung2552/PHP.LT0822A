@@ -33,7 +33,7 @@
                             <ul class="ul-head">
                                 <ul  class="ul-left">
                                     <li><span class="span-left">Username:</span> <span class="span-right"><input type="text" name="user"></span></li>
-                                    <li><span class="span-left">Password:</span> <span class="span-right"><input type="text" name="pass"></span></li>
+                                    <li><span class="span-left">Password:</span> <span class="span-right"><input type="password" name="pass"></span></li>
                                     <li><span class="span-left">Full_name:</span> <span class="span-right"><input type="text" name="full_name" ></span></li>
                                 </ul>
                                 <ul class="ul-right">

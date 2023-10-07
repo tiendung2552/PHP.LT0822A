@@ -13,18 +13,15 @@
        
         
         $loi = array();
-        if($username == ''){
-           $loi['phone'] = 'username must no để trống';
-        }
-        if($password == ''){
-            $loi['pass'] = 'pass must no để trống ';
+        if($username == '' && $password == ''){
+           $loi['thongtin'] = 'Không được để trống thông tin';
         }
        
         if(!$loi){
             $password = md5($password);
             $taikhoan = $db -> get('taikhoan', array( 'sdt' => $username ));
             if(empty($taikhoan) || ($password!=$taikhoan[0]['pass'])){
-                $loi['phone'] = 'Bạn đã nhập sai';
+                $loi['thongtin'] = 'Bạn đã nhập sai';
             }
         }
     

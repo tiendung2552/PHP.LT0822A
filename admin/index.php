@@ -65,6 +65,9 @@ switch ($page) {
         break;
     case 'khachmuahang':
         include "controller/c_khachmuahang.php";
+        break;
+    case 'xoakh_mua':
+        include "controller/c_xoakh_mua.php";
         break;    
     case 'xoakh':
         include "controller/c_xoakh.php";
