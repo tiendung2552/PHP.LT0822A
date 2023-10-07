@@ -4,7 +4,7 @@
 
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $dh=$db->delete('ct_donhang', array('id_ct'=>$id));
+            $dh=$db->delete('donhang', array('id_donhang'=>$id));
             header ('location: ?controller=quanlidh');
         }
 

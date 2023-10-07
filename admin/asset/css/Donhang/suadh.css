@@ -1,0 +1,133 @@
+.background-right-table{
+    background-color: rgb(168, 233, 233);
+    margin: 30px 20px 0px 80px;
+    width: 1220px;
+    height:auto;
+    border-radius: 10%;
+    }
+.background-right-table-small{
+    background-color: rgb(88, 199, 199);
+    margin: 0px 20px 0px 50px;
+    width: 1130px;
+    height:auto;
+    border-radius: 10%
+    }
+.text-demo1{
+    width: 150px;
+    text-align: center;
+    margin-left: 150px;
+    padding-top: 35px;
+    border-radius: 10px;    
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+}
+.text-demo1:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo2{
+    width: 150px;
+    text-align: center;
+    margin-left: 130px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+    border-radius: 10px; 
+}
+.text-demo2:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.text-demo3{
+    width: 150px;
+    text-align: center;
+    margin-left: 120px;
+    padding-top: 35px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(216, 181, 27);
+    border-radius: 10px; 
+}
+.text-demo3:hover{
+    background-color: rgb(216, 181, 27);
+    border-radius: 10px;
+    color: black;
+}
+.body .background-left .a4{
+    background-color: rgb(216, 181, 27) ;
+    color: black;
+}
+h1{
+    padding-top: 15px;
+    text-align: center;
+}
+form{
+    height: auto;
+    padding: 0;
+}
+table{
+    width: 100%;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+.span-left{
+    width: 120px;
+}
+table tr td{
+    padding-left: 1px;
+    padding-top:20px ;
+}
+.right1{
+    padding:5px 10px;
+    padding-top: 5px;
+
+}
+.right{
+    padding:5px 10px;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+.span-right{
+    display: flex;
+}
+.span-right input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;  
+}
+.span-right .right1{
+    padding-top: 40px;
+    padding-left: 300px;
+}
+
+.more-staff {
+    width: 150px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin: 50px 0px 0px 420px;
+    padding: 0;
+    
+}
+
+.more-staff:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.come-back{
+    width: 150px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    margin-top: 0px;
+    margin-left: 50px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 0px 10px 0px 10px;
+}
+.come-back:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    
+}

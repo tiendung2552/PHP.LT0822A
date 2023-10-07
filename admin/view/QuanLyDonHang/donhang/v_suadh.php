@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="asset/css/attributes.css">
-    <link rel="stylesheet" href="asset/css/Donhang/themdh.css">
+    <link rel="stylesheet" href="asset/css/Donhang/suadh.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -65,13 +65,15 @@
                                 </td> 
                             </tr>
                         </table>
-                        <input type="submit" class="more-staff" name="btn_upd" value="Sửa Đơn Hàng">
+                        
                           <?php }  ?>
-                            
+                          <td>
+                          <input type="submit" class="more-staff" name="btn_upd" value="Sửa Đơn Hàng">
+                          <a href="?page=trangchu" class="come-back">Quay lại</a></td>
                     </div>
                     
                     </form>
-                    <a href="?page=trangchu" class="come-back"><button>Quay lại</button></a>
+                    
                 </div>
             </div>
         </div>

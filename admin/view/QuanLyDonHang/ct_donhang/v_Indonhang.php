@@ -78,7 +78,7 @@
            <img src="../images/logo/qr.png" alt="" width="100px">
 </div>
 <?php } ?>
-<a href="?page=In" onclick="return confirm('Bạn muốn in đơn hàng này');">In Đơn Hàng</a>
+<a href="?page=In&id=<?php echo $value['id_sanpham'] ?>" onclick="return confirm('Bạn muốn in đơn hàng này');">In Đơn Hàng</a>
 </form>
 
 <a href="?page=trangchu">Về trang chủ</a>

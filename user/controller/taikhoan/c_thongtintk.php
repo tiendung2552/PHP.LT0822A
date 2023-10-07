@@ -39,6 +39,6 @@ if (isset($_SESSION['ss_user'])) {
     header("Location: ?controller=login");
     exit;
 }
-// Hiển thị biểu mẫu để người dùng cập nhật thông tin
+
 include "view/taikhoan/v_thongtintk.php";
 ?>

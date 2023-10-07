@@ -22,11 +22,9 @@ if (isset($_SESSION['ss_admin'])) {
             $note = $_POST['note'];
 
             $sanpham = $db->get('sanpham' ,array('id_sanpham' => $id_sanpham));
-            $amount1 = 0;
-            foreach ($sanpham as $key => $value) {
-                $amount = $value['gia'] * $soluongsp;
-                $amount1 += $amount;
-            }
+           
+           
+           
             // var_dump($soluongsp);
             // die;
             $db->update('khach_hang', array(
@@ -37,14 +35,17 @@ if (isset($_SESSION['ss_admin'])) {
             ),
             array('id_kh' => $donhang[0]['id_kh'])
         );
-
-           
+        $amount1 = 0;
+        foreach ($sanpham as $key => $value) {
+            $amount = $value['gia'] * $soluongsp;
+            $amount1 += $amount;
+            
             $db->update('donhang', array(
                 'tong'=>$amount1
             ),
             array('id_donhang' => $id_ct)
         );
-
+        
             $db->update('ct_donhang', array(
                 'id_sanpham' => $id_sanpham,
                 'soluongsp' => $soluongsp,
@@ -59,6 +60,7 @@ if (isset($_SESSION['ss_admin'])) {
         
         header('location: ?page=QuanlyDh');   
         }
+    }
         }else{
             echo '<script type="text/javascript">alert("Bạn không có quyền để thêm");
             window.history.back();</script>';
