@@ -163,10 +163,9 @@
     <!-------------------------- product ---------------------------->
    	<section class="product">
 
-   	  	
    	 		<div class="container">
 	   	 		<div class="product-top row">
-	                <p>Trang Chủ</p> <span>&#10230; </span> <p>Nữ</p> <span>&#10230; </span> <p>Hàng nữ mới về</p> <span>&#10230; </span> <p>ELLIE DRESS - ĐẦM REN SERONA</p>
+	                <p>Trang Chủ</p> <span>&#10230; </span> <p>Nữ</p> <span>&#10230; </span> <p>Hàng nữ mới về</p>
 	   	 		</div>
 				<?php foreach ($product as $key => $value) { ?>
                     <div class="product-content row">
@@ -181,7 +180,7 @@
                             <!-- /// product-name //// -->
                             <div class="product-content-right-product-name">
                                 <h1><?php echo $value['tensanpham'] ?></h1>
-                                <p> SKU: 45S2779 </p>
+                                <p>Mã đơn hàng: <?php echo $value['id_sanpham'] ?> </p>
                             </div>
 
                             <!-- //// product-giá //// -->

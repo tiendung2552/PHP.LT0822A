@@ -45,7 +45,6 @@
                                     <tr>
                                     <th>ID</th>
                                     <th>Username</th>
-                                    <th>Password</th>
                                     <th>Full_name</th>
                                     <th>Số Điện Thoại</th>
                                     <th>Lv</th>
@@ -60,7 +59,6 @@
                                     <tr>
                                         <td><?php echo $value['id'] ?></td>
                                         <td><?php echo $value['user'] ?></td>
-                                        <td><?php echo $value['pass'] ?></td>
                                         <td><?php echo $value['full_name'] ?></td>
                                         <td><?php echo $value['sodienthoai'] ?></td>
                                         <td><?php echo $value['lv'] ?></td>

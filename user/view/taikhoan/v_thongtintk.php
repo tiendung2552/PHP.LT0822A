@@ -40,7 +40,7 @@
         	<li><a href="">Tin Tức</a></li>
         </div>
         <div class="others">
-        	<li><input placeholder="Tìm kiếm" type="text"> <i class="fas fa-search"></i></li>
+        	
         	<li> <a class="fa fa-paw" href=""></a>
 				<div class="sub-action" style="display: block;">
                     <div class="top-action">

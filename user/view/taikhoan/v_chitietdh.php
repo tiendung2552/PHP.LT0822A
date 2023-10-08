@@ -215,7 +215,7 @@
                         <th class="text-center">SỐ LƯỢNG</th>
                         <th class="text-center">ĐƠN GIÁ</th>
                         <th class="text-center">THÀNH TIỀN</th>
-                     
+                        <th class="text-center">NGÀY NHẬN</th>
                        
                     </tr>
                 </thead>
@@ -230,7 +230,7 @@
                         <td><?php echo $value['soluongsp'] ?></td>
                         <td><?php echo $value['gia'] ?></td>
                         <td><?php echo $value['amount'] ?></td>
-                          
+                        <td><?php echo $value['ngaynhan'] ?></td>
             
                     </tr>
                 <?php } ?>

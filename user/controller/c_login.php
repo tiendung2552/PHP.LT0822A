@@ -24,7 +24,7 @@
                 $loi['thongtin'] = 'Bạn đã nhập sai';
             }
         }
-    
+
         if(!$loi){
             $_SESSION['ss_id'] = $taikhoan[0]['id_user'];
             $_SESSION['ss_user'] = $taikhoan[0]['name'];
@@ -32,7 +32,9 @@
             $_SESSION['ss_email'] = $taikhoan[0]['email'];
             $_SESSION['ss_diachi'] = $taikhoan[0]['diachi'];
             
-            header('location: ?controller=trangchu');
+            echo "<script>alert ('Đăng nhập thành công'); 
+            window.location.href = '?controller=trangchu';</script>";
+            //header('location: ?controller=trangchu');
         }
 }
 

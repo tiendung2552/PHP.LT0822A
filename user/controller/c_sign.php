@@ -1,5 +1,6 @@
 <?php 
 
+
     if(isset($_POST['btn_sign'])){
         $id = $_SESSION['ss_id'];
         $username = $_POST['name'];
@@ -48,14 +49,16 @@
             'ngaytao'=>$date,
             'diachi' => $address,
             'gioitinh'=>$gioitinh));
-            
-            header('location: ?controller=login');
+
+            echo "<script>alert('Đăng ký thành công');
+            window.location.href = '?controller=login';</script>";
+            // header('location: ?controller=login');
         }
-    }else{
-    echo "<script>alert ('Số điện thoại này đã tồn tại');
+        
+        }else{
+        echo "<script>alert ('Số điện thoại này đã tồn tại');
                 window.history.back();</script>";
-    }
-             
+        }
 }
     
     include 'view/v_dangky.php';
