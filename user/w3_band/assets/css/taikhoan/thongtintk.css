@@ -385,26 +385,35 @@ a {
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 40%;
+    width: 50%;
     position: relative;
+    border-radius: 10px;
+    
 }
-
+.modal-content h2{
+    margin:  20px 0;
+}
 .close {
     float: right;
     cursor: pointer;
 }
 
 /* CSS cho nút mở modal */
-.modal-button {
-    background-color: #007bff;
-    color: #fff;
+.modal .modal-content .btn{
+    text-align: center;
+}
+.modal .modal-content button {
+    background-color: #000000;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
-
+    border-radius: 10px 0px 10px 0px;
+    
 }
 
 /* CSS cho biểu mẫu */
@@ -418,7 +427,8 @@ label {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -426,13 +436,12 @@ input[type="email"] {
 }
 
 button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
-    margin-left: 210px;
-    margin-top: 50px;
     border-radius: 10px 0px 10px 0px;
 }
 /* CSS cho modal đổi mật khẩu */
@@ -440,12 +449,10 @@ button[type="submit"] {
     display: none;
 }
 
-/* CSS cho nút mở modal đổi mật khẩu */
-
-
 /* CSS cho biểu mẫu đổi mật khẩu */
 #changePasswordForm {
     margin-top: 20px;
+    
 }
 
 #changePasswordForm h2 {

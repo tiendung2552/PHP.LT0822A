@@ -71,7 +71,7 @@ else{
                 break;
 
         case 'product':
-            include 'controller/giohang/c_Giohang.php';
+            include 'controller/c_product.php';
                 break;
        
         case 'giohang':

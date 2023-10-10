@@ -214,43 +214,47 @@
                 </div>
 
                 <!-- Modal đổi mật khẩu -->
-                <form id="changePasswordForm">
+                <form action="" method="post">
                 <div id="changePasswordModal" class="modal">
                     <div class="modal-content">
                         <span class="close" id="closeChangePasswordModalBtn">&times;</span>
                         <!-- Nội dung modal -->
-                        
+                      
                             <h2>Đổi mật khẩu</h2>
-                            <label for="username">Mật khẩu cũ: </label>
-                            <input type="text" id="username" name="username"><br>
-
-                            <label for="username">Mật khẩu mới:</label>
-                            <input type="text" id="username" name="username"><br>
-
-                            <label for="email">Nhập lại mật khẩu mới:</label>
-                            <input type="email" id="email" name="email"><br>
-
-                            <button type="submit">Đổi mật khẩu</button>
-                        
+                            <label for="password">Mật khẩu cũ: </label>
+                            <input type="password" id="pass" name="pass"><br>
+                            
+                            <label for="password">Mật khẩu mới:</label>
+                            <input type="text" id="newpass" name="newpass"><br>
+                            
+                            <label for="password">Nhập lại mật khẩu mới:</label>
+                            <input type="text" id="res_newpass" name="res_newpass"><br>
+                           
+                        <div class="btn">
+                            <button name="upd_pass">Đổi mật khẩu</button>
+                        </div>
                     </div>
                 </div>
+                
                 <!-- Modal update tài khoản -->
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close" id="closeModalBtn">&times;</span>
                         <!-- Nội dung modal -->
+                        <?php foreach ($taikhoan as $key => $value) { ?>
                             <h2>Cập nhật tài khoản</h2>
                             <label for="username">Họ tên:</label>
-                            <input type="text" id="username" name="username"><br>
+                            <input type="text" id="username" name="name" value="<?php echo $value['name'] ?>"><br>
 
                             <label for="username">Số điện thoại:</label>
-                            <input type="text" id="username" name="username"><br>
+                            <input type="text" id="phone" name="sdt" value="<?php echo $value['sdt'] ?>"><br>
 
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email"><br>
-
-                            <button type="submit">Cập nhật</button>
-                       
+                            <input type="email" id="email" name="email" value="<?php echo $value['email'] ?>"><br>
+                            <div class="btn">
+                            <button name="btn_upd">Cập nhật</button>
+                            </div>
+                       <?php } ?>
                     </div>
                 </div>
                 </form>

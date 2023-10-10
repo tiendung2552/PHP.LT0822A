@@ -232,9 +232,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1> 
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											 <p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											 <p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href="?controller=product&id=<?php echo $value['id_sanpham'] ?>"></a></button>
                                     		</div>
 										</div>
@@ -256,9 +257,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1> 
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											 <p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											 <p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
@@ -279,9 +281,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1>  
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											 <p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											 <p1><?php echo $value['gia'] ?><sup>đ</sup></p1>
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
@@ -318,9 +321,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1> 
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
@@ -342,9 +346,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1> 
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
@@ -366,9 +371,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1> 
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
@@ -405,9 +411,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1> 
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
@@ -434,9 +441,10 @@
 											<a href=""><img src="images/color/004.png" alt="004" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><img src="images/color/026.png" alt="026" style=" width: 20px; height: 20px; border-radius: 50%;" class="lazy"></a>
 											<a href=""><span><i class="fa-regular fa-heart"></i></span></a>
-											<h1><?php echo $value['tensanpham'] ?></h1> <br>
+											<h1><?php echo $value['tensanpham'] ?></h1>
+                                            <p>Tồn kho:<?php echo $value['tonkho'] ?></p>
 											<div class="price">
-											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> <p>2.590.000<sup>đ</sup></p>
+											<p1><?php echo $value['gia'] ?><sup>đ</sup></p1> 
 											<button><a style=" color: #F0FFFF;" class="fa fa-shopping-bag" href=""></a></button>
                                     		</div>
 										</div>
