@@ -45,7 +45,8 @@
                             <table >
                                 <thead>
                                     <tr>
-                                    <th>ID</th>
+                                    <th>ID_Khách mua</th>
+                                    <th>id_user</th>
                                     <th>Tên khách hàng</th>
                                     <th>Số Điện Thoại</th>
                                     <th>Email</th>
@@ -57,6 +58,7 @@
                                 <tbody>
                                     <tr>
                                         <td><?php echo $value['id_kh'] ?></td>
+                                        <td><?php echo $value['id_user'] ?></td>
                                         <td><?php echo $value['name'] ?></td>
                                         <td><?php echo $value['sdt'] ?></td>
                                         <td><?php echo $value['email'] ?></td>
